@@ -62,7 +62,7 @@ function allg {
 	git status;
 	read -p 'enter commit message: ' commitMessage;
 	git commit -m "$commitMessage";
-	git push -u origin master;
+	git push -u origin main;
 }
 
 # newremote will copy remote editions of most relevant dot files to a remote system.
