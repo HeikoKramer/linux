@@ -1,0 +1,58 @@
+syntax on
+set number " turn on line numbers
+" set relativenumber " doesn't show line numbers depending on your position
+set norelativenumber " normal line numbers starting with 1 at the top …
+" set ruler " ruler is the bar at the bottom and it is on by default
+
+set showcmd
+
+" tabs and indentation
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set smartindent
+set smarttab
+
+" highlighting
+set hlsearch " will highlight all matches :noh will turn it off
+set incsearch
+
+set linebreak
+ 
+set history=100
+filetype plugin on  " allow sensing the filetype
+set formatoptions+=c
+set listchars=tab:→\ ,eol:↲,nbsp:␣,space:·,trail:·,extends:⟩,precedes:⟨
+
+set shortmess=aoOtI " avoid most 'Hit Enter …' messages
+set viminfo='20,<1000,s1000
+
+set noswapfile
+set nobackup
+set nowritebackup
+
+set icon " terminal title -> filename
+
+set scrolloff=999 " keeps cursor in the middle of the screen
+
+" start at last place you were editing
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+"au BufWritePost ~/.vimrc so ~/.vimrc
+
+" disable arrow keys (vi muscle memory)
+noremap <up> :echoerr "Umm, use k instead"<CR>
+noremap <down> :echoerr "Umm, use j instead"<CR>
+noremap <left> :echoerr "Umm, use h instead"<CR>
+noremap <right> :echoerr "Umm, use l instead"<CR>
+"inoremap <up> <NOP>
+"inoremap <down> <NOP>
+"inoremap <left> <NOP>
+"inoremap <right> <NOP>
+
+
+" ALL AVAILABLE DEFAULT COLORSCHEMES
+" blue       default    desert     evening    koehler    murphy     peachpuff  shine      torte
+" darkblue   delek      elflord    industry   morning    pablo      ron        slate      zellner
+" FAVOURITES: koehler, delek, peachpuff, slate, zellner
+colorscheme koehler
