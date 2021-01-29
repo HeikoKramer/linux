@@ -10,6 +10,7 @@ alias gih='cd ~/repos/github' #enter github directory
 alias lin='cd ~/repos/github/linux' #enter linux repo
 alias dot='cd ~/repos/github/linux/dotfiles' #jumps to dotfile directory
 alias sf='cd ~/repos/github/sfdx' #enter sfdx repo
+alias sfp='cd ~/repos/github/sfdx_projects' #enter sfdx_projects private repo
 ## FILE SHORTCUTS
 alias notes='vim ~/repos/gitlab.com/heiko__b/dotfiles/notes.md' #opens my notes in VIM
 alias linn='vim ~/repos/github/linux/linux_notes.md' #opens my notes on Linux
@@ -26,6 +27,7 @@ alias l='exa -Fahl --color=always --group-directories-first' #colorised list
 alias x='xclip' #copy output into xclip
 alias xs='xclip -section clipboard -o' #shows xclip clipboards
 alias off='shutdown -h now' #shuts down the system
+alias gs='git status' #shows git status is directory is a repo
 ## REMOTE ACCESS SHORTCUTS
 alias pihole='ssh pihole' #connects to pihole raspi
 alias apie='ssh ApplePie' #connects to Mac Mini gaming station
