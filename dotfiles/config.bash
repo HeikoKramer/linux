@@ -23,15 +23,17 @@ alias sshc='vim ~/.ssh/config' #opens ssh config in vim
 alias book='mupdf -I ~/Desktop/TLCL-19.01.pdf' #opens "The Linus Command Line" book in mupdf
 ## TERMINAL COMMAND SHORCUTS
 alias h='history' #shows command history
-alias l='exa -Fahl --color=always --group-directories-first' #colorised list
+alias l='ls -alh --color=always --group-directories-first' #colorised list
 alias x='xclip' #copy output into xclip
 alias xs='xclip -section clipboard -o' #shows xclip clipboards
 alias off='shutdown -h now' #shuts down the system
+alias offr='sudo shutdown -h now' #shuts down a remote system
 alias gs='git status' #shows git status is directory is a repo
 ## REMOTE ACCESS SHORTCUTS
 alias pihole='ssh pihole' #connects to pihole raspi
 alias apie='ssh ApplePie' #connects to Mac Mini gaming station
 alias jitsi='ssh jitsi' #connect to digital ocean droplet
+alias one='ssh one' #connect to one server
 
 # PROMT
 ## All red
@@ -106,3 +108,5 @@ function path {
   echo -e ${PATH//:/\\n};
 }
 export -f path
+
+neofetch

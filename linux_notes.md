@@ -1232,4 +1232,38 @@ If you enter `tmux a` it will reconnect to the last session, bringing you where 
 <kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>x</kbd> will kill a pane. <br>
 <kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>w</kbd> will show all windows. <br>
 
+----
+
+## MUTT
+Mutt is a terminal email client. <br>
+
+### installation & configuration
+`sudo apt-get install mutt` get's mutt installed. <br>
+Create file **~/.config/mutt/muttrc** and write inside: <br>
+```sh
+set folder ="imaps://mailadress@here.pl@Mailserver.information.here:993"
+
+set spoolfile = "+INBOX"
+``` 
+
+Opening `mutt` or `neomutt` if installed will now ask you for the mail pw. <br>
+You can now browse and read through your email. **N** are **new** mails, **r** marks emails you have **replied** too. <br>
+<kbd>?</kbd> will show you all the key-bindings in place. <br>
+<kbd>c</kbd> then <kbd>?</kbd> shows a list of all available mailboxes – should be none at this point. <br>
+So to set up some mailboxes and make the mail sendable the **muttrc** must be completed like this: <br>
+```sh
+set folder = "imaps://mailadress@here.pl@Mailserver.information.here:993"
+set smtp_url = "smtp://mailadress@here.pl@Mailserver.information.here:587"
+
+set from = "mailadress@here.pl"
+set realname = "Your Name"
+
+set spoolfile = "+INBOX"
+set record = "+Sent"
+set trash = "+Trash"
+set postponed = "+Drafts"
+
+mailboxes =INBOX =Sent =Trash =Drafts =Junk  
+```
+The entry of your mail-password will be required as set. <br>
 
