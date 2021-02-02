@@ -1267,3 +1267,47 @@ mailboxes =INBOX =Sent =Trash =Drafts =Junk
 ```
 The entry of your mail-password will be required as set. <br>
 
+
+----
+
+## gpg
+`gpg` or `gpg2` come with basically every distro are used for basic encryption. <br>
+```sh
+gpg --full-gen-key #this command will initialise the process to generate a key
+                   #it will be followed by a series of options
+
+## PATH
+gpg: keybox '/home/heiko/.gnupg/pubring.kbx' created
+
+## KEY TYPE
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+  (14) Existing key from card
+Your selection? 1
+
+## KEY SIZE
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (3072) 4096
+Requested keysize is 4096 bits
+
+##  EXPIRATION
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 0
+Key does not expire at all
+Is this correct? (y/N) 
+```
+An identity **name** and **email** must be given and a **password** will be required to protect  the key. <br>
+To encrypt a file, use: `gpg -r your.mail@your-domain.com -e file` <br>
+*your.mail@your-domain.com* should be the mail you specified as identifier. <br>
+**file.gpg** will be cerated – **file** will remain in the directory and has to be removed manually. <br>
+`gpg -d file.gpg > file` would decrypt file back in its former apperance. <br>
+The entry of the former set **password** will be required to decrypt file.gpg. <br>
+
