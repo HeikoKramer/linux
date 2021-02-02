@@ -5,13 +5,16 @@ shopt -s globstar
 set -o noclobber #prevents the > operator from overwriting existing files, this can still be done with >|
 # ALIASES
 ## DIRECTORY SHORTCUTS
-alias gil='cd ~/repos/gitlab.com' #enter gitlab directory
-alias gih='cd ~/repos/github' #enter github directory
-alias lin='cd ~/repos/github/linux' #enter linux repo
-alias dot='cd ~/repos/github/linux/dotfiles' #jumps to dotfile directory
-alias sf='cd ~/repos/github/sfdx' #enter sfdx repo
-alias sfp='cd ~/repos/github/sfdx_projects' #enter sfdx_projects private repo
-alias conf='cd ~/.config' #enter config files
+alias gil='cd ~/repos/gitlab.com; l' #enter and list gitlab directory
+alias gih='cd ~/repos/github; l' #enter and list github directory
+alias lin='cd ~/repos/github/linux; l' #enter and list linux repo
+alias lins='cd ~/repos/github/linux/scripts; l' #enter and list linux scripts
+alias dot='cd ~/repos/github/linux/dotfiles; l' #enter and list dotfiles directory
+alias dotr='cd ~/repos/github/linux/dotfiles/remote; l' #enter and list remote dotfiles directory
+alias sf='cd ~/repos/github/sfdx; l' #enter and list sfdx repo
+alias sfp='cd ~/repos/github/sfdx_projects; l' #enter and list sfdx_projects private repo
+alias sfs='cd ~/repos/github/sfdx/sfdx_scripts; l' #enter and list sfdx scripts
+alias conf='cd ~/.config; l' #enter and list config files
 ## FILE SHORTCUTS
 alias notes='vim ~/repos/gitlab.com/heiko__b/dotfiles/notes.md' #opens my notes in VIM
 alias linn='vim ~/repos/github/linux/linux_notes.md' #opens my notes on Linux
