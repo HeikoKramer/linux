@@ -11,6 +11,7 @@ alias lin='cd ~/repos/github/linux' #enter linux repo
 alias dot='cd ~/repos/github/linux/dotfiles' #jumps to dotfile directory
 alias sf='cd ~/repos/github/sfdx' #enter sfdx repo
 alias sfp='cd ~/repos/github/sfdx_projects' #enter sfdx_projects private repo
+alias conf='cd ~/.config' #enter config files
 ## FILE SHORTCUTS
 alias notes='vim ~/repos/gitlab.com/heiko__b/dotfiles/notes.md' #opens my notes in VIM
 alias linn='vim ~/repos/github/linux/linux_notes.md' #opens my notes on Linux
@@ -21,6 +22,7 @@ alias bashc='vim ~/repos/github/linux/dotfiles/config.bash' #opens bashconfig in
 alias vimrc='vim ~/repos/github/linux/dotfiles/vimrc' #opens vimrc in vim
 alias sshc='vim ~/.ssh/config' #opens ssh config in vim
 alias book='mupdf -I ~/Desktop/TLCL-19.01.pdf' #opens "The Linus Command Line" book in mupdf
+alias muttc='vim ~/.config/mutt/muttrc' #opens (neo)mutt config file in vim
 ## TERMINAL COMMAND SHORCUTS
 alias h='history' #shows command history
 alias l='ls -alh --color=always --group-directories-first' #colorised list
@@ -29,6 +31,7 @@ alias xs='xclip -section clipboard -o' #shows xclip clipboards
 alias off='shutdown -h now' #shuts down the system
 alias offr='sudo shutdown -h now' #shuts down a remote system
 alias gs='git status' #shows git status is directory is a repo
+alias mutt='neomutt' #launches neomutt instead of mutt
 ## REMOTE ACCESS SHORTCUTS
 alias pihole='ssh pihole' #connects to pihole raspi
 alias apie='ssh ApplePie' #connects to Mac Mini gaming station
