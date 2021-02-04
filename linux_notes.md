@@ -1311,3 +1311,28 @@ To encrypt a file, use: `gpg -r your.mail@your-domain.com -e file` <br>
 `gpg -d file.gpg > file` would decrypt file back in its former apperance. <br>
 The entry of the former set **password** will be required to decrypt file.gpg. <br>
 
+----
+
+## pass
+`sudo apt install pass` to install **pass**. <br>
+`pass init your.mail@your-domain.com*` toinitialize a password storage. <br>
+`pass add email` will add the password *email* to your password storage. <br>
+`pass` or `pass ls` will list all stored passwords: 
+```sh
+Password Store
+└── email
+```
+*pam-gnupg to unlock key-pair on login: https://github.com/cruegge/pam-gnupg*
+
+## dmenu
+`sudo apt install dmenu` to install **dmenu**. <br>
+`man -k . | dmenu -l 30` will show a 30 lines visible list of all available manual files. As you type in your search the 30 lines will change to relevant output. <br>
+*passmenu to show passwords and copy them to clipboard*
+
+## zathura
+`sudo apt install zathura` to install **zathura**. <br>
+
+
+
+
+
