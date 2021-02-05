@@ -117,7 +117,10 @@ export -f path
 
 neofetch
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+# source sfdx configuration file
+# check out sfdx.conf so see all sfdx related aliases and functions
+if [ -f ~/.sfdx.conf ]; then
+    . ~/.sfdx.conf
+    echo "sfdx.conf sourced!"
 fi
 
