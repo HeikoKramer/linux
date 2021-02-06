@@ -23,6 +23,7 @@ alias bashrc='vim ~/.bashrc' #opens my .bashrc in VIM
 alias bashcr='vim ~/repos/github/linux/dotfiles/remote/.bash_aliases' #opens remote bashconfig in vim
 alias bashc='vim ~/repos/github/linux/dotfiles/config.bash' #opens bashconfig in vim
 alias vimrc='vim ~/repos/github/linux/dotfiles/vimrc' #opens vimrc in vim
+alias sfc='vim ~/repos/github/linux/dotfiles/sfdx.conf' #opens sfdx.conf in vim
 alias sshc='vim ~/.ssh/config' #opens ssh config in vim
 alias book='mupdf -I ~/Desktop/TLCL-19.01.pdf' #opens "The Linus Command Line" book in mupdf
 alias muttc='vim ~/.config/mutt/muttrc' #opens (neo)mutt config file in vim
