@@ -121,6 +121,6 @@ neofetch
 # check out sfdx.conf so see all sfdx related aliases and functions
 if [ -f ~/.sfdx.conf ]; then
     . ~/.sfdx.conf
-    echo "sfdx.conf sourced!"
+    echo "sourced >> .sfdx.conf"
 fi
 
