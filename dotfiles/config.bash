@@ -14,6 +14,7 @@ alias dotr='cd ~/repos/github/linux/dotfiles/remote; l' #enter and list remote d
 alias sf='cd ~/repos/github/sfdx; l' #enter and list sfdx repo
 alias sfp='cd ~/repos/github/sfdx_projects; l' #enter and list sfdx_projects private repo
 alias sfs='cd ~/repos/github/sfdx/sfdx_scripts; l' #enter and list sfdx scripts
+alias isv='cd ~/repos/github/sfdx_projects/isv; l' #enter isv sfdx project
 alias conf='cd ~/.config; l' #enter and list config files
 ## FILE SHORTCUTS
 alias notes='vim ~/repos/gitlab.com/heiko__b/dotfiles/notes.md' #opens my notes in VIM

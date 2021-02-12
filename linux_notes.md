@@ -266,6 +266,32 @@ echo "some text" >> aa1                                        #redirect #append
 # *dev/null is the nirvana of the shell. It is also called "bit bucket" or "black hole". 
 # https://en.wikipedia.org/wiki/Null_device
 
+##### APT #####
+sudo apt update
+# refreshes the index of what packages are available at which version
+
+sudo apt install tmux -y
+# will install tmux and automatically answer **yes** to questions like additional disk space due to the **-y** option 
+
+sudo apt install tmux htop git
+# will install three application at once
+
+sudo apt remove zathura -y
+# will remove the app zathura without further questions
+
+sudo apt search vim
+# will show all available vim packages like vim-nox, neovim, etc.
+
+sudo apt upgrade
+# updates all packages with updates available 
+# make sure index is up-to-date (sudo apt update) before you upgrade
+
+sudo apt dist-upgrade
+# performs upgrades for apps which require the previous removal or installation of a package
+
+sudo vim /etc/apt/sources.list
+# will open the sources file for apt
+
 ##### CAT #####
 cat notes.txt
 # This would display the content of "notes.txt" in the terminal.
@@ -340,6 +366,7 @@ git push -u origin master
 ### default editor
 sudo update-alternatives --config editor
 ```
+----
 
 ### Wildcards / Expansion
 |Wildcard|Meaning|
