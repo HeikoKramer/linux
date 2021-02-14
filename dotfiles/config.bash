@@ -118,6 +118,28 @@ function path {
 }
 export -f path
 
+# vpnc – vpn connect – will establish a connection to my surfshark-vpn service
+function vpnc {
+  myip; #calls myip script to display current public ip
+  printf "––– old-ip –––\n" | lolcat;
+  sleep 0.25;
+  sudo surfshark-vpn attack;
+  sleep 0.25;
+  printf "––– new-ip –––\n" | lolcat;
+  myip;
+}
+
+# vpnd – vpn disconnect – will disconnect the connection to my surfshark-vpn service
+function vpnd {
+  myip; #calls myip script to display current public ip
+  printf "––– old-ip –––\n" | lolcat;
+  sleep 0.25;
+  sudo surfshark-vpn down;
+  sleep 0.25;
+  printf "––– new-ip –––\n" | lolcat;
+  myip;
+}
+
 neofetch
 
 # source sfdx configuration file
@@ -126,4 +148,3 @@ if [ -f ~/.sfdx.conf ]; then
     . ~/.sfdx.conf
     echo "sourced >> .sfdx.conf"
 fi
-

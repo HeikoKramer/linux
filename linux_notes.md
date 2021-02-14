@@ -1394,7 +1394,20 @@ vboxmanage setextradata "$vm_name" "VBoxInternal2/EfiGraphicsResolution" "2560x1
 
 *commands can also be run individual, screen resolution should be adjusted* <br>
 
+## surfshark vpn
+Download installer from [surfshark.com](https://surfshark.com/download/linux) <br>
+`sudo apt-get install {/path/to/file}` then `sudo  apt-get update` and `sudo apt-get install surfshark-vpn`. <br>
+**surfshark** should be ready to go now, try `sudo surfshark-vpn`. You'll have to enter your credentials. <br>
+`sudo surfshark-vpn help` will show all available command. most important are: <br>
+`sudo surfshark-vpn attack` will connect you to the fastest available vpn server. <br>
+`sudo surfshark-vpn status` will show the connection status of your vpn. <br>
+`sudo surfshark-vpn down` will disconnect you from vpn service. <br>
+I have written two functions **vpnc** and **vpnd** to cannect/disconnect sufshark. <br>
+Those functions can be found in my [bash config](https://github.com/HeikoKramer/linux/blob/main/dotfiles/config.bash). <br>
+They are using the [myip](https://github.com/HeikoKramer/linux/blob/main/scripts/myip) which I've – as I belive – stolen from [rwxrob](https://github.com/rwxrob/) to show the old/new public ip. <br>
+
 
 ## ansible
-### getting started with ansible – prerequisite ssh [LLTV](https://youtu.be/-Q4T9wLsvOQ)
+### getting started with ansible – prerequisite ssh 
+Notes while following the [LLTV](https://youtu.be/-Q4T9wLsvOQ) ansible tutorial series <br>
 `sudo apt install openssh-server` on the remote client 
