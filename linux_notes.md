@@ -1414,7 +1414,7 @@ Those lynx folks are text-savy for sure. <br>
 Typing `lynx` opens a a kind of offensive colored **About Lynx** page, not very inviting, but let's check it out. <br>
 There are atually two files in `cd /etc/lynx/` **lynx.cfg** and **lynx.lss**. <br>
 **config**: `sudo vim /etc/lynx/lynx.cfg` **colors**: `sudo vim /etc/lynx/lynx.lss`. <br>
-Whatched [rob's video on lynx](https://youtu.be/Vdd2MTv6vrs) and just copied his [lynx.lss](https://github.com/rwxrob/dotfiles/blob/master/common/lynx/lynx.lss) – the colors are so much better now! <br>
+Whatched [rob's video on lynx](https://youtu.be/Vdd2MTv6vrs) and just copied his [lynx.lss](https://github.com/rwxrob/dotfiles/blob/master/common/lynx/lynx.lss) – the colors are much better now. <br>
 ### navigation in lynx
 So by default the **arrow keys** are used to navigate. <br>
 <kbd>down</kbd> moves **down/right**, <kbd>up</kbd> moves **up/left**. The cursor jumps from link to link. <br>
@@ -1423,7 +1423,7 @@ So by default the **arrow keys** are used to navigate. <br>
 <kbd>/</kbd> to **search**, <kbd>q</kbd> to **quit**. <br>
 <kbd>o</kbd> the **options** menu is most interesting. Here you can change those settings which are also managed in **lynx.cfg** I guess. <br>
 I've managed to save my changes by checking **Save options to disk** and click <kbd>left</kbd> on **Accept Changes**. <br>
-Colors swapped back to the default after that, but looks my changes were saved. <br>
+Colors swapped back to the default after that, but it looks like my changes were saved. <br>
 I've activated **vim** keybindings and to **auto-accept cookies**. <br>  
 **vim** keybindings have the disadvantage that you start entering jjjjjj and stuff as soon as you hit some entry field. <br>
 
