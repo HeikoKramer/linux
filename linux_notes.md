@@ -1426,7 +1426,9 @@ I've managed to save my changes by checking **Save options to disk** and click <
 Colors swapped back to the default after that, but it looks like my changes were saved. <br>
 I've activated **vim** keybindings and to **auto-accept cookies**. <br>  
 **vim** keybindings have the disadvantage that you start entering jjjjjj and stuff as soon as you hit some entry field. <br>
-
+`lynx https://github.com/HeikoKramer/linux/blob/main/linux_notes.md` brings you to this file on github.com. <br>
+I'm used to edit this file in vim, so browsing it in lynx with that link to link navigation and other colors fiels weird. <br>
+But it is generally good readable. The search works kind of like in **vim**. <br>
 
 ## ansible
 ### getting started with ansible – prerequisite ssh 
