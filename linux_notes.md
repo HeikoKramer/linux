@@ -1359,7 +1359,42 @@ Password Store
 ## zathura
 `sudo apt install zathura` to install **zathura**. <br>
 
+## virtualbox
+Oracle® VirtualBox® [User Manual](https://www.virtualbox.org/manual/UserManual.html) <br>
+**Reboot** after install and add yourself to the **vboxusers** group. <br>
+Using vb is actually quite simple. This [YouTube video](https://youtu.be/D1dVhDYAv9E) gives a good overview. <br>
+I'm using some Mac OS applications which are kind of mandatory for me. So my first virtualbox project was to set up a virtual mac. <br>
+This [tutorial to run a mac on virtualbox](https://blog.victormendonca.com/2020/04/17/how-to-install-macos-catalina-in-virtual-box/) worked well for me. <br>
+The tutorial's script comes with a nice little otion menue and finalises the setup of the virtual mac:  
+
+```sh
+#!/bin/bash
+
+PS3='Please select the VM: '
+n=0
+while read line ; do
+  options[n++]="$line"
+done <<<"$(vboxmanage list vms | awk '{$NF=""; print $0}' | tr -d '"')"
+select opt in "${options[@]}" ; do
+  vm_name="$opt"
+  break
+done
+
+echo "Running updates for \"${vm_name}\" VM"
+
+vboxmanage modifyvm "$vm_name" --cpuidset 00000001 000106e5 00100800 0098e3fd bfebfbff && echo "Changed CPU ID Set" ; sleep .5
+vboxmanage setextradata "$vm_name" "VBoxInternal/Devices/efi/0/Config/DmiSystemProduct" "iMac11,3" && echo "Changed DmiSystemProduct" ; sleep .5
+vboxmanage setextradata "$vm_name" "VBoxInternal/Devices/efi/0/Config/DmiSystemVersion" "1.0" && echo "Changed DmiSystemVersion" ; sleep .5
+vboxmanage setextradata "$vm_name" "VBoxInternal/Devices/efi/0/Config/DmiBoardProduct" "Iloveapple" && echo "Changed DmiBoardProduct" ; sleep .5
+vboxmanage setextradata "$vm_name" "VBoxInternal/Devices/smc/0/Config/DeviceKey" "ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc" && echo "Changed DeviceKey" ; sleep .5
+vboxmanage setextradata "$vm_name" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 1 && echo "Changed GetKeyFromRealSMC" ; sleep .5
+vboxmanage setextradata "$vm_name" "VBoxInternal2/EfiGraphicsResolution" "2560x1440" && echo "Changed resolution to 2560x1440" ; sleep .5
+
+```
+
+*commands can also be run individual, screen resolution should be adjusted* <br>
 
 
-
-
+## ansible
+### getting started with ansible – prerequisite ssh [LLTV](https://youtu.be/-Q4T9wLsvOQ)
+`sudo apt install openssh-server` on the remote client 

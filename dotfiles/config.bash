@@ -28,6 +28,7 @@ alias sfc='vim ~/repos/github/linux/dotfiles/sfdx.conf' #opens sfdx.conf in vim
 alias sshc='vim ~/.ssh/config' #opens ssh config in vim
 alias book='mupdf -I ~/Desktop/TLCL-19.01.pdf' #opens "The Linus Command Line" book in mupdf
 alias muttc='vim ~/.config/mutt/muttrc' #opens (neo)mutt config file in vim
+alias vmac='VBoxManage startvm "VMac"' #starts my virtual mac
 ## TERMINAL COMMAND SHORCUTS
 alias h='history' #shows command history
 alias l='ls -alh --color=always --group-directories-first' #colorised list
