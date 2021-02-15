@@ -38,6 +38,8 @@ alias off='shutdown -h now' #shuts down the system
 alias offr='sudo shutdown -h now' #shuts down a remote system
 alias gs='git status' #shows git status is directory is a repo
 alias mutt='neomutt' #launches neomutt instead of mutt
+alias ?='duck' #calls duck function (duckduckgo search in lynx)
+alias ??='google' #calls google function (google search in lynx)
 ## REMOTE ACCESS SHORTCUTS
 alias pihole='ssh pihole' #connects to pihole raspi
 alias apie='ssh ApplePie' #connects to Mac Mini gaming station
@@ -139,6 +141,18 @@ function vpnd {
   printf "––– new-ip –––\n" | lolcat;
   myip;
 }
+
+# duck – takes user input and performs a duckduckgo search with it in the lynx browser
+function duck {
+  lynx "duckduckgo.com/lite?kd=-1&kp=-1&q=$*";
+}
+export -f duck
+
+# google – takes user input and performs a google search with it in the lynx browser
+function google {
+  lynx "google.com/search?q=$*";
+}
+export -f google
 
 neofetch
 
