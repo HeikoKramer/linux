@@ -1389,7 +1389,6 @@ vboxmanage setextradata "$vm_name" "VBoxInternal/Devices/efi/0/Config/DmiBoardPr
 vboxmanage setextradata "$vm_name" "VBoxInternal/Devices/smc/0/Config/DeviceKey" "ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc" && echo "Changed DeviceKey" ; sleep .5
 vboxmanage setextradata "$vm_name" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 1 && echo "Changed GetKeyFromRealSMC" ; sleep .5
 vboxmanage setextradata "$vm_name" "VBoxInternal2/EfiGraphicsResolution" "2560x1440" && echo "Changed resolution to 2560x1440" ; sleep .5
-
 ```
 
 *commands can also be run individual, screen resolution should be adjusted* <br>
@@ -1421,6 +1420,18 @@ So by default the **arrow keys** are used to navigate. <br>
 <kbd>right</kbd> to **follow a link**. <kbd>left</kbd> to **go back** to the last page. <br>
 <kbd>h</kbd> the lynx **help** is as rich and well documented as everything so far. <br>
 <kbd>/</kbd> to **search**, <kbd>q</kbd> to **quit**. <br>
+By pressing <kbd>q</kbd> only 1x, lynx requires a confirmation to quit with <kbd>y</kbd>. <br>
+<kbd>q</kbd> <kbd>q</kbd> **quits** lynx without further confirmation required. <br>
+<kbd>g</kbd> will open a prompt to enter a URL whre to **go** next. <br>
+<kbd>p</kbd> will open the **print** menu – providing information about the file, such as **Number of lines**. <br>
+Print options are:
+* Save to a local file
+* Mail the file
+* Print to the screen
+* Print out to a printer
+*I'm actually not sure what that print to the screen option is for as the content is already on the screen.* <br>
+<kbd>m</kbd> for **main** is actually quite useful. It doesn't bring you to the default start page which can be specified within lynx.cfg, but to the page where you've started to follow links. <br>
+<kbd>delete</kbd> is supposed to provide a **history list**, but it doesn't. <br>
 <kbd>o</kbd> the **options** menu is most interesting. Here you can change those settings which are also managed in **lynx.cfg** I guess. <br>
 I've managed to save my changes by checking **Save options to disk** and click <kbd>left</kbd> on **Accept Changes**. <br>
 Colors swapped back to the default after that, but it looks like my changes were saved. <br>
@@ -1438,6 +1449,31 @@ I'll leave the colors as copied from rob for now, but that section is worth to c
 There is an interesting selction **ENABLE_LYNXRC** starting at line 3398 in lynx.cfg. <br>
 There you can manage which changes via the **option menue** will be saveable to **.lynxrc**. <br>
 My guess is that **.lynxrc** can overwrite setting from **lynx.cfg**, but that is an assumption. <br>
+### lynx functions
+Inspired by rwxrob's duck and google functions (below), I've created two wiki functions. <br>
+`wikie` searches within the **english** … `wikid` within the **german** wikipedia. <br>
+```sh
+# duck – takes user input and performs a duckduckgo search with it in the lynx browser
+function duck {
+  lynx "duckduckgo.com/lite?kd=-1&kp=-1&q=$*";
+}
+
+# google – takes user input and performs a google search with it in the lynx browser
+function google {
+  lynx "google.com/search?q=$*";
+}
+
+# wikie – takes user input and performs a search within the english wikipedia via lynx
+function wikie {
+  lynx "en.wikipedia.org/wiki/$*";
+}
+
+# wikid – takes user input and performs a search within the german wikipedia via lynx
+function wikid {
+  lynx "de.wikipedia.org/wiki/$*";
+}
+```
+
 
 ## ansible
 ### getting started with ansible – prerequisite ssh 

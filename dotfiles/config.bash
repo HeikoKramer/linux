@@ -154,6 +154,19 @@ function google {
 }
 export -f google
 
+# wikie – takes user input and performs a search within the english wikipedia via lynx
+function wikie {
+  lynx "en.wikipedia.org/wiki/$*";
+}
+export -f wikie
+
+# wikid – takes user input and performs a search within the german wikipedia via lynx
+function wikid {
+  lynx "de.wikipedia.org/wiki/$*";
+}
+export -f wikid
+
+
 neofetch
 
 # source sfdx configuration file
