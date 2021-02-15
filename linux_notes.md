@@ -1411,10 +1411,10 @@ lynx is a text based webrowser. To install lynx type `sudo apt install lynx -y` 
 Check out the lynx config: `vim /etc/lynx/lynx.cfg` <br>
 It has close to 4000 lines and the [official lynx user guide](https://lynx.invisible-island.net/release/lynx_help/Lynx_users_guide.html) also ain't lean … <br>
 Those lynx folks are text-savy for sure. <br>
-Typing `lynx` opens a a kind of offensive colored **About Lynx** page, not very inviting, but let's check it out. <br>
+Typing `lynx` opens a kind of offensive colored **About Lynx** page, not very inviting, but let's check it out. <br>
 There are atually two files in `cd /etc/lynx/` **lynx.cfg** and **lynx.lss**. <br>
 **config**: `sudo vim /etc/lynx/lynx.cfg` **colors**: `sudo vim /etc/lynx/lynx.lss`. <br>
-Whatched [rob's video on lynx](https://youtu.be/Vdd2MTv6vrs) and just copied his [lynx.lss](https://github.com/rwxrob/dotfiles/blob/master/common/lynx/lynx.lss) – the colors are much better now. <br>
+Whatched [rob's video on lynx](https://youtu.be/Vdd2MTv6vrs) and just copied his [lynx.lss](https://github.com/rwxrob/dotfiles/blob/master/common/lynx/lynx.lss) – much better colorscheme, it's readable now. <br>
 ### navigation in lynx
 So by default the **arrow keys** are used to navigate. <br>
 <kbd>down</kbd> moves **down/right**, <kbd>up</kbd> moves **up/left**. The cursor jumps from link to link. <br>
@@ -1429,6 +1429,15 @@ I've activated **vim** keybindings and to **auto-accept cookies**. <br>
 `lynx https://github.com/HeikoKramer/linux/blob/main/linux_notes.md` brings you to this file on github.com. <br>
 I'm used to edit this file in vim, so browsing it in lynx with that link to link navigation and other colors fiels weird. <br>
 But it is generally good readable. The search works kind of like in **vim**. <br>
+The changes made in the **options menu** where not saved to lynx.cfg – but to **~/.lynxrc** <br>
+I have changed some settings in lynx.cfg too .. time will show if there is a conflict between that file and .lynxrc. <br>
+One thing I have not setup yet is the downloader -> starting at line 1752 in lynx.cfg. <br>
+I'd like to setup uGet here, but have to research / try how to do that correctly. <br>
+There is a **COLOR_STYLE** section at line 3019 in lynx.cfg. Looks like you can choose between six color styles there. <br>
+I'll leave the colors as copied from rob for now, but that section is worth to check out later. <br>
+There is an interesting selction **ENABLE_LYNXRC** starting at line 3398 in lynx.cfg. <br>
+There you can manage which changes via the **option menue** will be saveable to **.lynxrc**. <br>
+My guess is that **.lynxrc** can overwrite setting from **lynx.cfg**, but that is an assumption. <br>
 
 ## ansible
 ### getting started with ansible – prerequisite ssh 
