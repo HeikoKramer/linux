@@ -1365,7 +1365,7 @@ Oracle® VirtualBox® [User Manual](https://www.virtualbox.org/manual/UserManual
 Using vb is actually quite simple. This [YouTube video](https://youtu.be/D1dVhDYAv9E) gives a good overview. <br>
 I'm using some Mac OS applications which are kind of mandatory for me. So my first virtualbox project was to set up a virtual mac. <br>
 This [tutorial to run a mac on virtualbox](https://blog.victormendonca.com/2020/04/17/how-to-install-macos-catalina-in-virtual-box/) worked well for me. <br>
-The tutorial's script comes with a nice little otion menue and finalises the setup of the virtual mac:  
+The tutorial's script comes with a nice little otion menue and finalises the setup of the virtual mac: <br>
 
 ```sh
 #!/bin/bash
@@ -1408,8 +1408,7 @@ They are using the [myip](https://github.com/HeikoKramer/linux/blob/main/scripts
 ## lynx
 lynx is a text based webrowser. To install lynx type `sudo apt install lynx -y` <br>.
 Check out the lynx config: `vim /etc/lynx/lynx.cfg` <br>
-It has close to 4000 lines and the [official lynx user guide](https://lynx.invisible-island.net/release/lynx_help/Lynx_users_guide.html) also ain't lean … <br>
-Those lynx folks are text-savy for sure. <br>
+It has close to 4000 lines and the [official lynx user guide](https://lynx.invisible-island.net/release/lynx_help/Lynx_users_guide.html) also ain't lean … those lynx folks are text-savy for sure. <br>
 Typing `lynx` opens a kind of offensive colored **About Lynx** page, not very inviting, but let's check it out. <br>
 There are atually two files in `cd /etc/lynx/` **lynx.cfg** and **lynx.lss**. <br>
 **config**: `sudo vim /etc/lynx/lynx.cfg` **colors**: `sudo vim /etc/lynx/lynx.lss`. <br>
@@ -1429,6 +1428,7 @@ Print options are:
 * Mail the file
 * Print to the screen
 * Print out to a printer
+
 *I'm actually not sure what that print to the screen option is for as the content is already on the screen.* <br>
 <kbd>m</kbd> for **main** is actually quite useful. It doesn't bring you to the default start page which can be specified within lynx.cfg, but to the page where you've started to follow links. <br>
 <kbd>delete</kbd> is supposed to provide a **history list**, but it doesn't. <br>
