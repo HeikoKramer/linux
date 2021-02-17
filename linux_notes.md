@@ -1257,7 +1257,7 @@ I've installed **tmux** for a while now, used it once in a while for updating mu
 But I belive I'm usind it pretty basic and there is much more power behind it. <br>
 So I'm watching the tmux series from [LernLinuxTV](https://youtu.be/gmjyMxezIWU) as the channel has gernerally the best beginner tutorials in my opinion. <br>
 <br>
-**NOTE**: I'm using rwxrob's tmux config so the keybindings differ from the originals to match an application called screen. <br>
+**NOTE**: I'm using [rwxrob's](https://github.com/rwxrob) tmux config so the keybindings differ from the originals to match an application called screen. <br>
 So if someone reads this .. <kbd>CTRL</kbd> <kbd>b</kbd> is the original prefix to initiated tmux commands but I'm using <kbd>CTRL</kbd> <kbd>a</kbd>. <br>
 Other key bindings are changed as well in the [rwxrob-style config](https://github.com/HeikoKramer/linux/blob/main/dotfiles/tmux.conf), but check it out for yourself. <br>
 <br>
