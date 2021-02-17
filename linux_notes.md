@@ -1246,6 +1246,9 @@ If you have a code block of **bash** in your document, and you want to see the o
 <kbd>!</kbd> <kbd>!</kbd> to enter a mode in which Vim accepts any command / function as input and writes its output at the cursors position. <br>
 *Functions should be exported to be available in Vim!* <br>
 
+### misc
+`:set cuc` activates vim's **cursor column** – a vertical line indicator for the cursor position. <br>
+
 ----
 
 ## TMUX (rwxrob config)
