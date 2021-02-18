@@ -1248,6 +1248,28 @@ If you have a code block of **bash** in your document, and you want to see the o
 
 ### misc
 `:set cuc` activates vim's **cursor column** – a vertical line indicator for the cursor position. <br>
+Interesting on VimTricks: [Operate until pattern](https://vimtricks.com/p/vimtrick-operate-until-pattern/) <br>
+To try out those methods I've created a test file repeting the sentence: <br>
+```sh
+This is a text test to test some vim stuff 12345 blablabla great test file.
+```
+
+**until single character**
+So `dtt` deletes everything in the line until the first **t**:<br>
+*text test to test some vim stuff 12345 blablabla great test file.* <br>
+`ctt` does the same, but leaves you in **insert** mode before the word test.<br>
+`yt1` copys everything until the first **1**. So with our sentence <kbd>p</kbd> gives you: <br>
+*This is a text test to test some vim stuff* <br>
+<br>
+**until pattern**
+`d/test` <kbd>enter</kbd> delets everything until the first **test**: <br>
+*test to test some vim stuff 12345 blablabla great test file.* <br>
+`c/test some` <kbd>enter</kbd> delets everything until the **test some** and leaves you in **insert** mode before **test**: <br>
+*test some vim stuff 12345 blablabla great test file.* <br>
+So in this example we have skipped the first **test** by given the command the pattern of the second **test** which is followed by **some**. <br>
+To write out **some** is not really necessary, `c/test s` <kbd>enter</kbd> would do the job just as well. <br>
+`y/stuff` <kbd>enter</kbd> copies everything untill **stuff**: <br>
+*This is a text test to test some vim* <br>
 
 ----
 
