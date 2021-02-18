@@ -1294,7 +1294,20 @@ You can also type `exit` to kill a pane – that way no confirmation is required
 The **arrow keys** can as well be used to navigate between keys, so <kbd>CTRL</kbd> <kbd>a</kbd> and then <kbd>left</kbd> <kbd>right</kbd> <kbd>up</kbd> <kbd>down</kbd> will move you in the direction you're pressing. <br>
 <kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>z</kbd> will **zoom** into a pane. Means it will open fullscreen without exiting from the other panes. <br>
 <kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>z</kbd> again will zoom out and bring back the other panes. <br>
-
+### windows
+<kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>c</kbd> to **create** a new window. <br>
+*New window doesn't mean new separate window, more an additional instance within the same window.* <br>
+*The content of the window where you sterted the command will disappear and you'll look at a fresh shell. <br>*
+<kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>p</kbd> to move back to the **previous** window. <br>
+<kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>n</kbd> to move back to the **next** window. <br>
+*It doesn't actually matter which command you use if you've only two windows open* <br>
+Each window has gets a number, visible in the statusbar. The \* indicates on which window you're looking at. <br>
+You can navigate to a specific window with <kbd>CTRL</kbd> <kbd>a</kbd> then that window's number. <br> 
+<kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>&</kbd> to **kill** a window. <br> 
+**exit** <kbd>enter</kbd> will much easier to type but has the same effect. <br>
+You can rename a window by typing <kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>,</kbd>. <br>
+<kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>f</kbd> to **find** a window. <br>
+*Shows a list tree of all open windows and panes and you can brows through it to preview their content.*
 
 [tmux cheat sheet](https://tmuxcheatsheet.com/) <br>
 
