@@ -1308,13 +1308,51 @@ You can navigate to a specific window with <kbd>CTRL</kbd> <kbd>a</kbd> then tha
 You can rename a window by typing <kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>,</kbd>. <br>
 <kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>f</kbd> to **find** a window. <br>
 *Shows a list tree of all open windows and panes and you can brows through it to preview their content.*
+### sessions
+<kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>d</kbd> **detaches** session and brings you out of tmux. <br>
+`tmux a` to get back to the session. This works well if you have only one session opened. <br>
+But you can have multiple tmux sessions running simultaniously. <br>
+```sh
+$ ps aux | grep tmux
+heiko       2423  0.6  0.0  10700  4124 ?        Ss   07:35   0:02 tmux
+heiko       4655  0.0  0.0   9376   728 pts/1    S+   07:43   0:00 grep --color=auto tmux
+```
+The **ps aux** command is one way to show those sessions. A better way though is **tmux list-sessions**: <br>
+```sh
+$ tmux list-sessions
+0: 1 windows (created Fri Feb 19 07:35:26 2021)
+1: 1 windows (created Fri Feb 19 07:42:46 2021)
+```
+You don't have to be in tmux to use that command. It can be used from an other terminal window and work just fine. <br>
+`tmux a -t 0` brings you back to the session with index **0**, `tmux a -t 1` to session **1**. <br>
+More comfortable as remembering the session index is to name a session. <br>
+To do so enter the session you want to rename and type <kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>$</kbd> and enter the name in the panel. <br>
+I've split one session in horizontal, one in vertical panes to see if the switching works, so I named them vertical and horizontal: <br>
+```sh
+$ tmux list-sessions
+horizontal: 1 windows (created Fri Feb 19 07:42:46 2021)
+vertical: 1 windows (created Fri Feb 19 07:35:26 2021)
+```
+**NOTE:** You can use spaces in the name, like **horizontal split** but you'll get an error if you try `tmux a -t horizontal split`. <br>
+The first word of the name will bring you to that session `tmux a -t horizontal`, but spaces are generally a bad ides here. <br>
+A simple, short name makes sense at this point, as tab-completion doesn't work with the `tmux a -t` command. <br>
+Hm … maybe a space is not that bad after all … if you name a session **1 horizontal** you'd had an index plus name and could do just `tmux a -t 1`. <br>
+You can name a session directly when you open it with `tmux new -s "dev"` <br>
+```sh
+$ tmux ls
+dev: 1 windows (created Fri Feb 19 08:17:09 2021)
+horizontal: 1 windows (created Fri Feb 19 07:42:46 2021)
+vertical: 1 windows (created Fri Feb 19 07:35:26 2021)
+```
+See that? `tmux ls` is the short command for `tmux list-sessions`. <br> 
+To list all the sessions in tmux, type <kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>s</kbd>. <br>
+This is probably the most comfortable way to browse your sessions as you can navigate through them with the arrow keys and tmux even displays a little preview of the session. <br>
+<kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>w</kbd> is maybe even better, as it shows all sessions plus their open **windows**. <br>
 
 [tmux cheat sheet](https://tmuxcheatsheet.com/) <br>
 
-<kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>d</kbd> – detached, the session is ended. <br>
-<kbd>CTRL</kbd> <kbd>a</kbd> then <kbd>w</kbd> will show all windows. <br>
-
 ----
+
 
 ## MUTT
 Mutt is a terminal email client. <br>
