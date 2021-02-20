@@ -99,6 +99,7 @@ function newremote {
 function upgr {
 	sudo apt update -y;
 	sudo apt upgrade -y;
+  refresh;
 }
 
 # octal will show octal permission scheme for chmod command
