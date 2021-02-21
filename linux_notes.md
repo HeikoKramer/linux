@@ -174,6 +174,12 @@ cd                         # takes you back into the home  directory
 cd -                       # takes you back into the last directory
 cd ..                      # takes you one  director up
 
+pwd                        # print working directory
+
+realpath Mastering_Vim_Quickly_v1.1.pdf
+# prints full path of the file "Mastering_Vim_Quickly_v1.1.pdf":
+/home/heiko/books/mastering_vim/book/Mastering_Vim_Quickly_v1.1.pdf
+
 mv 8ball eightball         # renames the file 8ball to eightball within same directory
 mv eightball somedir/      # moves the eightball file to the somedir directory
 # IMPORTANT: Get into the habbit to always use a / when moving a file into a directory!
