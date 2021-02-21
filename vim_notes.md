@@ -143,6 +143,12 @@ The command promt looks a bit different in **visual** mode, the above will apper
 Outputs of external commands can be inserted as well, example: `:r !ls`. <br>
 <kbd>v</kbd> for **visual** mode and then <kbd>y</kbd> will copy all marked text. <br>
 If `:e` is entered - or any other first letter - and <kbd>CTRL</kbd> + <kbd>d</kbd> is pressed the all command starting wit **e** will show. <br>
+### Visual Block
+If you have some table-like formated text/code with vertical aligned strings of identical size, you can use **visual block** to edit them simultaniously. <br>
+Bring the cursor to the first entry you'd like to edit, press <kbd>CTRL</kbd> <kbd>v</kbd> to enter **visual block** mode. <br>
+Press <kbd>l</kbd> till the string is fully selected, then start pressing <kbd>j</kbd> to mark the the same areal in as many lines below as you like. <br>
+When all lines are selected press <kbd>c</kbd> to **change**, enter the new text, press <kbd>ESC</kbd> and that change will aply to all selected lines. <br>
+This method works as well with <kbd>d</kbd> for **delete** or <kbd>y</kbd> for **yank**. <br>
 
 ## Executing Code in Vim
 <kbd>:</kbd> then `read !echo "Hello"` would print "Hello" at the cursors position. <br>
