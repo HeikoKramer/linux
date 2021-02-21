@@ -173,7 +173,6 @@ export -f wikid
 
 ## autostart apps
 neofetch
-tmux
 
 # source sfdx configuration file
 # check out sfdx.conf so see all sfdx related aliases and functions

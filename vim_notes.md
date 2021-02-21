@@ -1,25 +1,31 @@
 # VIM
 
+## Installing Vim
+`sudo apt install vim` on Debian based Linux distros, `brew install vim` on Mac OS. <br>
+
+## Starting Vim
+`vim example.md` will open example.md
+
 ## the dot
 <kbd>.</kbd> will repeat the last used command. So if you typed <kbd>d</kbd> <kbd>w</kbd> to delted a word, you only need to press <kbd>.</kbd> to continue deleting word by word. <br>
 The dot can also be used to repeat more complex operations like the change of a word: <br>
-If you press <kbd>c</kbd> <kbd>e</kbd> on the word "bank" and replace it with "financial institution", then exit insert mode with <kbd>ESC</kbd> and press <kbd>n</kbd>, your cursor will jumt to the next appearence of the word "bank". A press on <kbd>.</kbd> will then repeat  the change and replace it with "financial institution". That way you can jump from "bank" to   "bank" by pressing <kbd>n</kbd> and change those where it is required. <br>
+If you press <kbd>c</kbd> <kbd>e</kbd> on the word "bank" and replace it with "financial institution", then exit insert mode with <kbd>ESC</kbd> and press <kbd>n</kbd>, your cursor will jumt to the next appearence of the word "bank". A press on <kbd>.</kbd> will then repeat the change and replace it with "financial institution". That way you can jump from "bank" to "bank" by pressing <kbd>n</kbd> and change those where it is required. <br>
 To out-commend a line of bash code, press <kbd>0</kbd> <kbd>i</kbd> <kbd>#</kbd> – this can be repeated at each following line to quickly commend a block of text. <br>
 
-## VIM config
-The line **au bufnewfile,bufRead *filename* set filetype=sh** added in VIM config will make vim interprete the file *filename* as a bash file. <br>
+## Vim config
+The line **au bufnewfile,bufRead *filename* set filetype=sh** added in Vim config will make vim interprete the file *filename* as a bash file. <br>
 `:set nu` show line numbers in vim. `set nonu` hides them. <br>
 `:so %` reloads the file without closing it (to source a file) <br>
 `:set list` shows you spaces tabs and stuff. `:set nolist` to turn it off. <br>
 `:set cursorline` or `:set cul` to show a line under current cursor position. `nocursorline` or `nocul` to switch it off. <br>
 
-## VIM ressources
+## Vim ressources
 **vimtutor** command to open an in vim integrated tutorial <br>
 https://rwx.gg/vi-magic-wands/ <br>
 https://vimgenius.com <br>
 https://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/ <br>
 
-## Navigation in VIM
+## Navigation in Vim
 To move the cursor use the h,j,k,l keys in the middle of the keyboard. <br>
 <kbd>k</kbd> The k key moves up. <br>
 <kbd>j</kbd> The j key moves down. <br>
@@ -28,7 +34,7 @@ To move the cursor use the h,j,k,l keys in the middle of the keyboard. <br>
 <kbd>0</kbd> then <kbd>ENTER</kbd> will bring you to the start of the line. <br>
 <kbd>$</kbd> then <kbd>ENTER</kbd> will bring you to the end of the line. <br>
 A number then <kbd>w</kbd> will jump number of words forward (2w wil jum two word). <br>
-<kbd>3</kbd> then <kbd>e</kbd> will jump to the end of the third word from where the curso     are. <br>
+<kbd>3</kbd> then <kbd>e</kbd> will jump to the end of the third word from where the curso are. <br>
 <kbd>CTRL</kbd> <kbd>g</kbd> will show your position in the document. <br>
 Jump to document start by typing <kbd>g</kbd> <kbd>g</kbd>. <br>
 Type <kbd>G</kbd> to jump to to the file bottom. <br>
@@ -36,19 +42,19 @@ Type <kbd>G</kbd> to jump to to the file bottom. <br>
 <kbd>4</kbd> <kbd>2</kbd> <kbd>G</kbd> will bring you to line 42. <br>
 <kbd>4</kbd> <kbd>2</kbd> <kbd>g</kbd> <kbd>g</kbd> will bring you to line 42. <br>
 <kbd>:</kbd> <kbd>4</kbd> <kbd>2</kbd> will bring you to line 42. <br>
-<kbd>g</kbd> <kbd>j</kbd> moves down to a blank line (only <kbd>j</kbd> skipps those lines).   <br>
+<kbd>g</kbd> <kbd>j</kbd> moves down to a blank line (only <kbd>j</kbd> skipps those lines). <br>
 Capital <kbd>W</kbd> and <kbd>B</kbd> move you word by word - but don't count brackets and stuff as words like <kbd>w</kbd> and <kbd>b</kbd> do. <br>
 <kbd>f</kbd> + letter takes you to the next appearance of that letter in this line. <br>
 <kbd>F</kbd> + letter takes you to the last appearance of that letter in this line. <br>
 <kbd>CTRL</kbd> <kbd>f</kbd> for page down. <kbd>CTRL</kbd> <kbd>b</kbd> for page up. <br>
 
-## Exiting VIM
-VIM has different modes in which it is operating. <br>
+## Exiting Vim
+Vim has different modes in which it is operating. <br>
 To ensure you're in the **Normal** mode - from which you can exit - press <kbd>ESC</kbd> <br>
-Type <kbd>:</kbd> then <kbd>q</kbd> then <kbd>!</kbd> and hit <kbd>ENTER</kbd> to exit VIM without saving. <br>
+Type <kbd>:</kbd> then <kbd>q</kbd> then <kbd>!</kbd> and hit <kbd>ENTER</kbd> to exit Vim without saving. <br>
 Type <kbd>:</kbd> then <kbd>w</kbd> then <kbd>q</kbd> and hit <kbd>ENTER</kbd> to save and exit. <br>
 Type <kbd>:</kbd> then <kbd>w</kbd> and hit <kbd>ENTER</kbd> to save without exiting. <br>
-<kbd>Z</kbd> <kbd>Z</kbd> is a way to quit VIM from **normal** mode with saving the file. <br>
+<kbd>Z</kbd> <kbd>Z</kbd> is a way to quit Vim from **normal** mode with saving the file. <br>
 
 ## Delete
 Press <kbd>x</kbd> in **Normal** mode to delete the character under the cursor. <br>
@@ -57,7 +63,7 @@ The <kbd>e</kbd> instead of the <kbd>w</kbd> to leave the space after the word. 
 Press <kbd>d</kbd> then <kbd>$</kbd> then <kbd>ENTER</kbd> to delete from where your cursor is to the end of the line. <br>
 <kbd>d</kbd> <kbd>d</kbd> deletes the whole line. <br>
 <kbd>3</kbd> <kbd>d</kbd> <kbd>d</kbd> deletes three lines. <br>
-<kbd>d</kbd> <kbd>3</kbd> <kbd>w</kbd> will delte the word under the cursor plus the next two  words. <br>
+<kbd>d</kbd> <kbd>3</kbd> <kbd>w</kbd> will delte the word under the cursor plus the next two words. <br>
 <kbd>3</kbd> <kbd>d</kbd> <kbd>d</kbd> deletes the line where cursor is plus the next two lines. <br>
 <kbd>D</kbd> deletes from cursor position to the end of the line. <kbd>d</kbd> <kbd>$</kbd> does the same. <br>
 When you're in line 15 ant type <kbd>d</kbd> <kbd>:</kbd> <kbd>3</kbd> <kbd>0</kbd> <kbd>ENTER</kbd> 15 lines (15-30) will be deleted. <br>
@@ -75,7 +81,7 @@ There is no ctrl+x style cut and paste in Vim --> because it keeps the last dele
 ## Insert mode text editing
 Press <kbd>a</kbd> in **Normal** mode to start appending letters where you are. <br>
 Press <kbd>A</kbd> in **Normal** mode to start appending at the end of the line. <br>
-<kbd>c</kbd> <kbd>e</kbd> will delete from where the cursor is to the end of the word and put  you in **insert** mode. <br>
+<kbd>c</kbd> <kbd>e</kbd> will delete from where the cursor is to the end of the word and put you in **insert** mode. <br>
 <kbd>c</kbd> <kbd>$</kbd> will delete everything from where the cursor is to the end of the line and put you in insert mode. <br>
 <kbd>2</kbd> <kbd>c</kbd> <kbd>c</kbd> will delete the two lines after the cursor and put you in insert mode. <br>
 <kbd>o</kbd> will open a new line below the cursor and put you in **insert** mode. <br>
@@ -91,13 +97,13 @@ Use <kbd>e</kbd> in combination with <kbd>a</kbd> to jump to last letter before 
 while <kbd>U</kbd> will undo all changes on the last edited line. <br>
 <kbd>CTRL</kbd> + <kbd>r</kbd> redos the chages if you undid something by mistake. <br>
 Redo doesn't work after capital <kbd>U</kbd>. <br>
-<kbd>R</kbd> will enter **replace** mode where you can override everything under the cursor.   <br>
+<kbd>R</kbd> will enter **replace** mode where you can override everything under the cursor. <br>
 <kbd>5</kbd> <kbd>u</kbd> will undo the last five operations. <br>
 
 ## Search
 To search for type <kbd>/</kbd> then any phrase then <kbd>ENTER</kbd>. <br>
 <kbd>n</kbd> jumps down to the next search hit, <kbd>N</kbd> jumps up. <br>
-You can start a search with <kbd>?</kbd> as well -> <kbd>n</kbd> and <kbd>N</kbd> move in the  opposite direction then. <br>
+You can start a search with <kbd>?</kbd> as well -> <kbd>n</kbd> and <kbd>N</kbd> move in the opposite direction then. <br>
 <kbd>CTRL</kbd> <kbd>o</kbd> will bring you back to where you started the search. <br>
 <kbd>CTRL</kbd> <kbd>i</kbd> will jump back to next cursor position. <br>
 `:set ic` will ignore case sensitivity. <br>
@@ -107,7 +113,7 @@ If you want to ignore case sensitivity for just one search type `/ignore\c`. <br
 `:nohlsearch` will deactivate it. <br> `:no` + command will disable all `:set` commands. <br>
 
 ## Replace
-`:s/thee/the` will replace the firtst thee in the line  with the. <br>
+`:s/thee/the` will replace the firtst thee in the line with the. <br>
 `:s/thee/the/g` will replace all thee in the line. <br>
 `:%s/thee/the/g` will replace all thee in the file. <br>
 `:%s/thee/the/gc` finds all thee in the file and gives options replace y/n <br>
@@ -119,7 +125,7 @@ If you want to ignore case sensitivity for just one search type `/ignore\c`. <br
 <kbd>5</kbd> <kbd>\></kbd> <kbd>\></kbd> to indent five lines from the cursors position. <br>
 
 ## Command & Visual mode
-<kbd>:</kbd> <kbd>!</kbd> will set VIM in the mode to execute any external command. <br>
+<kbd>:</kbd> <kbd>!</kbd> will set Vim in the mode to execute any external command. <br>
 `:!ls` will for example show a list of the current directory. <br>
 `:w filename` will save a copy of the edited file with name *filename*. <br>
 <kbd>v</kbd> brings you in **visual** mode. All moves you make in visual mode mark the text you're passing by. <br>
@@ -139,7 +145,7 @@ If you have a code block of **bash** in your document, and you want to see the o
 ## Case folding
 <kbd>~</kbd> in **normal** mode changes the case of the letter under the cursor. <br>
 
-## VIM tricks – magic wand
+## Vim tricks – magic wand
 <kbd>!</kbd> <kbd>!</kbd> to enter a mode in which Vim accepts any command / function as input and writes its output at the cursors position. <br>
 *Functions should be exported to be available in Vim!* <br>
 
