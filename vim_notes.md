@@ -4,7 +4,12 @@
 `sudo apt install vim` on Debian based Linux distros, `brew install vim` on Mac OS. <br>
 
 ## Starting Vim
-`vim example.md` will open example.md
+`vim example.md` will open example.md positioning the cursor at the start of the file. <br>
+Not in my case as I have `au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif` added to  my **.vimrc**. <br>
+That line in Vim's config file will ensure Vim opens each file with the cursor positioned at the last edited line. <br>
+`vim example.md +33` will open example.md with cursor positioned at line 33. `vim +33 example.md` works as well.<br>
+`vim +/Pinguine example.md` opens example.md at the first appearance of the pattern **Pinguine**. <br>
+It's functioning like a regular search, so pressing the <kbd>n</kbd> key will jump to the next pattern-match. <br>
 
 ## the dot
 <kbd>.</kbd> will repeat the last used command. So if you typed <kbd>d</kbd> <kbd>w</kbd> to delted a word, you only need to press <kbd>.</kbd> to continue deleting word by word. <br>
