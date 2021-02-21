@@ -28,7 +28,8 @@ alias bashc='vim ~/repos/github/linux/dotfiles/config.bash' #opens bashconfig in
 alias vimrc='vim ~/repos/github/linux/dotfiles/vimrc' #opens vimrc in vim
 alias sfc='vim ~/repos/github/linux/dotfiles/sfdx.conf' #opens sfdx.conf in vim
 alias sshc='vim ~/.ssh/config' #opens ssh config in vim
-alias book='mupdf -I ~/Desktop/TLCL-19.01.pdf' #opens "The Linus Command Line" book in mupdf
+alias book='mupdf -I ~/books/TLCL-19.01.pdf' #opens "The Linus Command Line" book in mupdf
+alias vimb='mupdf -I ~/books/mastering_vim/book/Mastering_Vim_Quickly_v1.1.pdf' #opens vim book in mupdf
 alias muttc='vim ~/.config/mutt/muttrc' #opens (neo)mutt config file in vim
 alias vmac='VBoxManage startvm "VMac"' #starts my virtual mac
 ## TERMINAL COMMAND SHORCUTS
