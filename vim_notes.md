@@ -13,7 +13,7 @@ It's functioning like a regular search, so pressing the <kbd>n</kbd> key will ju
 `vim example.md +"152d|x"` will delete line 152 of example.md and close the file before you even realize it has been opened. <br>
 `vim example.md +"152d"` will delete line 152 and leave the file open. <kbd>u</kbd> to undo the delition will work in that case.<br>
 
-## Commands
+## Command types
 There are three types of commands in vim: <br>
 **Ex commands** like `:set nonu` to deactivate line numbers or `:set nu` to switch them back on again. <br>
 `:help ex-cmd-index` will show the entire list of ex commands. <br>
@@ -21,7 +21,60 @@ There are three types of commands in vim: <br>
 Those commands are usually added to your **.vimrc** file. <br>
 **Editing Commands** are usually used in **normal** or **insert** mode – like `d4w` to *delete four words*. <br>
 
-## the dot
+## Opening files
+`vim filename` to open the file *filename* in vim. <br>
+`vim` to open vim and then `:e filename` to open *filename* from vim. <br> 
+
+## Close & save files / exiting Vim
+Vim has different modes in which it is operating. <br>
+To ensure you're in the **normal** mode – from which you can exit – press <kbd>ESC</kbd> <br>
+Type <kbd>:</kbd> then <kbd>q</kbd> then <kbd>!</kbd> and hit <kbd>ENTER</kbd> to exit Vim without saving. <br>
+Type <kbd>:</kbd> then <kbd>w</kbd> then <kbd>q</kbd> and hit <kbd>ENTER</kbd> to save and exit. <br>
+Type <kbd>:</kbd> then <kbd>w</kbd> and hit <kbd>ENTER</kbd> to save without exiting. <br>
+`:w example.md` to save file as example.md – `:w! example.md` to overwrite if example.md already exists. <br>
+Type <kbd>:</kbd> then <kbd>x</kbd> and hit <kbd>ENTER</kbd> to leave vim and save (only if file has been changed). <br>
+<kbd>Z</kbd> <kbd>Z</kbd> is another way to quit Vim from **normal** mode with saving the file. <br>
+
+## Navigation in Vim
+To move the cursor use the h,j,k,l keys in the middle of the keyboard. <br>
+<kbd>k</kbd> The k key moves up. <br>
+<kbd>j</kbd> The j key moves down. <br>
+<kbd>h</kbd> The h key moves left. <br>
+<kbd>l</kbd> The l key moves right. <br>
+<kbd>0</kbd> then <kbd>ENTER</kbd> will bring you to the start of the line. <br>
+<kbd>$</kbd> then <kbd>ENTER</kbd> will bring you to the end of the line. <br>
+<kbd>}</kbd> then <kbd>ENTER</kbd> will bring you to the next empty line. <br>
+A number then <kbd>w</kbd> will jump number of words forward (2w will jump two words). <br>
+<kbd>3</kbd> then <kbd>e</kbd> will jump to the end of the third word from where the cursor is. <br>
+<kbd>CTRL</kbd> <kbd>g</kbd> will show your position in the document. <br>
+Jump to document start by typing <kbd>g</kbd> <kbd>g</kbd>. <br>
+Type <kbd>G</kbd> to jump to to the file bottom. <br>
+<kbd>%</kbd> over any kind of bracket will flip cursor to the matching part. <br>
+<kbd>4</kbd> <kbd>2</kbd> <kbd>G</kbd> will bring you to line 42. <br>
+<kbd>4</kbd> <kbd>2</kbd> <kbd>g</kbd> <kbd>g</kbd> will bring you to line 42. <br>
+<kbd>:</kbd> <kbd>4</kbd> <kbd>2</kbd> will bring you to line 42. <br>
+<kbd>g</kbd> <kbd>j</kbd> moves down to a blank line (only <kbd>j</kbd> skipps those lines). <br>
+Capital <kbd>W</kbd> and <kbd>B</kbd> move you word by word - but don't count brackets and stuff as words like <kbd>w</kbd> and <kbd>b</kbd> do. <br>
+<kbd>f</kbd> + letter takes you to the next appearance of that letter in this line. <br>
+<kbd>F</kbd> + letter takes you to the last appearance of that letter in this line. <br>
+<kbd>CTRL</kbd> <kbd>f</kbd> for page down. <kbd>CTRL</kbd> <kbd>b</kbd> for page up. <br>
+
+## The read command
+When we want to get content from an other file into our currently open file, we are **loading it into Vim's buffer**. <br>
+A command to do that is the **read** command – `:read` or the short form `:r`. <br>
+`:r example.md` will insert full content of example.md below the cursor. <br>
+`:30r example.md` will insert full content of example.md below line 30. <br>
+`:0r example.md` will insert full content of example.md before line 1. <br>
+`:31r!sed -n 56,62p ~/test/example.md` will combine **read** and **sed** to insert line 56-62 from example.md below line 31 in current buffer. <br>
+You can load any command output into buffer that way: `r!ls ~/test` to list files from the text directory or `r!man man` to load the whole *man* manpage. <br> 
+<kbd>:</kbd> then `read !echo "Hello"` would print "Hello" at the cursors position. <br>
+Or <kbd>:</kbd> `read !ps aux` would paste a list of running processes into the file. <br>
+*This doesn't only work with standard commands, but also with any executable or exported functions.* <br>
+
+## Executing Code in Vim
+If you have a code block of **bash** in your document, and you want to see the outcome of it, press <kbd>!</kbd> <kbd>}</kbd>. It get's translated into an x-command and when you now typ "bash" and hit <kbd>ENTER</kbd>, the code block will get replaced with its actual output. <br>
+
+## The Dot
 <kbd>.</kbd> will repeat the last used command. So if you typed <kbd>d</kbd> <kbd>w</kbd> to delted a word, you only need to press <kbd>.</kbd> to continue deleting word by word. <br>
 The dot can also be used to repeat more complex operations like the change of a word: <br>
 If you press <kbd>c</kbd> <kbd>e</kbd> on the word "bank" and replace it with "financial institution", then exit insert mode with <kbd>ESC</kbd> and press <kbd>n</kbd>, your cursor will jumt to the next appearence of the word "bank". A press on <kbd>.</kbd> will then repeat the change and replace it with "financial institution". That way you can jump from "bank" to "bank" by pressing <kbd>n</kbd> and change those where it is required. <br>
@@ -39,37 +92,6 @@ The line **au bufnewfile,bufRead *filename* set filetype=sh** added in Vim confi
 https://rwx.gg/vi-magic-wands/ <br>
 https://vimgenius.com <br>
 https://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/ <br>
-
-## Navigation in Vim
-To move the cursor use the h,j,k,l keys in the middle of the keyboard. <br>
-<kbd>k</kbd> The k key moves up. <br>
-<kbd>j</kbd> The j key moves down. <br>
-<kbd>h</kbd> The h key moves left. <br>
-<kbd>l</kbd> The l key moves right. <br>
-<kbd>0</kbd> then <kbd>ENTER</kbd> will bring you to the start of the line. <br>
-<kbd>$</kbd> then <kbd>ENTER</kbd> will bring you to the end of the line. <br>
-A number then <kbd>w</kbd> will jump number of words forward (2w wil jum two word). <br>
-<kbd>3</kbd> then <kbd>e</kbd> will jump to the end of the third word from where the curso are. <br>
-<kbd>CTRL</kbd> <kbd>g</kbd> will show your position in the document. <br>
-Jump to document start by typing <kbd>g</kbd> <kbd>g</kbd>. <br>
-Type <kbd>G</kbd> to jump to to the file bottom. <br>
-<kbd>%</kbd> over any kind of bracket will flip cursor to the matching part. <br>
-<kbd>4</kbd> <kbd>2</kbd> <kbd>G</kbd> will bring you to line 42. <br>
-<kbd>4</kbd> <kbd>2</kbd> <kbd>g</kbd> <kbd>g</kbd> will bring you to line 42. <br>
-<kbd>:</kbd> <kbd>4</kbd> <kbd>2</kbd> will bring you to line 42. <br>
-<kbd>g</kbd> <kbd>j</kbd> moves down to a blank line (only <kbd>j</kbd> skipps those lines). <br>
-Capital <kbd>W</kbd> and <kbd>B</kbd> move you word by word - but don't count brackets and stuff as words like <kbd>w</kbd> and <kbd>b</kbd> do. <br>
-<kbd>f</kbd> + letter takes you to the next appearance of that letter in this line. <br>
-<kbd>F</kbd> + letter takes you to the last appearance of that letter in this line. <br>
-<kbd>CTRL</kbd> <kbd>f</kbd> for page down. <kbd>CTRL</kbd> <kbd>b</kbd> for page up. <br>
-
-## Exiting Vim
-Vim has different modes in which it is operating. <br>
-To ensure you're in the **Normal** mode - from which you can exit - press <kbd>ESC</kbd> <br>
-Type <kbd>:</kbd> then <kbd>q</kbd> then <kbd>!</kbd> and hit <kbd>ENTER</kbd> to exit Vim without saving. <br>
-Type <kbd>:</kbd> then <kbd>w</kbd> then <kbd>q</kbd> and hit <kbd>ENTER</kbd> to save and exit. <br>
-Type <kbd>:</kbd> then <kbd>w</kbd> and hit <kbd>ENTER</kbd> to save without exiting. <br>
-<kbd>Z</kbd> <kbd>Z</kbd> is a way to quit Vim from **normal** mode with saving the file. <br>
 
 ## Delete
 Press <kbd>x</kbd> in **Normal** mode to delete the character under the cursor. <br>
@@ -157,11 +179,6 @@ Bring the cursor to the first entry you'd like to edit, press <kbd>CTRL</kbd> <k
 Press <kbd>l</kbd> till the string is fully selected, then start pressing <kbd>j</kbd> to mark the the same areal in as many lines below as you like. <br>
 When all lines are selected press <kbd>c</kbd> to **change**, enter the new text, press <kbd>ESC</kbd> and that change will aply to all selected lines. <br>
 This method works as well with <kbd>d</kbd> for **delete** or <kbd>y</kbd> for **yank**. <br>
-
-## Executing Code in Vim
-<kbd>:</kbd> then `read !echo "Hello"` would print "Hello" at the cursors position. <br>
-Or <kbd>:</kbd> `read !ps aux` would paste a list of running processes into the file. <br>
-If you have a code block of **bash** in your document, and you want to see the outcome of it, press <kbd>!</kbd> <kbd>}</kbd>. It get's translated into an x-command and when you now typ "bash" and hit <kbd>ENTER</kbd>, the code block will get replaced with its actual output. <br>
 
 ## Case folding
 <kbd>~</kbd> in **normal** mode changes the case of the letter under the cursor. <br>
