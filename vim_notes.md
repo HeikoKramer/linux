@@ -13,6 +13,14 @@ It's functioning like a regular search, so pressing the <kbd>n</kbd> key will ju
 `vim example.md +"152d|x"` will delete line 152 of example.md and close the file before you even realize it has been opened. <br>
 `vim example.md +"152d"` will delete line 152 and leave the file open. <kbd>u</kbd> to undo the delition will work in that case.<br>
 
+## Commands
+There are three types of commands in vim: <br>
+**Ex commands** like `:set nonu` to deactivate line numbers or `:set nu` to switch them back on again. <br>
+`:help ex-cmd-index` will show the entire list of ex commands. <br>
+**Mapped commands** are more complex commands which are mapped ore bind to keys for easier access. <br>
+Those commands are usually added to your **.vimrc** file. <br>
+**Editing Commands** are usually used in **normal** or **insert** mode – like `d4w` to *delete four words*. <br>
+
 ## the dot
 <kbd>.</kbd> will repeat the last used command. So if you typed <kbd>d</kbd> <kbd>w</kbd> to delted a word, you only need to press <kbd>.</kbd> to continue deleting word by word. <br>
 The dot can also be used to repeat more complex operations like the change of a word: <br>
