@@ -41,14 +41,18 @@ To move the cursor use the h,j,k,l keys in the middle of the keyboard. <br>
 <kbd>j</kbd> The j key moves down. <br>
 <kbd>h</kbd> The h key moves left. <br>
 <kbd>l</kbd> The l key moves right. <br>
+<kbd>6</kbd> <kbd>j</kbd> will move you six lines down, <kbd>6</kbd> <kbd>k</kbd> six lines up. <br>
+<kbd>22</kbd> <kbd>h</kbd> will move you 22 cursor positions left, <kbd>22</kbd> <kbd>l</kbd> 22 positions right. <br>
 <kbd>0</kbd> then <kbd>ENTER</kbd> will bring you to the start of the line. <br>
 <kbd>$</kbd> then <kbd>ENTER</kbd> will bring you to the end of the line. <br>
-<kbd>}</kbd> then <kbd>ENTER</kbd> will bring you to the next empty line. <br>
+<kbd>}</kbd> then <kbd>ENTER</kbd> will bring you to the next empty line after a block of text. <br>
+<kbd>{</kbd> then <kbd>ENTER</kbd> will bring you to the next empty line before a block of text. <br>
 A number then <kbd>w</kbd> will jump number of words forward (2w will jump two words). <br>
 <kbd>3</kbd> then <kbd>e</kbd> will jump to the end of the third word from where the cursor is. <br>
 <kbd>CTRL</kbd> <kbd>g</kbd> will show your position in the document. <br>
 Jump to document start by typing <kbd>g</kbd> <kbd>g</kbd>. <br>
 Type <kbd>G</kbd> to jump to to the file bottom. <br>
+`50%` <kbd>ENTER</kbd> will bring you to the middle of the document. <br>
 <kbd>%</kbd> over any kind of bracket will flip cursor to the matching part. <br>
 <kbd>4</kbd> <kbd>2</kbd> <kbd>G</kbd> will bring you to line 42. <br>
 <kbd>4</kbd> <kbd>2</kbd> <kbd>g</kbd> <kbd>g</kbd> will bring you to line 42. <br>
@@ -58,6 +62,7 @@ Capital <kbd>W</kbd> and <kbd>B</kbd> move you word by word - but don't count br
 <kbd>f</kbd> + letter takes you to the next appearance of that letter in this line. <br>
 <kbd>F</kbd> + letter takes you to the last appearance of that letter in this line. <br>
 <kbd>CTRL</kbd> <kbd>f</kbd> for page down. <kbd>CTRL</kbd> <kbd>b</kbd> for page up. <br>
+
 
 ## The read command
 When we want to get content from an other file into our currently open file, we are **loading it into Vim's buffer**. <br>
