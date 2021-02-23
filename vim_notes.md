@@ -63,7 +63,6 @@ Capital <kbd>W</kbd> and <kbd>B</kbd> move you word by word - but don't count br
 <kbd>F</kbd> + letter takes you to the last appearance of that letter in this line. <br>
 <kbd>CTRL</kbd> <kbd>f</kbd> for page down. <kbd>CTRL</kbd> <kbd>b</kbd> for page up. <br>
 
-
 ## The read command
 When we want to get content from an other file into our currently open file, we are **loading it into Vim's buffer**. <br>
 A command to do that is the **read** command – `:read` or the short form `:r`. <br>
@@ -79,6 +78,24 @@ Or <kbd>:</kbd> `read !ps aux` would paste a list of running processes into the 
 ## Executing Code in Vim
 If you have a code block of **bash** in your document, and you want to see the outcome of it, press <kbd>!</kbd> <kbd>}</kbd>. It get's translated into an x-command and when you now typ "bash" and hit <kbd>ENTER</kbd>, the code block will get replaced with its actual output. <br>
 
+## Search
+To search for type <kbd>/</kbd> then any phrase then <kbd>ENTER</kbd>. <br>
+<kbd>n</kbd> jumps down to the next search hit, <kbd>N</kbd> jumps up. <br>
+You can start a search with <kbd>?</kbd> as well – <kbd>n</kbd> and <kbd>N</kbd> move in the opposite direction then. <br>
+<kbd>CTRL</kbd> <kbd>o</kbd> will bring you back to where you started the search. <br>
+<kbd>CTRL</kbd> <kbd>i</kbd> will jump back to next cursor position. <br>
+Press <kbd>\*</kbd> in **normal** mode to search forwards for the word under the cursor. <br>
+Press <kbd>\#</kbd> in **normal** mode to search backwards for the word under the cursor. <br>
+`*` and `#` will only search for the exact pattern. If the cursor is on the word **for** and you also want to find **forwards**, type <kbd>g</kbd> <kbd>\*</kbd> or <kbd>g</kbd> <kbd>\#</kbd>. <br>
+`5*` will jump to the 5th occurence of the word under the cursor. <br>
+If you want to edit the word under the cursor before editing, press <kbd>/</kbd> then <kbd>CTRL</kbd> <kbd>r</kbd> then <kbd>CTRL</kbd> <kbd>w</kbd>. <br>
+`:set ic` will ignore case sensitivity. <br>
+A search for `/ignore` will show ignore, IGNORE or Ignore than. <br>
+If you want to ignore case sensitivity for just one search type `/ignore\c`. <br>
+`:set hls is` will activate search highlighting. <br>
+`:nohlsearch` will deactivate it. <br>
+`:no` + command will disable all `:set` commands. <br>
+
 ## The Dot
 <kbd>.</kbd> will repeat the last used command. So if you typed <kbd>d</kbd> <kbd>w</kbd> to delted a word, you only need to press <kbd>.</kbd> to continue deleting word by word. <br>
 The dot can also be used to repeat more complex operations like the change of a word: <br>
@@ -91,12 +108,6 @@ The line **au bufnewfile,bufRead *filename* set filetype=sh** added in Vim confi
 `:so %` reloads the file without closing it (to source a file) <br>
 `:set list` shows you spaces tabs and stuff. `:set nolist` to turn it off. <br>
 `:set cursorline` or `:set cul` to show a line under current cursor position. `nocursorline` or `nocul` to switch it off. <br>
-
-## Vim ressources
-**vimtutor** command to open an in vim integrated tutorial <br>
-https://rwx.gg/vi-magic-wands/ <br>
-https://vimgenius.com <br>
-https://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/ <br>
 
 ## Delete
 Press <kbd>x</kbd> in **Normal** mode to delete the character under the cursor. <br>
@@ -132,7 +143,8 @@ Press <kbd>A</kbd> in **Normal** mode to start appending at the end of the line.
 Use <kbd>e</kbd> in combination with <kbd>a</kbd> to jump to last letter before your insert, so you can straight start typing. <br>
 <kbd>s</kbd> will delete the letter under the cursor and put you in **insert** mode. <br>
 <kbd>S</kbd> will delete the line under the cursor and put you in **insert** mode. <br>
-<kbd>I</kbd> will start **insert** mode at the beginning of the line.
+<kbd>I</kbd> will start **insert** mode at the beginning of the line. <br>
+While in **insert** mode press <kbd>CTRL</kbd> <kbd>o</kbd> to execute one **normal** mode command before switching back into **insert**.
 
 ## Undo, redo
 <kbd>u</kbd> will undo the last change, the next <kbd>u</kbd> undos the prior change and so on … <br>
@@ -141,18 +153,6 @@ while <kbd>U</kbd> will undo all changes on the last edited line. <br>
 Redo doesn't work after capital <kbd>U</kbd>. <br>
 <kbd>R</kbd> will enter **replace** mode where you can override everything under the cursor. <br>
 <kbd>5</kbd> <kbd>u</kbd> will undo the last five operations. <br>
-
-## Search
-To search for type <kbd>/</kbd> then any phrase then <kbd>ENTER</kbd>. <br>
-<kbd>n</kbd> jumps down to the next search hit, <kbd>N</kbd> jumps up. <br>
-You can start a search with <kbd>?</kbd> as well -> <kbd>n</kbd> and <kbd>N</kbd> move in the opposite direction then. <br>
-<kbd>CTRL</kbd> <kbd>o</kbd> will bring you back to where you started the search. <br>
-<kbd>CTRL</kbd> <kbd>i</kbd> will jump back to next cursor position. <br>
-`:set ic` will ignore case sensitivity. <br>
-A search for `/ignore` will show ignore, IGNORE or Ignore than. <br>
-If you want to ignore case sensitivity for just one search type `/ignore\c`. <br>
-`:set hls is` will activate search highlighting. <br>
-`:nohlsearch` will deactivate it. <br> `:no` + command will disable all `:set` commands. <br>
 
 ## Replace
 `:s/thee/the` will replace the firtst thee in the line with the. <br>
@@ -216,3 +216,9 @@ So in this example we have skipped the first **test** by given the command the p
 To write out **some** is not really necessary, `c/test s` <kbd>enter</kbd> would do the job just as well. <br>
 `y/stuff` <kbd>enter</kbd> copies everything untill **stuff**: <br>
 *This is a text test to test some vim* <br>
+
+## Vim ressources
+**vimtutor** command to open an in vim integrated tutorial <br>
+[rwxrob magic wands](https://rwx.gg/vi-magic-wands/) <br>
+[vimgenius](https://vimgenius.com) <br>
+[learn vim progressively](https://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/) <br>
