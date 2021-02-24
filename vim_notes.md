@@ -96,6 +96,17 @@ If you want to ignore case sensitivity for just one search type `/ignore\c`. <br
 `:nohlsearch` will deactivate it. <br>
 `:no` + command will disable all `:set` commands. <br>
 
+## netrw – the Vim file manager
+`:Ex` opens current directory with horizontal screen splitt (same as `:Sex`). <br>
+`:Vex` opens current directory in vertical splitt – directory left (same as `:Lex`). <br>
+*I've tried :Rex but it didn't work. The book says :Vex would open directories on the right .. but for me :Lex and :Vex look exactly the same (left)* <br>
+`:Ex ~/repos/` opens **repos** directory. <br>
+`:Tex` opens current directory in new window. <br>
+There are different list viewing options available. Press <kbd>i</kbd> within the list view to change to the next one. <br>
+`:q` will bring you back to full screen document mode. <br>
+<kbd>D</kbd> in list mode to **delete** the file under the cursor, <kbd>R</kbd> to **rename** and <kbd>X</kbd> to **execute** it . <br>
+To create a new file press <kbd>%</kbd> – Vim will open an other editor in the splitt screen then. `:wq` will save that file and return to fullscreen. <br>
+
 ## The Dot
 <kbd>.</kbd> will repeat the last used command. So if you typed <kbd>d</kbd> <kbd>w</kbd> to delted a word, you only need to press <kbd>.</kbd> to continue deleting word by word. <br>
 The dot can also be used to repeat more complex operations like the change of a word: <br>
