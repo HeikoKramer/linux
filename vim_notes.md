@@ -93,7 +93,7 @@ If you want to edit the word under the cursor before editing, press <kbd>/</kbd>
 A search for `/ignore` will show ignore, IGNORE or Ignore than. <br>
 If you want to ignore case sensitivity for just one search type `/ignore\c`. <br>
 `:set hls is` will activate search highlighting. <br>
-`:nohlsearch` or short `:nohl` will deactivate it. <br>
+`:nohlsearch` or short `:noh` will deactivate it. <br>
 `:no` + command will disable all `:set` commands. <br>
 
 ## netrw – the Vim file manager
