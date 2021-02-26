@@ -3,7 +3,7 @@ set number " turn on line numbers
 " set relativenumber " doesn't show line numbers depending on your position
 set norelativenumber " normal line numbers starting with 1 at the top …
 " set ruler " ruler is the bar at the bottom and it is on by default
-
+set wildmenu " shows command tab-completion options as a selectable menue
 set showcmd
 
 " tabs and indentation
