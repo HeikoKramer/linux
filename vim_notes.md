@@ -193,7 +193,7 @@ If `:e` is entered - or any other first letter - and <kbd>CTRL</kbd> + <kbd>d</k
 If you have some table-like formated text/code with vertical aligned strings of identical size, you can use **visual block** to edit them simultaniously. <br>
 Bring the cursor to the first entry you'd like to edit, press <kbd>CTRL</kbd> <kbd>v</kbd> to enter **visual block** mode. <br>
 Press <kbd>l</kbd> till the string is fully selected, then start pressing <kbd>j</kbd> to mark the the same areal in as many lines below as you like. <br>
-When all lines are selected press <kbd>c</kbd> to **change**, enter the new text, press <kbd>ESC</kbd> and that change will aply to all selected lines. <br>
+When all lines are selected press <kbd>c</kbd> to **change**, enter the new text, press <kbd>ESC</kbd> and that change will apply to all selected lines. <br>
 This method works as well with <kbd>d</kbd> for **delete** or <kbd>y</kbd> for **yank**. <br>
 
 ## Case folding
@@ -203,8 +203,25 @@ This method works as well with <kbd>d</kbd> for **delete** or <kbd>y</kbd> for *
 <kbd>!</kbd> <kbd>!</kbd> to enter a mode in which Vim accepts any command / function as input and writes its output at the cursors position. <br>
 *Functions should be exported to be available in Vim!* <br>
 
-## misc
-`:set cuc` activates vim's **cursor column** – a vertical line indicator for the cursor position. <br>
+## Cursor position visualisiation
+`:set cul` activates **cursor line** – a horizontal line indicator for the cursor position. <br> 
+`:set cuc` activates **cursor column** – a vertical line indicator for the cursor position. <br>
+`:set nocul` or `:set nocuc` for to deactivate those indicators. <br>
+The styling of the cursor line can be set, example: `:highlight CursorLine guibg=lightblue ctermbg=lightgrey` <br>
+
+## Spellchecking
+`:set spell` to activate **spellchecking** in default language. `:set nospell` to deactivate it. <br>
+Use this command to set the default language `:set spell spelllang=en_us` – add it to your **.vimrc** to set it permanent<br>
+When turned on, miss-spelled word will be highlighted like search results. <br>
+<kbd>\]</kbd> <kbd>s</kbd> to jump forwards through those results, <kbd>\[</kbd> <kbd>s</kbd> does the same backwards. <br>
+<kbd>z</kbd> <kbd>=</kbd> will provide a list with spelling recommendations. <br> 
+You can type the list index number and <kbd>ENTER</kbd> and Vim will replace the word with your selection. <br>
+Just hit <kbd>ENTER</kbd> if no suggestion is matching to leave the listing page. <br>
+If Vim is marking correct spelled word as incorrect type <kbd>z</kbd> <kbd>g</kbd> to add that word to the dictionary. <br>
+You can as well mark a word as incorrect by using <kbd>z</kbd> <kbd>w</kbd> <br>
+Good link on spellchecking: [linux.com](https://www.linux.com/training-tutorials/using-spell-checking-vim/) <br>
+
+## Until pattern
 Interesting on VimTricks: [Operate until pattern](https://vimtricks.com/p/vimtrick-operate-until-pattern/) <br>
 To try out those methods I've created a test file repeting the sentence: <br>
 ```sh
