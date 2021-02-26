@@ -6,6 +6,7 @@ set norelativenumber " normal line numbers starting with 1 at the top …
 set wildmenu " shows command tab-completion options as a selectable menue
 set showcmd
 set title " shows filename in the window top bar
+set spell " spellchecking enabled by default
 " tabs and indentation
 set expandtab
 set tabstop=2
