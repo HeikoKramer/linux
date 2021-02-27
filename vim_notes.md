@@ -124,6 +124,7 @@ The line **au bufnewfile,bufRead *filename* set filetype=sh** added in Vim confi
 Press <kbd>x</kbd> in **normal** mode to delete the character under the cursor and continue left. <br>
 <kbd>X</kbd> to delete the character under the cursor and continue right. <br>
 So if the cursor is on **m** in **example**, <kbd>x</kbd> <kbd>x</kbd> will result in **exale**, <kbd>X</kbd> <kbd>X</kbd> in **emple**. <br>
+<kbd>s</kbd> deletes the character under the cursor like <kbd>x</kbd>, but it leaves you in **insert** mode afterwards. <br>
 Park the cursor on the first letter of a word you'd like to **delete** and press <kbd>d</kbd> then <kbd>w</kbd>. <br>
 The <kbd>e</kbd> instead of the <kbd>w</kbd> to leave the space after the word. <br>
 Press <kbd>d</kbd> then <kbd>$</kbd> then <kbd>ENTER</kbd> to delete from where your cursor is to the end of the line. <br>
