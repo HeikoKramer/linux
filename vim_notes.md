@@ -168,8 +168,15 @@ Use the `:earlier` command (short `:ea`) to set your document back to a state it
 `:earlier 3d` or `:ea 3d` will show how your doc looked **3 days** ago. <br>
 `:ea 3h` will set it back **3 hours**, `:ea 3m` **3 minutes**, `:ea 30s` **30 seconds**. <br>
 Go back forward in time with the `:later` (short `:lat`) command. <br>
+Use `:ea 10` or `lat 10` without a time option to **undo/redo** the ten last edits. <br>
 Additional to the time options there is **f** – for **file** state – which counts every time you saved. <br>
 `:ea 3f` undoes all changes since the last **3x you saved**, `:lat 3f` redoes all that. <br>
+**Undo branches:** When you use undo/redo operations, Vim will create a branch at any undo point. <br>
+You can switch between branches by typing `g-` or `g+`. <br>
+**Persistent undo:** the undo command <kbd>u</kbd> is usually restricted to the current session. <br>
+You can activate session overarching undo by adding `set undofile` in your **.vimrc** <br>
+Vim will create a hidden **undofile** for each edited file in the directory where that file is located. <br>
+You can specify a storage location for those files in your **.vimrc**, like I have here: `set undodir=~/.vim/undo`. <br>
 
 ## Replace
 `:s/thee/the` will replace the first thee in the line with the. <br>

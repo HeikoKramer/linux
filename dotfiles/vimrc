@@ -32,7 +32,8 @@ set viminfo='20,<1000,s1000
 set noswapfile
 set nobackup
 set nowritebackup
-
+set undodir=~/.vim/undo " sets undo directory to store undofile (below)
+set undofile " activates persistent undos indipendent from session
 set icon " terminal title -> filename
 
 set scrolloff=999 " keeps cursor in the middle of the screen
