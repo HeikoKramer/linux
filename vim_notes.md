@@ -96,29 +96,6 @@ If you want to ignore case sensitivity for just one search type `/ignore\c`. <br
 `:nohlsearch` or short `:noh` will deactivate it. <br>
 `:no` + command will disable all `:set` commands. <br>
 
-## netrw – the Vim file manager
-`:Ex` opens current directory with horizontal screen split (same as `:Sex`). <br>
-`:Vex` opens current directory in vertical split – directory left (same as `:Lex`). <br>
-*I've tried :Rex but it didn't work. The book says :Vex would open directories on the right .. but for me :Lex and :Vex look exactly the same (left)* <br>
-`:Ex ~/repos/` opens **repos** directory. <br>
-`:Tex` opens current directory in new window. <br>
-There are different list viewing options available. Press <kbd>i</kbd> within the list view to change to the next one. <br>
-`:q` will bring you back to full screen document mode. <br>
-<kbd>D</kbd> in list mode to **delete** the file under the cursor, <kbd>R</kbd> to **rename** and <kbd>X</kbd> to **execute** it . <br>
-To create a new file press <kbd>%</kbd> – Vim will open an other editor in the split screen then. `:wq` will save that file and return to full screen. <br>
-
-## The Dot
-<kbd>.</kbd> will repeat the last used command. So if you typed <kbd>d</kbd> <kbd>w</kbd> to deleted a word, you only need to press <kbd>.</kbd> to continue deleting word by word. <br>
-The dot can also be used to repeat more complex operations like the change of a word: <br>
-If you press <kbd>c</kbd> <kbd>e</kbd> on the word "bank" and replace it with "financial institution", then exit insert mode with <kbd>ESC</kbd> and press <kbd>n</kbd>, your cursor will jump to the next appearance of the word "bank". A press on <kbd>.</kbd> will then repeat the change and replace it with "financial institution". That way you can jump from "bank" to "bank" by pressing <kbd>n</kbd> and change those where it is required. <br>
-To out-commend a line of bash code, press <kbd>0</kbd> <kbd>i</kbd> <kbd>#</kbd> – this can be repeated at each following line to quickly commend a block of text. <br>
-
-## Vim config
-The line **au bufnewfile,bufRead *filename* set filetype=sh** added in Vim config will make vim interprets the file *filename* as a bash file. <br>
-`:set nu` show line numbers in vim. `set nonu` hides them. <br>
-`:so %` reloads the file without closing it (to source a file) <br>
-`:set list` shows you spaces tabs and stuff. `:set nolist` to turn it off. <br>
-`:set cursorline` or `:set cul` to show a line under current cursor position. `nocursorline` or `nocul` to switch it off. <br>
 
 ## Delete
 Press <kbd>x</kbd> in **normal** mode to delete the character under the cursor and continue left. <br>
@@ -135,6 +112,31 @@ Press <kbd>d</kbd> then <kbd>$</kbd> then <kbd>ENTER</kbd> to delete from where 
 <kbd>D</kbd> deletes from cursor position to the end of the line. <kbd>d</kbd> <kbd>$</kbd> does the same. <br>
 When you're in line 15 ant type <kbd>d</kbd> <kbd>:</kbd> <kbd>3</kbd> <kbd>0</kbd> <kbd>ENTER</kbd> 15 lines (15-30) will be deleted. <br>
 <kbd>d</kbd> <kbd>}</kbd> will delete a whole block to the next empty line below, <kbd>d</kbd> <kbd>{</kbd> above the cursor. <br>
+You can delete un**t**il something by adding the **t** modifier: <kbd>d</kbd> <kbd>t</kbd> <kbd>?</kbd> deletes everything from the cursor's position un**t**il the next question mark. <br>
+
+## Until pattern
+Interesting on VimTricks: [Operate until pattern](https://vimtricks.com/p/vimtrick-operate-until-pattern/) <br>
+To try out those methods I've created a test file repeating the sentence: <br>
+```sh
+This is a text test to test some vim stuff 12345 blablabla great test file.
+```
+
+**until single character**
+So `dtt` deletes everything in the line until the first **t**:<br>
+*text test to test some vim stuff 12345 blablabla great test file.* <br>
+`ctt` does the same, but leaves you in **insert** mode before the word test.<br>
+`yt1` copies everything until the first **1**. So with our sentence <kbd>p</kbd> gives you: <br>
+*This is a text test to test some vim stuff* <br>
+<br>
+**until pattern**
+`d/test` <kbd>enter</kbd> deletes everything until the first **test**: <br>
+*test to test some vim stuff 12345 blablabla great test file.* <br>
+`c/test some` <kbd>enter</kbd> deletes everything until the **test some** and leaves you in **insert** mode before **test**: <br>
+*test some vim stuff 12345 blablabla great test file.* <br>
+So in this example we have skipped the first **test** by given the command the pattern of the second **test** which is followed by **some**. <br>
+To write out **some** is not really necessary, `c/test s` <kbd>enter</kbd> would do the job just as well. <br>
+`y/stuff` <kbd>enter</kbd> copies everything until **stuff**: <br>
+*This is a text test to test some vim* <br>
 
 ## Change inside
 **Change inside quotes** <br>
@@ -160,7 +162,7 @@ There is no ctrl+x style cut and paste in Vim --> because it keeps the last dele
 `2y` will copy two lines from the cursors position. <br>
 `y$` will copy from cursor to the end `y0` to beginning of the line. <br>
 
-## Insert mode text editing
+## Ways to change into insert mode
 Press <kbd>a</kbd> in **Normal** mode to start appending letters where you are. <br>
 Press <kbd>A</kbd> in **Normal** mode to start appending at the end of the line. <br>
 <kbd>c</kbd> <kbd>e</kbd> will delete from where the cursor is to the end of the word and put you in **insert** mode. <br>
@@ -202,6 +204,12 @@ You can specify a storage location for those files in your **.vimrc**, like I ha
 `:%s/thee/the/g` will replace all thee in the file. <br>
 `:%s/thee/the/gc` finds all thee in the file and gives options replace y/n <br>
 `545,555s/bold/old/g` will replace all bold with old in between line 545 and 555. <br>
+
+## The Dot
+<kbd>.</kbd> will repeat the last used command. So if you typed <kbd>d</kbd> <kbd>w</kbd> to deleted a word, you only need to press <kbd>.</kbd> to continue deleting word by word. <br>
+The dot can also be used to repeat more complex operations like the change of a word: <br>
+If you press <kbd>c</kbd> <kbd>e</kbd> on the word "bank" and replace it with "financial institution", then exit insert mode with <kbd>ESC</kbd> and press <kbd>n</kbd>, your cursor will jump to the next appearance of the word "bank". A press on <kbd>.</kbd> will then repeat the change and replace it with "financial institution". That way you can jump from "bank" to "bank" by pressing <kbd>n</kbd> and change those where it is required. <br>
+To out-commend a line of bash code, press <kbd>0</kbd> <kbd>i</kbd> <kbd>#</kbd> – this can be repeated at each following line to quickly commend a block of text. <br>
 
 ## Indentation
 <kbd>\></kbd> <kbd>\></kbd> in **normal** mode to indent a line. <br>
@@ -252,29 +260,23 @@ If Vim is marking correct spelled word as incorrect type <kbd>z</kbd> <kbd>g</kb
 You can as well mark a word as incorrect by using <kbd>z</kbd> <kbd>w</kbd> <br>
 Good link on spellchecking: [linux.com](https://www.linux.com/training-tutorials/using-spell-checking-vim/) <br>
 
-## Until pattern
-Interesting on VimTricks: [Operate until pattern](https://vimtricks.com/p/vimtrick-operate-until-pattern/) <br>
-To try out those methods I've created a test file repeating the sentence: <br>
-```sh
-This is a text test to test some vim stuff 12345 blablabla great test file.
-```
+## netrw – the Vim file manager
+`:Ex` opens current directory with horizontal screen split (same as `:Sex`). <br>
+`:Vex` opens current directory in vertical split – directory left (same as `:Lex`). <br>
+*I've tried :Rex but it didn't work. The book says :Vex would open directories on the right .. but for me :Lex and :Vex look exactly the same (left)* <br>
+`:Ex ~/repos/` opens **repos** directory. <br>
+`:Tex` opens current directory in new window. <br>
+There are different list viewing options available. Press <kbd>i</kbd> within the list view to change to the next one. <br>
+`:q` will bring you back to full screen document mode. <br>
+<kbd>D</kbd> in list mode to **delete** the file under the cursor, <kbd>R</kbd> to **rename** and <kbd>X</kbd> to **execute** it . <br>
+To create a new file press <kbd>%</kbd> – Vim will open an other editor in the split screen then. `:wq` will save that file and return to full screen. <br>
 
-**until single character**
-So `dtt` deletes everything in the line until the first **t**:<br>
-*text test to test some vim stuff 12345 blablabla great test file.* <br>
-`ctt` does the same, but leaves you in **insert** mode before the word test.<br>
-`yt1` copies everything until the first **1**. So with our sentence <kbd>p</kbd> gives you: <br>
-*This is a text test to test some vim stuff* <br>
-<br>
-**until pattern**
-`d/test` <kbd>enter</kbd> deletes everything until the first **test**: <br>
-*test to test some vim stuff 12345 blablabla great test file.* <br>
-`c/test some` <kbd>enter</kbd> deletes everything until the **test some** and leaves you in **insert** mode before **test**: <br>
-*test some vim stuff 12345 blablabla great test file.* <br>
-So in this example we have skipped the first **test** by given the command the pattern of the second **test** which is followed by **some**. <br>
-To write out **some** is not really necessary, `c/test s` <kbd>enter</kbd> would do the job just as well. <br>
-`y/stuff` <kbd>enter</kbd> copies everything until **stuff**: <br>
-*This is a text test to test some vim* <br>
+## Vim config
+The line **au bufnewfile,bufRead *filename* set filetype=sh** added in Vim config will make vim interprets the file *filename* as a bash file. <br>
+`:set nu` show line numbers in vim. `set nonu` hides them. <br>
+`:so %` reloads the file without closing it (to source a file) <br>
+`:set list` shows you spaces tabs and stuff. `:set nolist` to turn it off. <br>
+`:set cursorline` or `:set cul` to show a line under current cursor position. `nocursorline` or `nocul` to switch it off. <br>
 
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
