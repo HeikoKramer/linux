@@ -159,11 +159,17 @@ While in **insert** mode press <kbd>CTRL</kbd> <kbd>o</kbd> to execute one **nor
 
 ## Undo, redo
 <kbd>u</kbd> will undo the last change, the next <kbd>u</kbd> undoes the prior change and so on … <br>
-while <kbd>U</kbd> will undo all changes on the last edited line. <br>
+<kbd>U</kbd> will undo all changes on the last edited line. <br>
 <kbd>CTRL</kbd> + <kbd>r</kbd> redoes the changes if you undid something by mistake. <br>
 Redo doesn't work after capital <kbd>U</kbd>. <br>
 <kbd>R</kbd> will enter **replace** mode where you can override everything under the cursor. <br>
 <kbd>5</kbd> <kbd>u</kbd> will undo the last five operations. <br>
+Use the `:earlier` command (short `:ea`) to set your document back to a state it had a specific time ago: <br>
+`:earlier 3d` or `:ea 3d` will show how your doc looked **3 days** ago. <br>
+`:ea 3h` will set it back **3 hours**, `:ea 3m` **3 minutes**, `:ea 30s` **30 seconds**. <br>
+Go back forward in time with the `:later` (short `:lat`) command. <br>
+Additional to the time options there is **f** – for **file** state – which counts every time you saved. <br>
+`:ea 3f` undoes all changes since the last **3x you saved**, `:lat 3f` redoes all that. <br>
 
 ## Replace
 `:s/thee/the` will replace the first thee in the line with the. <br>
