@@ -136,6 +136,20 @@ Press <kbd>d</kbd> then <kbd>$</kbd> then <kbd>ENTER</kbd> to delete from where 
 When you're in line 15 ant type <kbd>d</kbd> <kbd>:</kbd> <kbd>3</kbd> <kbd>0</kbd> <kbd>ENTER</kbd> 15 lines (15-30) will be deleted. <br>
 <kbd>d</kbd> <kbd>}</kbd> will delete a whole block to the next empty line below, <kbd>d</kbd> <kbd>{</kbd> above the cursor. <br>
 
+## Change inside
+**Change inside quotes** <br>
+Write this sentence in a Vim file: Vim is the most "complicated" editor in the galaxy. <br> 
+Place the cursor somewhere before the word *complicated* in that line and type <kbd>c</kbd> <kbd>i</kbd> <kbd>"</kbd> then type the word *powerful* and hit <kbd>ESC</kbd>. <br>
+**Change inside tags** <br>
+To change the content within tags like `<h1>Super cool title here</h1>`, press <kbd>c</kbd> <kbd>i</kbd> <kbd>t</kbd> somewhere in the line to get `<h1></h1>` and the cursor within, ready to insert new content. <br>
+**Change inside sentence** <br>
+<kbd>c</kbd> <kbd>i</kbd> <kbd>s</kbd> within a block of text, will delete all words between punctuation characters. <br> 
+**Example:** This is a sentence. Is this another one? Of course it is! <br> 
+Type <kbd>c</kbd> <kbd>i</kbd> <kbd>s</kbd> while the cursor is on **another** to delete *Is this another one?* and leave *This is a sentence.  Of course it is!* with the cursor before **Of** and in **insert** mode. <br>
+<kbd>c</kbd> <kbd>i</kbd> <kbd>p</kbd> for **change inside paragraph** will delete a whole block of text between two empty lines. <br>
+<kbd>c</kbd> <kbd>i</kbd> <kbd>w</kbd> for **change inside word** is a bit useless as <kbd>c</kbd> <kbd>w</kbd> or <kbd>c</kbd> <kbd>e</kbd> will do the same with one keystroke less. <br>
+It actually makes sense when the cursor is positioned in the middle of a long word you'd like to change, as those other commands require the cursor to be positioned at the beginning of the word. <br>
+
 ## Copy, cut and paste
 Good summary: https://vim.fandom.com/wiki/Copy,_cut_and_paste
 There is no ctrl+x style cut and paste in Vim --> because it keeps the last deleted line in the cache. So to cut and past just delete whatever you want to cut and it is ready to be pasted. The so called cut command is not really for pasting, it is good for deleting and change into edit mode at the same time.
