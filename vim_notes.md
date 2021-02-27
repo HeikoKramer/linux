@@ -149,6 +149,7 @@ Type <kbd>c</kbd> <kbd>i</kbd> <kbd>s</kbd> while the cursor is on **another** t
 <kbd>c</kbd> <kbd>i</kbd> <kbd>p</kbd> for **change inside paragraph** will delete a whole block of text between two empty lines. <br>
 <kbd>c</kbd> <kbd>i</kbd> <kbd>w</kbd> for **change inside word** is a bit useless as <kbd>c</kbd> <kbd>w</kbd> or <kbd>c</kbd> <kbd>e</kbd> will do the same with one keystroke less. <br>
 It actually makes sense when the cursor is positioned in the middle of a long word you'd like to change, as those other commands require the cursor to be positioned at the beginning of the word. <br>
+<kbd>c</kbd> <kbd>i</kbd> <kbd>(</kbd> or <kbd>c</kbd> <kbd>i</kbd> <kbd>{</kbd> or <kbd>c</kbd> <kbd>i</kbd> <kbd>[</kbd> work as well, but the cursor has to be positioned on the **(, {, [** when entering the command. <br>
 
 ## Copy, cut and paste
 Good summary: https://vim.fandom.com/wiki/Copy,_cut_and_paste
