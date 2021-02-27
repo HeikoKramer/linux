@@ -121,7 +121,9 @@ The line **au bufnewfile,bufRead *filename* set filetype=sh** added in Vim confi
 `:set cursorline` or `:set cul` to show a line under current cursor position. `nocursorline` or `nocul` to switch it off. <br>
 
 ## Delete
-Press <kbd>x</kbd> in **Normal** mode to delete the character under the cursor. <br>
+Press <kbd>x</kbd> in **normal** mode to delete the character under the cursor and continue left. <br>
+<kbd>X</kbd> to delete the character under the cursor and continue right. <br>
+So if the cursor is on **m** in **example**, <kbd>x</kbd> <kbd>x</kbd> will result in **exale**, <kbd>X</kbd> <kbd>X</kbd> in **emple**. <br>
 Park the cursor on the first letter of a word you'd like to **delete** and press <kbd>d</kbd> then <kbd>w</kbd>. <br>
 The <kbd>e</kbd> instead of the <kbd>w</kbd> to leave the space after the word. <br>
 Press <kbd>d</kbd> then <kbd>$</kbd> then <kbd>ENTER</kbd> to delete from where your cursor is to the end of the line. <br>
@@ -131,7 +133,7 @@ Press <kbd>d</kbd> then <kbd>$</kbd> then <kbd>ENTER</kbd> to delete from where 
 <kbd>3</kbd> <kbd>d</kbd> <kbd>d</kbd> deletes the line where cursor is plus the next two lines. <br>
 <kbd>D</kbd> deletes from cursor position to the end of the line. <kbd>d</kbd> <kbd>$</kbd> does the same. <br>
 When you're in line 15 ant type <kbd>d</kbd> <kbd>:</kbd> <kbd>3</kbd> <kbd>0</kbd> <kbd>ENTER</kbd> 15 lines (15-30) will be deleted. <br>
-<kbd>d</kbd> <kbd>}</kbd> will delete a whole block, means to the next empty line. <br>
+<kbd>d</kbd> <kbd>}</kbd> will delete a whole block to the next empty line below, <kbd>d</kbd> <kbd>{</kbd> above the cursor. <br>
 
 ## Copy, cut and paste
 Good summary: https://vim.fandom.com/wiki/Copy,_cut_and_paste
