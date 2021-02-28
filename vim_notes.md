@@ -291,6 +291,10 @@ The line **au bufnewfile,bufRead *filename* set filetype=sh** added in Vim confi
 `:set list` shows you spaces tabs and stuff. `:set nolist` to turn it off. <br>
 `:set cursorline` or `:set cul` to show a line under current cursor position. `nocursorline` or `nocul` to switch it off. <br>
 
+## Vim version
+`:version` will show you the installed version and options of Vim – options marked with a **+** are installed those with **-** ain't.<br
+
+
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
 [rwxrob magic wands](https://rwx.gg/vi-magic-wands/) <br>
