@@ -97,6 +97,7 @@ If you want to ignore case sensitivity for just one search type `/ignore\c`. <br
 `:no` + command will disable all `:set` commands. <br>
 
 ## Replace
+**Substitue flags**: `c` **c**onfirm, `g` all occurrences in line, `i` **i**gnore case, `I` don't ignore case <br>
 `:s/thee/the` will replace the **first** *thee* **in the line** with *the*. <br>
 `:s/thee/the/g` will replace all *thee* **in the line** with *the*. <br>
 `:%s/thee/the/g` will replace **all** *thee* in the file with *the*. <br>
@@ -106,7 +107,10 @@ If you want to ignore case sensitivity for just one search type `/ignore\c`. <br
 `:23s/one/two/g` will replace all *one*, *ONE*, *One*, *oNe* and so on with *two* **in line 23**. <br>
 `:23,$s/one/two/g` will replace all *one* with *two* **from line 23 until the end of the document**. <br>
 `:?start?,/end/s/bla/blubb/g` replaces all *bla* with *blubb* between pattern **start** and **end** <br>
-**Substitue flags**: `c` **c**onfirm, `g` all occurrences in line, `i` **i**gnore case, `I` don't ignore case <br>
+**NOTE:** The shown examples will replace the search pattern wherever they find it! <br>
+Example: Let's change the string "Game of thrones season one" to "Game of thrones season two". <br>
+`:s/one/two/g` will do the trick, right? Unfortunately the outcome will be: Game of thr**two**s season two. <br>
+To **replace only whole words** you have to tag them: `:s/\<one\>/two/g` will replace *one* with *two* and leave thr**one**s as it is. <br> 
 
 ## Delete
 Press <kbd>x</kbd> in **normal** mode to delete the character under the cursor and continue left. <br>
