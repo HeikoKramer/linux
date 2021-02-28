@@ -96,6 +96,17 @@ If you want to ignore case sensitivity for just one search type `/ignore\c`. <br
 `:nohlsearch` or short `:noh` will deactivate it. <br>
 `:no` + command will disable all `:set` commands. <br>
 
+## Replace
+`:s/thee/the` will replace the **first** *thee* **in the line** with *the*. <br>
+`:s/thee/the/g` will replace all *thee* **in the line** with *the*. <br>
+`:%s/thee/the/g` will replace **all** *thee* in the file with *the*. <br>
+`:%s/thee/the/gc` finds all *thee* in the file and **gives y/n option for each** to replace with *the*. <br>
+`:545,555s/bold/old/g` will replace all *bold* with *old* in **between line 545 and 555**. <br>
+`:23s/one/two/g` will replace all *one* with *two* **in line 23**. <br>
+`:23s/one/two/g` will replace all *one*, *ONE*, *One*, *oNe* and so on with *two* **in line 23**. <br>
+`:23,$s/one/two/g` will replace all *one* with *two* **from line 23 until the end of the document**. <br>
+`:?start?,/end/s/bla/blubb/g` replaces all *bla* with *blubb* between pattern **start** and **end** <br>
+**Substitue flags**: `c` **c**onfirm, `g` all occurrences in line, `i` **i**gnore case, `I` don't ignore case <br>
 
 ## Delete
 Press <kbd>x</kbd> in **normal** mode to delete the character under the cursor and continue left. <br>
@@ -121,14 +132,14 @@ To try out those methods I've created a test file repeating the sentence: <br>
 This is a text test to test some vim stuff 12345 blablabla great test file.
 ```
 
-**until single character**
+**until single character** <br>
 So `dtt` deletes everything in the line until the first **t**:<br>
 *text test to test some vim stuff 12345 blablabla great test file.* <br>
 `ctt` does the same, but leaves you in **insert** mode before the word test.<br>
 `yt1` copies everything until the first **1**. So with our sentence <kbd>p</kbd> gives you: <br>
 *This is a text test to test some vim stuff* <br>
 <br>
-**until pattern**
+**until pattern** <br>
 `d/test` <kbd>enter</kbd> deletes everything until the first **test**: <br>
 *test to test some vim stuff 12345 blablabla great test file.* <br>
 `c/test some` <kbd>enter</kbd> deletes everything until the **test some** and leaves you in **insert** mode before **test**: <br>
@@ -197,13 +208,6 @@ You can switch between branches by typing `g-` or `g+`. <br>
 You can activate session overarching undo by adding `set undofile` in your **.vimrc** <br>
 Vim will create a hidden **undofile** for each edited file in the directory where that file is located. <br>
 You can specify a storage location for those files in your **.vimrc**, like I have here: `set undodir=~/.vim/undo`. <br>
-
-## Replace
-`:s/thee/the` will replace the first thee in the line with the. <br>
-`:s/thee/the/g` will replace all thee in the line. <br>
-`:%s/thee/the/g` will replace all thee in the file. <br>
-`:%s/thee/the/gc` finds all thee in the file and gives options replace y/n <br>
-`545,555s/bold/old/g` will replace all bold with old in between line 545 and 555. <br>
 
 ## The Dot
 <kbd>.</kbd> will repeat the last used command. So if you typed <kbd>d</kbd> <kbd>w</kbd> to deleted a word, you only need to press <kbd>.</kbd> to continue deleting word by word. <br>
