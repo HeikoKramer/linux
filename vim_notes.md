@@ -95,6 +95,14 @@ If you want to ignore case sensitivity for just one search type `/ignore\c`. <br
 `:set hls is` will activate search highlighting. <br>
 `:nohlsearch` or short `:noh` will deactivate it. <br>
 `:no` + command will disable all `:set` commands. <br>
+**Match a string** <br>
+A command close search to search is **match** – if you'd like to highlight the patter **something**, type `:match ErrorMsg /something/`. <br>
+The highlight color depends on your color scheme, try: `ErrorMsg`, `WarningMsg`, `ModeMsg` or `MoreMsg`. <br>
+
+## Search multiple files
+To search for the pattern **maker** within all files in your working directory, type `:vimgrep maker *` <br>
+Use `:clist` to get a list of all files containing that pattern. `cc 2` jumps to the 2nd second list entry. <br>
+Jump to the next match with `:cn` or to the previous with `:cN` <br>
 
 ## Replace
 **Substitue flags**: `c` **c**onfirm, `g` all occurrences in line, `i` **i**gnore case, `I` don't ignore case <br>
