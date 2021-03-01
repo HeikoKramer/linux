@@ -186,7 +186,7 @@ Type <kbd>c</kbd> <kbd>i</kbd> <kbd>s</kbd> while the cursor is on **another** t
 It actually makes sense when the cursor is positioned in the middle of a long word you'd like to change, as those other commands require the cursor to be positioned at the beginning of the word. <br>
 <kbd>c</kbd> <kbd>i</kbd> <kbd>(</kbd> or <kbd>c</kbd> <kbd>i</kbd> <kbd>{</kbd> or <kbd>c</kbd> <kbd>i</kbd> <kbd>[</kbd> work as well, but the cursor has to be positioned on the **(, {, [** when entering the command. <br>
 
-## Copy, cut and paste
+## Copy, cut, paste and move
 Good summary: https://vim.fandom.com/wiki/Copy,_cut_and_paste
 There is no ctrl+x style cut and paste in Vim --> because it keeps the last deleted line in the cache. So to cut and past just delete whatever you want to cut and it is ready to be pasted. The so called cut command is not really for pasting, it is good for deleting and change into edit mode at the same time.
 <kbd>p</kbd> the put command can be used to place prior deleted lines or words at cursor position. <br>
@@ -194,6 +194,8 @@ There is no ctrl+x style cut and paste in Vim --> because it keeps the last dele
 `y7w` will copy seven works from the cursors position. <br>
 `2y` will copy two lines from the cursors position. <br>
 `y$` will copy from cursor to the end `y0` to beginning of the line. <br>
+`23m42` will **move** line 23 to line 42. <br>
+`23,42m108` will **move** line 23-42 to line 108. <br>
 
 ## Ways to change into insert mode
 Press <kbd>a</kbd> in **Normal** mode to start appending letters where you are. <br>
