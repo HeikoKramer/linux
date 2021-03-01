@@ -108,6 +108,7 @@ Jump to the next match with `:cn` or to the previous with `:cN` <br>
 `:g/bla/d` deletes all lines in the document that contain *bla* with. <br>
 `:g!/bla/d` deletes all lines in the document that do **not** contain *bla* with. <br>
 `:g/^\s*$/d` deletes all blank lines in current file. <br>
+`:g/bla/s/text/TEXT/g` will change *text* to *TEXT* in every line which contains the pattern *bla*. <br>
 
 ## Replace
 **Substitue flags**: `c` **c**onfirm, `g` all occurrences in line, `i` **i**gnore case, `I` don't ignore case <br>
