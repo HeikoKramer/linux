@@ -196,6 +196,8 @@ There is no ctrl+x style cut and paste in Vim --> because it keeps the last dele
 `y$` will copy from cursor to the end `y0` to beginning of the line. <br>
 `23m42` will **move** line 23 to line 42. <br>
 `23,42m108` will **move** line 23-42 to line 108. <br>
+The move command will work on any line specified without the need to place the cursor there. <br>
+However, you can move the line where your cursor is placed with `:m10` – which will move this line to line 10. <br>
 
 ## Ways to change into insert mode
 Press <kbd>a</kbd> in **Normal** mode to start appending letters where you are. <br>
