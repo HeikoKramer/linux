@@ -104,6 +104,11 @@ To search for the pattern **maker** within all files in your working directory, 
 Use `:clist` to get a list of all files containing that pattern. `cc 2` jumps to the 2nd second list entry. <br>
 Jump to the next match with `:cn` or to the previous with `:cN` <br>
 
+## The global command
+`:g/bla/d` deletes all lines in the document that contain *bla* with. <br>
+`:g!/bla/d` deletes all lines in the document that do **not** contain *bla* with. <br>
+`:g/^\s*$/d` deletes all blank lines in current file. <br>
+
 ## Replace
 **Substitue flags**: `c` **c**onfirm, `g` all occurrences in line, `i` **i**gnore case, `I` don't ignore case <br>
 `:s/thee/the` will replace the **first** *thee* **in the line** with *the*. <br>
