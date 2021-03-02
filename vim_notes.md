@@ -323,6 +323,18 @@ A register is like a clipboard, but instead of only a single clipboard, Vim has 
 * 3x selection and drop registers `"*` `"+` `"~`
 * 1x black hole register `"_`
 * 1x last search pattern register `"/`
+### Named Registers
+Example:
+```sh
+ 29 Test REGISTER a
+ 30 Test REGISTER b
+ 31 Test REGISTER c
+```
+If you have three lines as those above and you'd like to paste each in different files or different positions in the same file, you'd place the cursor on the start of line 29 and type `"ayy` – named register a now stores *Test REGISTER a*. <br>
+In line 30 type `"byy` – named register b now stores *Test REGISTER b* and in line 31 type `"cyy` – named register c now stores *Test REGISTER c*. <br>
+To paste register a's content anywhere, place the cursor at the target position in the appropriate document and type `"aP`. <br>
+You guessed right … `"bP` to paste the content of register b and `"cP` to paste the register c stuff right where the cursor is. <br>
+Either **copy** and **paste** process happen in **normal** mode. <br> 
 
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
