@@ -334,7 +334,7 @@ If you have three lines as those above and you'd like to paste each in different
 In line 30 type `"byy` – named register b now stores *Test REGISTER b* and in line 31 type `"cyy` – named register c now stores *Test REGISTER c*. <br>
 To paste register a's content anywhere, place the cursor at the target position in the appropriate document and type `"aP`. <br>
 You guessed right … `"bP` to paste the content of register b and `"cP` to paste the register c stuff right where the cursor is. <br>
-Either **copy** and **paste** process happen in **normal** mode. <br> 
+Either **copy** and **paste** process happen in **normal** mode. **p** pastes **after** the cursor, **P** pastes **before** the cursor. <br> 
 
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
