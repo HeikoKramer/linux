@@ -310,8 +310,19 @@ The line **au bufnewfile,bufRead *filename* set filetype=sh** added in Vim confi
 `:set cursorline` or `:set cul` to show a line under current cursor position. `nocursorline` or `nocul` to switch it off. <br>
 
 ## Vim version
-`:version` will show you the installed version and options of Vim – options marked with a **+** are installed those with **-** ain't.<br
+`:version` will show you the installed version and options of Vim – options marked with a **+** are installed those with **-** ain't. <br>
 
+## Registers
+A register is like a clipboard, but instead of only a single clipboard, Vim has nine different types of clipboards: <br>
+* 1x unnamed register `""`
+* 10x numbered registers `"0` to `"9`
+* 1x small delete register `"-`
+* 26x named registers `"a` to `"z` or `"A` to `"Z`
+* 4x read-only registers `":` `".` `"%` `"#`
+* 1x expression register `"=`
+* 3x selection and drop registers `"*` `"+` `"~`
+* 1x black hole register `"_`
+* 1x last search pattern register `"/`
 
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
