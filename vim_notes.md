@@ -339,7 +339,10 @@ Either **copy** and **paste** process happen in **normal** mode. **p** pastes **
  `"ay}` will yank a block of text from the cursors position until the next free line into the **named register a**. <br>
  The command will **overwrite** whatever might already be stored there from previous `"a` commands. <br>
  `"Ay}` will **append** the content form cursor position until next empty line to the **named register a**. <br>
-
+**NOTE:** 26 named registers is a lot. If you ever forget, what you've stored in which register .. `:registers` will fresh up your mind with a preview list. <br>
+### The unnamed register
+You've probably used registers in Vim already without even knowing it. Whenever you yank, delete or change something, the content get's stored in the unnamed register. <br>
+Whenever you paste something, using <kbd>p</kbd> or <kbd>P</kbd>, you're taking that content out of that register. <br>
 
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
