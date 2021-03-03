@@ -343,6 +343,10 @@ Either **copy** and **paste** process happen in **normal** mode. **p** pastes **
 ### The unnamed register
 You've probably used registers in Vim already without even knowing it. Whenever you yank, delete or change something, the content get's stored in the unnamed register. <br>
 Whenever you paste something, using <kbd>p</kbd> or <kbd>P</kbd>, you're taking that content out of that register. <br>
+### The ". register
+You've probably used the dot before. The dot is simply repeating **the last edit you've made in insert mode**. <br>
+That edit is stored an **".** and revealed by the **.** command. <br>
+**Note:** If you need to copy your last entry 3x, you could type <kbd>ESC</kbd> after the insert, then <kbd>.</kbd> <kbd>.</kbd> <kbd>.</kbd> or just `3.` <br>
 
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
