@@ -353,6 +353,11 @@ The above registers are dedicated to the **Vim internal** use only. <br>
 To send content to the **system clipboard** the use of a **drop register** is required. <br>
 `"+yy` will yank the current line into the clipboard and make it available for <kbd>CTRL</kbd> <kbd>v</kbd> pasting in external applications. <br>
 
+## Buffers
+* Buffer   = text of a file in memory
+* Window   = view on a buffer
+* Tab page = collection of windows
+
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
 [rwxrob magic wands](https://rwx.gg/vi-magic-wands/) <br>
