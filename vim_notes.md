@@ -195,8 +195,8 @@ There is no ctrl+x style cut and paste in Vim --> because it keeps the last dele
 `y7w` will copy seven works from the cursors position. <br>
 `2y` will copy two lines from the cursors position. <br>
 `y$` will copy from cursor to the end `y0` to beginning of the line. <br>
-`23m42` will **move** line 23 to line 42. <br>
-`23,42m108` will **move** line 23-42 to line 108. <br>
+`:23m42` will **move** line 23 to line 42. <br>
+`:23,42m108` will **move** line 23-42 to line 108. <br>
 The move command will work on any line specified without the need to place the cursor there. <br>
 However, you can move the line where your cursor is placed with `:m10` – which will move this line to line 10. <br>
 
@@ -340,6 +340,7 @@ Either **copy** and **paste** process happen in **normal** mode. **p** pastes **
  The command will **overwrite** whatever might already be stored there from previous `"a` commands. <br>
  `"Ay}` will **append** the content form cursor position until next empty line to the **named register a**. <br>
 **NOTE:** 26 named registers is a lot. If you ever forget, what you've stored in which register .. `:registers` will fresh up your mind with a preview list. <br>
+To yank a line range into a named register use command mode like this: `:350,355y a` <br>
 ### The unnamed register
 You've probably used registers in Vim already without even knowing it. Whenever you yank, delete or change something, the content get's stored in the unnamed register. <br>
 Whenever you paste something, using <kbd>p</kbd> or <kbd>P</kbd>, you're taking that content out of that register. <br>
@@ -347,6 +348,10 @@ Whenever you paste something, using <kbd>p</kbd> or <kbd>P</kbd>, you're taking 
 You've probably used the dot before. The dot is simply repeating **the last edit you've made in insert mode**. <br>
 That edit is stored an **".** and revealed by the **.** command. <br>
 **Note:** If you need to copy your last entry 3x, you could type <kbd>ESC</kbd> after the insert, then <kbd>.</kbd> <kbd>.</kbd> <kbd>.</kbd> or just `3.` <br>
+### Drop registers
+The above registers are dedicated to the **Vim internal** use only. <br>
+To send content to the **system clipboard** the use of a **drop register** is required. <br>
+`"+yy` will yank the current line into the clipboard and make it available for <kbd>CTRL</kbd> <kbd>v</kbd> pasting in external applications. <br>
 
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
