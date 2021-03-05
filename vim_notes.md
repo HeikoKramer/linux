@@ -357,6 +357,8 @@ To send content to the **system clipboard** the use of a **drop register** is re
 * Buffer   = text of a file in memory
 * Window   = view on a buffer
 * Tab page = collection of windows
+A buffer can still be open although it's currently not visible in the window. <br>
+To display all opened buffers type `:ls` – to display the buffer with list index 3 in the window use `:5b`. <br>
 
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
