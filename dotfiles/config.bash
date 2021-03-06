@@ -17,6 +17,7 @@ alias sfs='cd ~/repos/github/sfdx/sfdx_scripts; l' #enter and list sfdx scripts
 alias isv='cd ~/repos/github/sfdx_projects/isv; l' #enter isv sfdx project
 alias conf='cd ~/.config; l' #enter and list config files
 ## FILE SHORTCUTS
+alias vim='nvim' #replace standard vim with neovim
 alias notes='vim ~/repos/gitlab.com/heiko__b/dotfiles/notes.md' #opens my notes in VIM
 alias linn='vim ~/repos/github/linux/linux_notes.md' #opens my notes on Linux
 alias vimn='vim ~/repos/github/linux/vim_notes.md' #opens my notes on vim
