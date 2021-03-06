@@ -367,7 +367,11 @@ You have basically three options if you want to use the drop registers neverthel
 * Window   = view on a buffer
 * Tab page = collection of windows
 A buffer can still be open although it's currently not visible in the window. <br>
-To display all opened buffers type `:ls` – to display the buffer with list index 3 in the window use `:5b`. <br>
+To display all opened buffers type `:ls` – to display the buffer with list index 3 in the window use `:3b`. <br>
+You can of course run that comman directly, iff you already know which buffe number you'd like to show. <br>
+`:ball` like **buffer all** will open all buffers in a splitted window. <br> 
+Switch back and forward between buffers with `:bnext` and `:bprevious`. <br>
+Close the current buffer with `:bd` – **buffer delete** – or for example the 2nd buffer with `:bd2`
 
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
