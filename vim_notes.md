@@ -367,13 +367,31 @@ You have basically three options if you want to use the drop registers neverthel
 * Window = view on a buffer
 A buffer can still be open although it's currently not visible in the window. <br>
 To display all opened buffers type `:ls` – to display the buffer with list index 3 in the window use `:3b`. <br>
-You can of course run that comman directly, iff you already know which buffe number you'd like to show. <br>
+You can of course run that command directly, if you already know which buffer number you'd like to show. <br>
 `:ball` like **buffer all** will open all buffers in a splitted window. <br> 
 Switch back and forward between buffers with `:bnext` and `:bprevious`. <br>
 Close the current buffer with `:bd` – **buffer delete** – or for example the 2nd buffer with `:bd2`
 Add the keybindings `map <C-H> :bprev<CR>` and `map <C-L> :bnext<CR>` to your **.vimrc** to jump back and forward between buffers pressing <kbd>CTRL</kbd> <kbd>h</kbd> or <kbd>CTRL</kbd> <kbd>l</kbd>. <br>
-Vim can have horizontal or ivertical splitted windows. To move between those windows use <kbd>CTRL</kbd> <kbd>w</kbd> and then <kbd>j</kbd>, <kbd>k</kbd>, <kbd>h</kbd> or <kbd>l</kbd>, to move up, down, left and right. <br>
+Vim can have horizontal or vertical splitted windows. To move between those windows use <kbd>CTRL</kbd> <kbd>w</kbd> and then <kbd>j</kbd>, <kbd>k</kbd>, <kbd>h</kbd> or <kbd>l</kbd>, to move up, down, left and right. <br>
 
+## Macros
+Vim allows you to record any chain of actions you're performing and store that sequence into a register. That is called a **macro**. <br>
+To start recording. type `qa` in **normal** mode. Example, let's record a macro to out-comment multiple lines of bash code: <br>
+
+* place the cursor on the first line of your code
+* type <kbd>i</kbd> to change int **insert** mode
+* type <kbd>#</kbd>, then <kbd>SPACE</kbd>
+* press <kbd>ESC</kbd> to switch back to **normal** mode
+* <kbd>j</kbd> to move down, <kbd>0</kbd> to jump to the beginning of the line
+* now it's time to end the recording, by pressing <kbd>q</kbd>
+
+Still in **normal** mode type `qa` to fire the recorded macro, out-comment that line and jump down to the beginning of the next one. <br>
+You might think this could faster be repeated with the **dot** command and you're probably right if you'd had to do this for only a few lines. <br>
+The cool thing about macros is, that it's now stored in the register and you can re-use it any time also in other buffers. <br>
+You can as add a number to it: `25@qa` will fire out a-register macro 25x times and so out-comment 25 lines in a row. <br>
+Those kinds of macros come especially in handy for repetitive formating tasks. <br>
+**Note:** Vim will redraw the screen every time a macro has been executed. That can take time if you're do a lot of iterations. <br>
+If you're using macros frequently, add `set lazyredraw` to your **.vimrc**. <br>
 
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
