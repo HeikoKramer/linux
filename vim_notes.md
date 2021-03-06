@@ -352,6 +352,13 @@ That edit is stored an **".** and revealed by the **.** command. <br>
 The above registers are dedicated to the **Vim internal** use only. <br>
 To send content to the **system clipboard** the use of a **drop register** is required. <br>
 `"+yy` will yank the current line into the clipboard and make it available for <kbd>CTRL</kbd> <kbd>v</kbd> pasting in external applications. <br>
+**NOTE:** It might be that the drop registers won't work in your current setup. <br>
+The reason is probably that the **xterm_clipboard** and **clipboard** features are not included in the Vim version of your distro. <br> 
+To check that out use the `:version` command. Features included are marked with a **+** not included features with a **-**. <br>
+If you want to use the drop registers use one of these three options:
+* compile Vim with those features
+* search and install a Vim version that already includes them
+* install neovim – which has those features activated by default
 
 ## Buffers
 * Buffer   = text of a file in memory
