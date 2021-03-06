@@ -355,10 +355,10 @@ To send content to the **system clipboard** the use of a **drop register** is re
 **NOTE:** It might be that the drop registers won't work in your current setup. <br>
 The reason is probably that the **xterm_clipboard** and **clipboard** features are not included in the Vim version of your distro. <br> 
 To check that out use the `:version` command. Features included are marked with a **+** not included features with a **-**. <br>
-If you want to use the drop registers use one of these three options:
-* compile Vim with those features
+You have basically three options if you want to use the drop registers nevertheless:
+* compile Vim including those features
 * search and install a Vim version that already includes them
-* install neovim – which has those features activated by default
+* install neovim and use – which has those features activated by default
 
 ## Buffers
 * Buffer   = text of a file in memory
