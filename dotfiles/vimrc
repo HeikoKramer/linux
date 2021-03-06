@@ -54,6 +54,7 @@ noremap <right> :echoerr "Umm, use l instead"<CR>
 colorscheme koehler
 
 " KEYBINDINGS
+" jump back and forward through your open buffers by pressing ctrl-h and ctrl-l
 map <C-H> :bprev<CR>
 map <C-L> :bnext<CR>
 
