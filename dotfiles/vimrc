@@ -52,3 +52,8 @@ noremap <right> :echoerr "Umm, use l instead"<CR>
 " darkblue   delek      elflord    industry   morning    pablo      ron        slate      zellner
 " FAVOURITES: koehler, delek, peachpuff, slate, zellner
 colorscheme koehler
+
+" NEOVIM SPECIFIC CONFIGS
+if has('nvim') 
+  set laststatus=0 noshowmode noruler
+endif
