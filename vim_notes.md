@@ -373,14 +373,16 @@ To display all opened buffers type `:ls` – to display the buffer with list ind
 [vimgenius](https://vimgenius.com) <br>
 [learn vim progressively](https://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/) <br>
 
+----
+
 # NEOVIM
 ## Installing Neovim
 Use `sudo apt install neovim` on Debian based distros. <br>
 ## Adopting your Vim configs 
-You can get Neovim up and running pretty fast, if you already have a good Vim in place. <br>
+You can get Neovim up and running pretty fast, if you already have a good Vim config in place. <br>
 To do so, just created a directory **nvim** in your **.config** directory `mkdir ~/.config/nvim`. <br>
 Create the file **init.vim** within that directory `touch ~/.config/nvim/init.vim`. <br>
-Place the following three lines in it and save to adopt your Vim config for Neovim: <br>
+Place the following three lines in it and save to adopt your Vim settings in Neovim: <br>
 ```sh
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
