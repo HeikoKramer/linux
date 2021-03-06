@@ -6,6 +6,7 @@ set wildmenu " shows command tab-completion options as a selectable menue
 set showcmd
 set title " shows filename in the window top bar
 " set spell " spellchecking enabled by default
+set lazyredraw " prevents vim from redrawing the screen after every macro execution
 " tabs and indentation
 set expandtab
 set tabstop=2
