@@ -362,10 +362,9 @@ You have basically three options if you want to use the drop registers neverthel
 * search and install a Vim version that already includes them
 * install neovim and use – which has those features activated by default
 
-## Buffers
-* Buffer   = text of a file in memory
-* Window   = view on a buffer
-* Tab page = collection of windows
+## Buffers and Windows
+* Buffer = text of a file in memory
+* Window = view on a buffer
 A buffer can still be open although it's currently not visible in the window. <br>
 To display all opened buffers type `:ls` – to display the buffer with list index 3 in the window use `:3b`. <br>
 You can of course run that comman directly, iff you already know which buffe number you'd like to show. <br>
@@ -373,6 +372,8 @@ You can of course run that comman directly, iff you already know which buffe num
 Switch back and forward between buffers with `:bnext` and `:bprevious`. <br>
 Close the current buffer with `:bd` – **buffer delete** – or for example the 2nd buffer with `:bd2`
 Add the keybindings `map <C-H> :bprev<CR>` and `map <C-L> :bnext<CR>` to your **.vimrc** to jump back and forward between buffers pressing <kbd>CTRL</kbd> <kbd>h</kbd> or <kbd>CTRL</kbd> <kbd>l</kbd>. <br>
+Vim can have horizontal or ivertical splitted windows. To move between those windows use <kbd>CTRL</kbd> <kbd>w</kbd> and then <kbd>j</kbd>, <kbd>k</kbd>, <kbd>h</kbd> or <kbd>l</kbd>, to move up, down, left and right. <br>
+
 
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
