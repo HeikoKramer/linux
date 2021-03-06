@@ -372,7 +372,7 @@ You can of course run that comman directly, iff you already know which buffe num
 `:ball` like **buffer all** will open all buffers in a splitted window. <br> 
 Switch back and forward between buffers with `:bnext` and `:bprevious`. <br>
 Close the current buffer with `:bd` – **buffer delete** – or for example the 2nd buffer with `:bd2`
-Add the keybindings `map <C-H> :bprev<CR>` and `map <C-L> :bnext<CR>` to your **.vimrc** to jump back and forward between buffers pressing <kbd>CTRL</kbd> <kbd>h</kbd> or <kbd>CTRL<kbd> <kbd>l</kbd>. <br>
+Add the keybindings `map <C-H> :bprev<CR>` and `map <C-L> :bnext<CR>` to your **.vimrc** to jump back and forward between buffers pressing <kbd>CTRL</kbd> <kbd>h</kbd> or <kbd>CTRL</kbd> <kbd>l</kbd>. <br>
 
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
