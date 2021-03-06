@@ -53,6 +53,10 @@ noremap <right> :echoerr "Umm, use l instead"<CR>
 " FAVOURITES: koehler, delek, peachpuff, slate, zellner
 colorscheme koehler
 
+" KEYBINDINGS
+map <C-H> :bprev<CR>
+map <C-L> :bnext<CR>
+
 " NEOVIM SPECIFIC CONFIGS
 if has('nvim') 
   set laststatus=0 noshowmode noruler
