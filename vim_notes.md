@@ -373,6 +373,7 @@ Switch back and forward between buffers with `:bnext` an:d `:bprevious`. <br>
 Close the current buffer with `:bd` – **buffer delete** – or for example the 2nd buffer with `:bd2`
 Add the keybindings `map <C-H> :bprev<CR>` and `map <C-L> :bnext<CR>` to your **.vimrc** to jump back and forward between buffers pressing <kbd>CTRL</kbd> <kbd>h</kbd> or <kbd>CTRL</kbd> <kbd>l</kbd>. <br>
 Vim can have horizontal or vertical splitted windows. To move between those windows use <kbd>CTRL</kbd> <kbd>w</kbd> and then <kbd>j</kbd>, <kbd>k</kbd>, <kbd>h</kbd> or <kbd>l</kbd>, to move up, down, left and right. <br>
+Open multiple files at once: `:args ~/test/*.md` will open all markdown files in the test directory. <br> 
 
 ## Macros
 Vim allows you to record any chain of actions you're performing and store that sequence into a register. That is called a **macro**. <br>
