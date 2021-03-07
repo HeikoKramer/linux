@@ -386,13 +386,17 @@ To start recording. type `qa` in **normal** mode. Example, let's record a macro 
 * <kbd>j</kbd> to move down, <kbd>0</kbd> to jump to the beginning of the line
 * now it's time to end the recording, by pressing <kbd>q</kbd>
 
-Still in **normal** mode type `qa` to fire the recorded macro, out-comment that line and jump down to the beginning of the next one. <br>
+Still in **normal** mode type `@a` to fire the recorded macro, out-comment that line and jump down to the beginning of the next one. <br>
 You might think this could faster be repeated with the **dot** command and you're probably right if you'd had to do this for only a few lines. <br>
 The cool thing about macros is, that it's now stored in the register and you can re-use it any time also in other buffers. <br>
 You can as add a number to it: `25@qa` will fire out a-register macro 25x times and so out-comment 25 lines in a row. <br>
 Those kinds of macros come especially in handy for repetitive formating tasks. <br>
 **Note:** Vim will redraw the screen every time a macro has been executed. That can take time if you're do a lot of iterations. <br>
 If you're using macros frequently, add `set lazyredraw` to your **.vimrc**. <br>
+### Recursive macros
+You can make a macro call itself to repeat the prior recorded steps. <br>
+In our example just add <kbd>@</kbd> <kbd>a</kbd> at the end before completing recording with <kbd>q</kbd>. <br>
+A that way recorded macro would out-comment everything from the cursors position until the end of the file. <br>
 ### Macro combinations
 Let's say you want our bash out-comment macro on all the lines in the file: <br>
 `:g/^/ norm @a` will do the trick. Expl: `g/^/` *(regex /^/ – every line)*, `norm` *run in normal mode*, `@a` *the macro recorded in a*. <br>
