@@ -394,10 +394,7 @@ Those kinds of macros come especially in handy for repetitive formating tasks. <
 If you're using macros frequently, add `set lazyredraw` to your **.vimrc**. <br>
 ### Macro combinations
 Let's say you want our bash out-comment macro on all the lines in the file: <br>
-`:g/^/ norm @a` will do the trick. <br>
-* `g/^/`   on every line that matches the regex /^/ - i.e. every line
-* `norm`   run in normal mode
-* `@a`     the macro recorded in a
+`:g/^/ norm @a` will do the trick. Expl: `g/^/` *(regex /^/ – every line)*, `norm` *run in normal mode*, `@a` *the macro recorded in a*. <br>
 `:g/bla/ norm @a` will out-comment each line containing the string *bla*. <br>
 `:10,15 norm @a` will out-comment line 10 until 15. <br>
 
