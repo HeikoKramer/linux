@@ -398,6 +398,11 @@ Let's say you want our bash out-comment macro on all the lines in the file: <br>
 `:g/^/ norm @a` will do the trick. Expl: `g/^/` *(regex /^/ – every line)*, `norm` *run in normal mode*, `@a` *the macro recorded in a*. <br>
 `:g/bla/ norm @a` will out-comment each line containing the string *bla*. <br>
 `:10,15 norm @a` will out-comment line 10 until 15. <br>
+### Edit macros
+You have the option to edit a macro to do some adjustments if you don't want to record it again. <br>
+We have stored our macro in register **a**, so to edit it, we need to paste it into an empty line. <br>
+`"aP` will show the macros content – now we can edit it. <kbd>ESC</kbd> and <kbd>0</kbd> when finished. <br>
+`"ay$` will then yank the whole line back into the register and our updated macro is ready to use. <br>
 
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
