@@ -402,6 +402,10 @@ Let's say you want our bash out-comment macro on all the lines in the file: <br>
 `:g/^/ norm @a` will do the trick. Expl: `g/^/` *(regex /^/ – every line)*, `norm` *run in normal mode*, `@a` *the macro recorded in a*. <br>
 `:g/bla/ norm @a` will out-comment each line containing the string *bla*. <br>
 `:10,15 norm @a` will out-comment line 10 until 15. <br>
+**Visual mode** comes in handy with macros. At the beginning of a block type <kbd>v</kbd> then <kbd>}</kbd> to mark until next empty line. <br>
+Then type <kbd>:</kbd> – `'<,'>` will already be written at the command prompt. That refers to the visual mode selected areal. <br>
+Complete the command with `norm @a` so that the complete command looks like this: `:'<,'>norm @a` <br>
+In our example the whole block will now be out-commented with the hash sign. <br>
 ### Edit macros
 You have the option to edit a macro to do some adjustments if you don't want to record it again. <br>
 We have stored our macro in register **a**, so to edit it, we need to paste it into an empty line. <br>
