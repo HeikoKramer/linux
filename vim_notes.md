@@ -369,7 +369,7 @@ A buffer can still be open although it's currently not visible in the window. <b
 To display all opened buffers type `:ls` – to display the buffer with list index 3 in the window use `:3b`. <br>
 You can of course run that command directly, if you already know which buffer number you'd like to show. <br>
 `:ball` like **buffer all** will open all buffers in a splitted window. <br> 
-Switch back and forward between buffers with `:bnext` and `:bprevious`. <br>
+Switch back and forward between buffers with `:bnext` an:d `:bprevious`. <br>
 Close the current buffer with `:bd` – **buffer delete** – or for example the 2nd buffer with `:bd2`
 Add the keybindings `map <C-H> :bprev<CR>` and `map <C-L> :bnext<CR>` to your **.vimrc** to jump back and forward between buffers pressing <kbd>CTRL</kbd> <kbd>h</kbd> or <kbd>CTRL</kbd> <kbd>l</kbd>. <br>
 Vim can have horizontal or vertical splitted windows. To move between those windows use <kbd>CTRL</kbd> <kbd>w</kbd> and then <kbd>j</kbd>, <kbd>k</kbd>, <kbd>h</kbd> or <kbd>l</kbd>, to move up, down, left and right. <br>
@@ -392,6 +392,14 @@ You can as add a number to it: `25@qa` will fire out a-register macro 25x times 
 Those kinds of macros come especially in handy for repetitive formating tasks. <br>
 **Note:** Vim will redraw the screen every time a macro has been executed. That can take time if you're do a lot of iterations. <br>
 If you're using macros frequently, add `set lazyredraw` to your **.vimrc**. <br>
+### Macro combinations
+Let's say you want our bash out-comment macro on all the lines in the file: <br>
+`:g/^/ norm @a` will do the trick. <br>
+* `g/^/`   on every line that matches the regex /^/ - i.e. every line
+* `norm`   run in normal mode
+* `@a`     the macro recorded in a
+`:g/bla/ norm @a` will out-comment each line containing the string *bla*. <br>
+`:10,15 norm @a` will out-comment line 10 until 15. <br>
 
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
