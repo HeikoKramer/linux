@@ -40,7 +40,14 @@ alias vimb='mupdf -I ~/books/Vim/Mastering_Vim_Quickly_v1.1.pdf' #opens vim book
 alias ovimb='mupdf -I ~/books/Vim/viandvimeditorspocketreference2e.pdf' #opens O'Reilly vim book in mupdf
 alias pvimb='mupdf -I ~/books/Vim/781789341096-MASTERING_VIM.pdf' #opens Packt vim book in mupdf
 ### Linux / Unix command line books
-alias book='mupdf -I ~/books/TLCL-19.01.pdf' #opens "The Linus Command Line" book in mupdf
+alias book='mupdf -I ~/books/Linux_CL/TLCL-19.01.pdf' #opens "The Linus Command Line" book in mupdf
+alias ubook='mupdf -I ~/books/Linux_CL/9781800564640-MASTERING_UBUNTU_SERVER_THIRD_EDITION.pdf' #opens Jay's ubuntu server book in mupdf
+alias obash='mupdf -I ~/books/Linux_CL/bashpocketreference2e.pdf' #opens O'Reilly  bash book in mupdf
+alias ogit='mupdf -I ~/books/Linux_CL/gitpocketguide1e.pdf' #opens O'Reilly git book in mupdf
+alias ogrep='mupdf -I ~/books/Linux_CL/greppocketref.pdf' #opens O'Reilly grep book in mupdf
+alias olinux='mupdf -I ~/books/Linux_CL/linuxpocketguide3e.pdf' #opens O'Reilly linux book in mupdf
+alias oregex='mupdf -I ~/books/Linux_CL/regularexpressionspocketreference.pdf' #opens O'Reilly regex book in mupdf
+alias oawk='mupdf -I ~/books/Linux_CL/sedandawkpocketreference2e.pdf' #opens O'Reilly sed & awk book in mupdf
 ## VIRTUALIZATION SHORTCUTS
 alias vmac='VBoxManage startvm "VMac"' #starts my virtual mac
 ## TERMINAL COMMAND SHORCUTS
