@@ -52,6 +52,10 @@ alias oawk='mupdf -I ~/books/Linux_CL/sedandawkpocketreference2e.pdf' #opens O'R
 alias jsb='mupdf -I ~/books/JS/Eloquent_JavaScript.pdf' #opens "Eloquent JS" book in mupdf
 alias nodeb='mupdf -I ~/books/JS/9781838987572-NODEJS_WEB_DEVELOPMENT_FIFTH_EDITION.pdf' #opens Packt NodeJS book in mupdf
 alias reactb='mupdf -I ~/books/JS/9781839219931-FULLSTACK_REACT_TYPESCRIPT_AND_NODE.pdf' #opens Packt React book in mupdf
+## Salesforce book
+alias lightb='mupdf -I ~/books/Salesforce/9781789956719-SALESFORCE_LIGHTNING_PLATFORM_ENTERPRISE_ARCHITECTURE_THIRD_EDITION.pdf' #opens Packt Lightning book in mupdf
+alias apexp='mupdf -I ~/books/Salesforce/9781800200920-MASTERING_APEX_PROGRAMMING.pdf' #opens Packt Apex book in mupdf
+alias archb='mupdf -I ~/books/Salesforce/9781800568754-BECOMING_A_SALESFORCE_CERTIFIED_TECHNICAL_ARCHITECT.pdf' #opens Packt SF Architect book in mupdf
 ## VIRTUALIZATION SHORTCUTS
 alias vmac='VBoxManage startvm "VMac"' #starts my virtual mac
 ## TERMINAL COMMAND SHORCUTS
