@@ -247,7 +247,7 @@ To out-commend a line of bash code, press <kbd>0</kbd> <kbd>i</kbd> <kbd>#</kbd>
 <kbd>\<</kbd> <kbd>\<</kbd> to take that line back. <br>
 <kbd>5</kbd> <kbd>\></kbd> <kbd>\></kbd> to indent five lines from the cursors position. <br>
 
-## Command & Visual mode
+## Command mode
 <kbd>:</kbd> <kbd>!</kbd> will set Vim in the mode to execute any external command. <br>
 `:!ls` will for example show a list of the current directory. <br>
 `:w filename` will save a copy of the edited file with name *filename*. <br>
@@ -257,14 +257,20 @@ You can use commands like <kbd>d</kbd> to delete the selected text or press <kbd
 The command promt looks a bit different in **visual** mode, the above will appear like `:'<,'>w TEST`. <br>
 `:r TEST` will insert the content of TEST at the cursor position. <br>
 Outputs of external commands can be inserted as well, example: `:r !ls`. <br>
-<kbd>v</kbd> for **visual** mode and then <kbd>y</kbd> will copy all marked text. <br>
 If `:e` is entered - or any other first letter - and <kbd>CTRL</kbd> + <kbd>d</kbd> is pressed the all command starting wit **e** will show. <br>
-### Visual Block
+
+## Visual mode
+<kbd>v</kbd> for **visual** mode, where you can mark text by moving around with the cursor or use keys like <kbd>$</kbd> to jump to the end of teh line. >vr
+When you're done selecting your areal, press <kbd>y</kbd> to yank the selsction od <kbd>d</kbd> to delete the marked text. <br>
+<kbd>V</kbd> will start into **visual** mode by selecting the whole line of the cursor's position. <br>
+### Visual block
 If you have some table-like formatted text/code with vertical aligned strings of identical size, you can use **visual block** to edit them simultaneously. <br>
 Bring the cursor to the first entry you'd like to edit, press <kbd>CTRL</kbd> <kbd>v</kbd> to enter **visual block** mode. <br>
 Press <kbd>l</kbd> till the string is fully selected, then start pressing <kbd>j</kbd> to mark the same areal in as many lines below as you like. <br>
 When all lines are selected press <kbd>c</kbd> to **change**, enter the new text, press <kbd>ESC</kbd> and that change will apply to all selected lines. <br>
 This method works as well with <kbd>d</kbd> for **delete** or <kbd>y</kbd> for **yank**. <br>
+`gv` will re-select the last text areal which was marked in **visual** mode before <kbd>ESC</kbd> was entered. <br>
+
 
 ## Case folding
 <kbd>~</kbd> in **normal** mode changes the case of the letter under the cursor. <br>
