@@ -48,6 +48,10 @@ alias ogrep='mupdf -I ~/books/Linux_CL/greppocketref.pdf' #opens O'Reilly grep b
 alias olinux='mupdf -I ~/books/Linux_CL/linuxpocketguide3e.pdf' #opens O'Reilly linux book in mupdf
 alias oregex='mupdf -I ~/books/Linux_CL/regularexpressionspocketreference.pdf' #opens O'Reilly regex book in mupdf
 alias oawk='mupdf -I ~/books/Linux_CL/sedandawkpocketreference2e.pdf' #opens O'Reilly sed & awk book in mupdf
+## JavaScript books
+alias jsb='mupdf -I ~/books/JS/Eloquent_JavaScript.pdf' #opens "Eloquent JS" book in mupdf
+alias nodeb='mupdf -I ~/books/JS/9781838987572-NODEJS_WEB_DEVELOPMENT_FIFTH_EDITION.pdf' #opens Packt NodeJS book in mupdf
+alias reactb='mupdf -I ~/books/JS/9781839219931-FULLSTACK_REACT_TYPESCRIPT_AND_NODE.pdf' #opens Packt React book in mupdf
 ## VIRTUALIZATION SHORTCUTS
 alias vmac='VBoxManage startvm "VMac"' #starts my virtual mac
 ## TERMINAL COMMAND SHORCUTS
