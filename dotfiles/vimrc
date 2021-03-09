@@ -38,6 +38,8 @@ set icon " terminal title -> filename
 
 set scrolloff=999 " keeps cursor in the middle of the screen
 
+vnoremap . :norm.<CR> " makes dot command work in visual mode without tying the usually needed full command
+
 " start at last place you were editing
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 "au BufWritePost ~/.vimrc so ~/.vimrc

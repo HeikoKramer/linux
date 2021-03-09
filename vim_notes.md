@@ -280,6 +280,7 @@ This is the prefix to use the command only on the **visual** marked lines. Now t
 `:'<,'> norm A;` will append a **;** at the end of each **visual** selected line. <br>
 `:'<,'> norm .` will repeat the last write action to each **visual** selected line. <br>
 It's important to add **norm** or **normal** to those command to switch to **normal** mode for their execution. <br>
+Add `vnoremap . :norm.<CR>` to your **.vimrc** to perform the dot command in visual by simply pressing <kbd>.</kbd> instead of typing the full command. <br>
 
 ## Case folding
 <kbd>~</kbd> in **normal** mode changes the case of the letter under the cursor. <br>
