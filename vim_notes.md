@@ -281,6 +281,7 @@ This is the prefix to use the command only on the **visual** marked lines. Now t
 `:'<,'> norm .` will repeat the last write action to each **visual** selected line. <br>
 It's important to add **norm** or **normal** to those command to switch to **normal** mode for their execution. <br>
 Add `vnoremap . :norm.<CR>` to your **.vimrc** to perform the dot command in visual by simply pressing <kbd>.</kbd> instead of typing the full command. <br>
+Add `vnoremap J :m '>+1<CR>gv=gv` and `vnoremap K :m '<-2<CR>gv=gv` to your **.vimrc** to move **visual** selected lines up and down with <kbd>K</kbd> and <kbd>J</kbd>. <br>
 
 ## Case folding
 <kbd>~</kbd> in **normal** mode changes the case of the letter under the cursor. <br>
