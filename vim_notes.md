@@ -270,7 +270,8 @@ Press <kbd>l</kbd> till the string is fully selected, then start pressing <kbd>j
 When all lines are selected press <kbd>c</kbd> to **change**, enter the new text, press <kbd>ESC</kbd> and that change will apply to all selected lines. <br>
 This method works as well with <kbd>d</kbd> for **delete** or <kbd>y</kbd> for **yank**. <br>
 `gv` will re-select the last text areal which was marked in **visual** mode before <kbd>ESC</kbd> was entered. <br>
-
+The **visual** mode selection follows the cursor where it goes – but you can switch directions with <kbd>o</kbd>. <br>
+The cursor than jumps to the opposing site as if you'd started the other way around. <br>
 
 ## Case folding
 <kbd>~</kbd> in **normal** mode changes the case of the letter under the cursor. <br>
