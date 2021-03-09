@@ -271,7 +271,15 @@ When all lines are selected press <kbd>c</kbd> to **change**, enter the new text
 This method works as well with <kbd>d</kbd> for **delete** or <kbd>y</kbd> for **yank**. <br>
 `gv` will re-select the last text areal which was marked in **visual** mode before <kbd>ESC</kbd> was entered. <br>
 The **visual** mode selection follows the cursor where it goes – but you can switch directions with <kbd>o</kbd>. <br>
-The cursor than jumps to the opposing site as if you'd started the other way around. <br>
+The cursor than jumps to the opposing site as if you'd started the other way around. <br> 
+### Visual mode commands
+The real power of **visual** mode lies in command mode. <br>
+Let's say you'd like to out-comment some lines of a shell script. Press <kbd>CTRL</kbd> <kbd>v</kbd>, go down those lines … <br>
+… then press <kbd>:</kbd> to enter into command mode. You'll see there's already something placed ther `'<,'>`. <br>
+This is the prefix to use the command only on the **visual** marked lines. Now type `norm I#` and hit <kbd>ENTER</kbd>. <br>
+`:'<,'> norm A;` will append a **;** at the end of each **visual** selected line. <br>
+`:'<,'> norm .` will repeat the last write action to each **visual** selected line. <br>
+It's important to add **norm** or **normal** to those command to switch to **normal** mode for their execution. <br>
 
 ## Case folding
 <kbd>~</kbd> in **normal** mode changes the case of the letter under the cursor. <br>
