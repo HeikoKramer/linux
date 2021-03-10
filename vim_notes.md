@@ -429,6 +429,11 @@ We have stored our macro in register **a**, so to edit it, we need to paste it i
 `"aP` will show the macros content – now we can edit it. <kbd>ESC</kbd> and <kbd>0</kbd> when finished. <br>
 `"ay$` will then yank the whole line back into the register and our updated macro is ready to use. <br>
 
+## Mappings
+Use the `:nmap` command to map a key or combination of keys to a specific command executed in **normal** mode. <br>
+`:nmap ev :e ~/repos/github/linux/dotfiles/vimrc<cr>` will open my **.vimrc** file when <kbd>e</kbd> then <kbd>v</kbd> is pressed. <br>
+`:nunmap ev` will unmap the previous set mapping. <br>
+
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
 [rwxrob magic wands](https://rwx.gg/vi-magic-wands/) <br>
