@@ -38,6 +38,20 @@ set icon " terminal title -> filename
 
 set scrolloff=999 " keeps cursor in the middle of the screen
 
+" start at last place you were editing
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+"au BufWritePost ~/.vimrc so ~/.vimrc
+
+" MAPPINGS 
+" CONFIG OPENING MAPPINGS
+" open vimrc by entering – ev
+nmap ev :e ~/repos/github/linux/dotfiles/vimrc<cr>
+" open bash config by entering – eb
+nmap eb :e ~/repos/github/linux/dotfiles/config.bash<cr>
+" open Salesforce sfdx config by entering – es
+nmap es :e ~/repos/github/linux/dotfiles/sfdx.conf<cr>
+" open tmux config by entering – et
+nmap et :e ~/repos/github/linux/dotfiles/tmux.conf<cr>
 " VISUAL MODE KEYBINDINGS
 " makes dot command work in visual mode without tying the usually needed full command
 vnoremap . :norm.<CR> 
@@ -45,19 +59,12 @@ vnoremap . :norm.<CR>
 vnoremap J :m '>+1<CR>gv=gv 
 " makes visual selected lines move up one line when pressing K 
 vnoremap K :m '<-2<CR>gv=gv
-
-" start at last place you were editing
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-"au BufWritePost ~/.vimrc so ~/.vimrc
-
+" KEY MAPPINGS
 " disable arrow keys (vi muscle memory)
 noremap <up> :echoerr "Umm, use k instead"<CR>
 noremap <down> :echoerr "Umm, use j instead"<CR>
 noremap <left> :echoerr "Umm, use h instead"<CR>
 noremap <right> :echoerr "Umm, use l instead"<CR>
-
-" open vimrc by entering – ev
-nmap ev :e ~/repos/github/linux/dotfiles/vimrc<cr>
 
 " ALL AVAILABLE DEFAULT COLORSCHEMES
 " blue       default    desert     evening    koehler    murphy     peachpuff  shine      torte
