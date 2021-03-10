@@ -433,6 +433,7 @@ We have stored our macro in register **a**, so to edit it, we need to paste it i
 Use the `:nmap` command to map a key or combination of keys to a specific command executed in **normal** mode. <br>
 `:nmap ev :e ~/repos/github/linux/dotfiles/vimrc<cr>` will open my **.vimrc** file when <kbd>e</kbd> then <kbd>v</kbd> is pressed. <br>
 When entered as a command, the mapping will last only for the active session. `:nunmap ev` will unmap the set **ev** mapping. <br>
+To use a mapping permanent, independent from the current session, add it into your **.vimrc**. <br>
 
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>

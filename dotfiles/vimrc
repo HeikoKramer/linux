@@ -59,6 +59,12 @@ vnoremap . :norm.<CR>
 vnoremap J :m '>+1<CR>gv=gv 
 " makes visual selected lines move up one line when pressing K 
 vnoremap K :m '<-2<CR>gv=gv
+" BUFFER NAVIGATION
+" jump back and forward through your open buffers by pressing ctrl-h and ctrl-l
+nmap <C-H> :bprev<CR>
+nmap <C-L> :bnext<CR>
+" close window with current buffer (buffer delete)
+nmap <C-D> :bd<CR>
 " KEY MAPPINGS
 " disable arrow keys (vi muscle memory)
 noremap <up> :echoerr "Umm, use k instead"<CR>
@@ -71,11 +77,6 @@ noremap <right> :echoerr "Umm, use l instead"<CR>
 " darkblue   delek      elflord    industry   morning    pablo      ron        slate      zellner
 " FAVOURITES: koehler, delek, peachpuff, slate, zellner
 colorscheme koehler
-
-" KEYBINDINGS
-" jump back and forward through your open buffers by pressing ctrl-h and ctrl-l
-map <C-H> :bprev<CR>
-map <C-L> :bnext<CR>
 
 " NEOVIM SPECIFIC CONFIGS
 if has('nvim') 
