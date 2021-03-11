@@ -45,13 +45,13 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " MAPPINGS 
 " CONFIG OPENING MAPPINGS
 " open vimrc by entering – ev
-nmap ev :e ~/repos/github/linux/dotfiles/vimrc<cr>
+noremap ev :e ~/repos/github/linux/dotfiles/vimrc<cr>
 " open bash config by entering – eb
-nmap eb :e ~/repos/github/linux/dotfiles/config.bash<cr>
+noremap eb :e ~/repos/github/linux/dotfiles/config.bash<cr>
 " open Salesforce sfdx config by entering – es
-nmap es :e ~/repos/github/linux/dotfiles/sfdx.conf<cr>
+noremap es :e ~/repos/github/linux/dotfiles/sfdx.conf<cr>
 " open tmux config by entering – et
-nmap et :e ~/repos/github/linux/dotfiles/tmux.conf<cr>
+noremap et :e ~/repos/github/linux/dotfiles/tmux.conf<cr>
 " VISUAL MODE KEYBINDINGS
 " makes dot command work in visual mode without tying the usually needed full command
 vnoremap . :norm.<CR> 
@@ -61,10 +61,10 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 " BUFFER NAVIGATION
 " jump back and forward through your open buffers by pressing ctrl-h and ctrl-l
-nmap <C-H> :bprev<CR>
-nmap <C-L> :bnext<CR>
+noremap <C-H> :bprev<CR>
+noremap <C-L> :bnext<CR>
 " close window with current buffer (buffer delete)
-nmap <C-D> :bd<CR>
+noremap <C-D> :bd<CR>
 " KEY MAPPINGS
 " disable arrow keys (vi muscle memory)
 noremap <up> :echoerr "Umm, use k instead"<CR>
