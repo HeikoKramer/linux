@@ -55,6 +55,16 @@ noremap sc :e ~/repos/github/linux/dotfiles/sfdx.conf<cr>
 " open tmux config by entering – tc
 noremap tc :e ~/repos/github/linux/dotfiles/tmux.conf<cr>
 
+" NOTES OPENING MAPPINGS
+" open my Vim notes by entering – vn
+noremap vn :e ~/repos/github/linux/vim_notes.md<cr>
+" open my Linux notes by entering – ln
+noremap ln :e ~/repos/github/linux/linux_notes.md<cr>
+" open my sfdx notes by entering – sn
+noremap sn :e ~/repos/github/sfdx/sfdx_notes.md<cr>
+" open my tmux notes by entering – tn
+noremap tn :e ~/repos/github/linux/tmux_notes.md<cr>
+
 " VISUAL MODE KEYBINDINGS
 " makes dot command work in visual mode without tying the usually needed full command
 vnoremap . :norm.<CR> 
