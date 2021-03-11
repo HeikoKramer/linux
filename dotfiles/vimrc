@@ -44,14 +44,14 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 " MAPPINGS 
 " CONFIG OPENING MAPPINGS
-" open vimrc by entering – ev
-noremap ev :e ~/repos/github/linux/dotfiles/vimrc<cr>
-" open bash config by entering – eb
-noremap eb :e ~/repos/github/linux/dotfiles/config.bash<cr>
-" open Salesforce sfdx config by entering – es
-noremap es :e ~/repos/github/linux/dotfiles/sfdx.conf<cr>
-" open tmux config by entering – et
-noremap et :e ~/repos/github/linux/dotfiles/tmux.conf<cr>
+" open vimrc by entering – vc
+noremap vc :e ~/repos/github/linux/dotfiles/vimrc<cr>
+" open bash config by entering – bc
+noremap bc :e ~/repos/github/linux/dotfiles/config.bash<cr>
+" open Salesforce sfdx config by entering – sc
+noremap sc :e ~/repos/github/linux/dotfiles/sfdx.conf<cr>
+" open tmux config by entering – tc
+noremap tc :e ~/repos/github/linux/dotfiles/tmux.conf<cr>
 " VISUAL MODE KEYBINDINGS
 " makes dot command work in visual mode without tying the usually needed full command
 vnoremap . :norm.<CR> 
