@@ -42,7 +42,9 @@ set scrolloff=999 " keeps cursor in the middle of the screen
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 "au BufWritePost ~/.vimrc so ~/.vimrc
 
+
 " MAPPINGS 
+
 " CONFIG OPENING MAPPINGS
 " open vimrc by entering – vc
 noremap vc :e ~/repos/github/linux/dotfiles/vimrc<cr>
@@ -52,6 +54,7 @@ noremap bc :e ~/repos/github/linux/dotfiles/config.bash<cr>
 noremap sc :e ~/repos/github/linux/dotfiles/sfdx.conf<cr>
 " open tmux config by entering – tc
 noremap tc :e ~/repos/github/linux/dotfiles/tmux.conf<cr>
+
 " VISUAL MODE KEYBINDINGS
 " makes dot command work in visual mode without tying the usually needed full command
 vnoremap . :norm.<CR> 
@@ -59,12 +62,14 @@ vnoremap . :norm.<CR>
 vnoremap J :m '>+1<CR>gv=gv 
 " makes visual selected lines move up one line when pressing K 
 vnoremap K :m '<-2<CR>gv=gv
+
 " BUFFER NAVIGATION
 " jump back and forward through your open buffers by pressing ctrl-h and ctrl-l
 noremap <C-H> :bprev<CR>
 noremap <C-L> :bnext<CR>
 " close window with current buffer (buffer delete)
 noremap <C-D> :bd<CR>
+
 " KEY MAPPINGS
 " disable arrow keys (vi muscle memory)
 noremap <up> :echoerr "Umm, use k instead"<CR>
@@ -72,11 +77,13 @@ noremap <down> :echoerr "Umm, use j instead"<CR>
 noremap <left> :echoerr "Umm, use h instead"<CR>
 noremap <right> :echoerr "Umm, use l instead"<CR>
 
+
 " ALL AVAILABLE DEFAULT COLORSCHEMES
 " blue       default    desert     evening    koehler    murphy     peachpuff  shine      torte
 " darkblue   delek      elflord    industry   morning    pablo      ron        slate      zellner
 " FAVOURITES: koehler, delek, peachpuff, slate, zellner
 colorscheme koehler
+
 
 " NEOVIM SPECIFIC CONFIGS
 if has('nvim') 
