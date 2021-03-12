@@ -438,7 +438,7 @@ Use `:h mapping` and `:h key-notation` to learn all about mapping and which key 
 This table showing the commands to map / unmap keys in the different modes is copied from the mapping help: <br>
 
 |Recursive|Non-recursive|Unmap|Modes|
-|:--------|:------------|...........|
+|:--------|:------------|:----|:----|
 |`:map`|:`noremap`|`unmap`|Normal, Visual, Select, Operator-pending|
 |`:nmap`|:`nnoremap`|`nunmap`|Normal|
 |`:vmap`|:`vnoremap`|`vunmap`|Visual and Select|
