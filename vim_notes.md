@@ -431,9 +431,34 @@ We have stored our macro in register **a**, so to edit it, we need to paste it i
 
 ## Mappings
 Use the `:nmap` command to map a key or combination of keys to a specific command executed in **normal** mode. <br>
-`:nmap ev :e ~/repos/github/linux/dotfiles/vimrc<cr>` will open my **.vimrc** file when <kbd>e</kbd> then <kbd>v</kbd> is pressed. <br>
-When entered as a command, the mapping will last only for the active session. `:nunmap ev` will unmap the set **ev** mapping. <br>
+`:nmap vc :e ~/repos/github/linux/dotfiles/vimrc<cr>` will open my **.vimrc** file when <kbd>v</kbd> then <kbd>c</kbd> is pressed. <br>
+When entered as a command, the mapping will last only for the active session. `:nunmap ev` will unmap the set **vc** mapping. <br>
 To use a mapping permanent, independent from the current session, add it into your **.vimrc**. <br>
+Use `:h mapping` and `:h key-notation` to learn all about mapping and which key can be mapped. <br>
+This table showing the commands to map / unmap keys in the different modes is copied from the mapping help: <br>
+
+|Recursive|Non-recursive|Unmap|Modes|
+|:--------|:------------|...........|
+|`:map`|:`noremap`|`unmap`|Normal, Visual, Select, Operator-pending|
+|`:nmap`|:`nnoremap`|`nunmap`|Normal|
+|`:vmap`|:`vnoremap`|`vunmap`|Visual and Select|
+|`:smap`|:`snoremap`|`sunmap`|Select|
+|`:xmap`|:`xnoremap`|`xunmap`|Visual|
+|`:omap`|:`onoremap`|`ounmap`|Operator-pending|
+|`:map!`|:`noremap!`|`unmap!`|Insert and Command-line|
+|`:imap`|:`inoremap`|`iunmap`|Insert|
+|`:lmap`|:`lnoremap`|`lunmap`|Insert, Command-line, Lang-Arg|
+|`:cmap`|:`cnoremap`|`cunmap`|Command-line|
+|`:tmap`|:`tnoremap`|`tunmap`|Terminal|
+
+**Note:** You can list all active mappings of a mode with the initial comman. <br>
+`:nmap` will list all **normal** mode, `:vmap` all **visual** mode mappings, and so on … <br>
+
+Good resource on mapping: <br>
+[Vim Drops](https://medium.com/vim-drops/understand-vim-mappings-and-create-your-own-shortcuts-f52ee4a6b8ed) <br>
+[Vim Tips Wiki Mapping Tutorial Part 1](https://vim.fandom.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1)) <br>
+[Vim Tips Wiki Mapping Tutorial Part 2](https://vim.fandom.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_2)) <br>
+[Vim Tips Wiki Mapping Tutorial Part 3](https://vim.fandom.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_3)) <br>
 
 ## Vim resources
 **vimtutor** command to open an in vim integrated tutorial <br>
