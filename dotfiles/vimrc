@@ -87,6 +87,9 @@ noremap <down> :echoerr "Umm, use j instead"<CR>
 noremap <left> :echoerr "Umm, use h instead"<CR>
 noremap <right> :echoerr "Umm, use l instead"<CR>
 
+" MISC COMMAND MAPPINGS
+" stop highlighting search pattern by pressing – ctrl-x
+nmap <C-X> :noh<cr>
 
 " ALL AVAILABLE DEFAULT COLORSCHEMES
 " blue       default    desert     evening    koehler    murphy     peachpuff  shine      torte
