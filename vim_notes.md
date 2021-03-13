@@ -451,7 +451,7 @@ This table showing the commands to map / unmap keys in the different modes is co
 |`:cmap`|:`cnoremap`|`cunmap`|Command-line|
 |`:tmap`|:`tnoremap`|`tunmap`|Terminal|
 
-**Note:** You can list all active mappings of a mode with the initial comman. <br>
+**Note:** You can list all active mappings of a mode with the initial command. <br>
 `:nmap` will list all **normal** mode, `:vmap` all **visual** mode mappings, and so on … <br>
 
 Good resource on mapping: <br>
@@ -461,7 +461,16 @@ Good resource on mapping: <br>
 [Vim Tips Wiki Mapping Tutorial Part 3](https://vim.fandom.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_3)) <br>
 
 ## Folding
-
+There is a brought variety of folding commands and setting options ind Vim. <br>
+Folding can be adjusted generally, file, programming language or custom syntax specific. <br>
+As I'm currently not a heavy folding user, I'll cover only some very basics here. <br>
+`zfap` will **fold** the paragraph on which the cursor is placed (no matter where it is placed. <br>
+<kbd>l</kbd> <kbd>l</kbd> or `zo` – with the cursor on the folded line – will **unfold** the paragraph. <br>  
+Fold the line where the cursor is placed + the next 10 lines with `zf10j`. <br>
+`zfa{` or `zfa}` will fold lines of code within curly brackets. <br>
+Move to the next / previous fold with `zj` and `zk`. <br>
+`zR` will close `zM` will open all folds in current buffer. <br>
+`:fold` will fold all lines currently marked in **visual** mode. <br>
 
 ## Great Vim resources
 `vimtutor` command to open an in vim integrated tutorial <br>
