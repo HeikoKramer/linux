@@ -87,6 +87,18 @@ noremap <down> :echoerr "Umm, use j instead"<CR>
 noremap <left> :echoerr "Umm, use h instead"<CR>
 noremap <right> :echoerr "Umm, use l instead"<CR>
 
+" SPELL CHECKING MAPPINGS
+" activate spell checking by typing – ss
+noremap ss :set spell<cr>
+" deactivate spell checking by typing – ns
+noremap ns :set nospell<cr>
+" jump back to last miss-spelled word by pressing – ctrl-s
+noremap <C-S> :norm [s<cr>
+" enter list of spelling suggestions by pressing – ctrl-z
+noremap <C-Z> :norm z=<cr>
+" ignore word and add to dictionary by pressing – ctrl-i
+noremap <C-I> :norm zg<cr>
+
 " MISC COMMAND MAPPINGS
 " stop highlighting search pattern by pressing – ctrl-x
 nmap <C-X> :noh<cr>
