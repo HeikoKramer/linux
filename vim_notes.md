@@ -460,9 +460,15 @@ Good resource on mapping: <br>
 [Vim Tips Wiki Mapping Tutorial Part 2](https://vim.fandom.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_2)) <br>
 [Vim Tips Wiki Mapping Tutorial Part 3](https://vim.fandom.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_3)) <br>
 
-## Vim resources
-**vimtutor** command to open an in vim integrated tutorial <br>
+## Folding
+
+
+## Great Vim resources
+`vimtutor` command to open an in vim integrated tutorial <br>
+[rwxrob Linux beginner boost](https://youtu.be/CI-FE2bKr7c) <br> 
 [rwxrob magic wands](https://rwx.gg/vi-magic-wands/) <br>
+[mastering Vim book (here on Twitter)](https://twitter.com/MasteringVim) <br>
+[Vim tips wiki](https://vim.fandom.com/wiki/Vim_Tips_Wiki) <br>
 [vimgenius](https://vimgenius.com) <br>
 [learn vim progressively](https://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/) <br>
 
