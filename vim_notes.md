@@ -472,6 +472,12 @@ Move to the next / previous fold with `zj` and `zk`. <br>
 `zR` will close `zM` will open all folds in current buffer. <br>
 `:fold` will fold all lines currently marked in **visual** mode. <br>
 
+## argdo vs bufdo
+**arglist** `:args` = list of items included in the initial opening command (`vim file1 file2 file3`). <br> 
+**buffers list** `:buffers` = list of all open buffers (**arglist** + subsequently opened files). <br> 
+`:argdo` commands will affect only items from the **arglist**, `:bufdo` commands apply to everything in the **biffers list**. <br>
+**Examples:** `:bufdo wq` **w**rite and **q**uit all buffers. `:wqa` applies the same on **a**ll buffers. <br>  
+
 ## Great Vim resources
 `vimtutor` command to open an in vim integrated tutorial <br>
 [rwxrob Linux beginner boost](https://youtu.be/CI-FE2bKr7c) <br> 
