@@ -477,6 +477,8 @@ Move to the next / previous fold with `zj` and `zk`. <br>
 **buffers list** `:buffers` = list of all open buffers (**arglist** + subsequently opened files). <br> 
 `:argdo` commands will affect only items from the **arglist**, `:bufdo` commands apply to everything in the **biffers list**. <br>
 **Examples:** `:bufdo wq` **w**rite and **q**uit all buffers. `:wqa` applies the same on **a**ll buffers. <br>  
+`:bufdo exe ":norm G\"ap" | w` will do the **G** command in **normal**, **paste** the content of **register a** and **w**rite all buffers. <br>
+`:bufdo exe ":norm \@b" | w` will execute the **macro** in **register b** on all buffers in the **buffers list** and **w**rite. <br>
 
 ## Great Vim resources
 `vimtutor` command to open an in vim integrated tutorial <br>
