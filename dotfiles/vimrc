@@ -1,6 +1,17 @@
 syntax on
-set number " turn on line numbers
-set norelativenumber " normal line numbers starting with 1 at the top …
+
+
+" NUMBER SETTINGS 
+" turn on line numbers
+set number
+" start vim with relative line numbers by default
+set relativenumber
+" switch to absolut line numbers when entering insert mode
+autocmd InsertEnter * :setlocal norelativenumber
+" switch back to relative line numbers when leaving insert mode
+autocmd InsertLeave * :setlocal relativenumber
+
+
 " set ruler " ruler is the bar at the bottom and it is on by default
 set wildmenu " shows command tab-completion options as a selectable menue
 set showcmd
@@ -15,8 +26,10 @@ set shiftwidth=2
 set smartindent
 set smarttab
 
-" highlighting
-set hlsearch " will highlight all matches :noh will turn it off
+
+" HIGHLIGHTING
+" will highlight all matches :noh will turn it off
+set hlsearch 
 set incsearch
 
 set linebreak
@@ -43,7 +56,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 "au BufWritePost ~/.vimrc so ~/.vimrc
 
 
-" MAPPINGS 
+" MAPPINGS
 
 " CONFIG OPENING MAPPINGS
 " open vimrc by entering – vc
