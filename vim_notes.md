@@ -479,6 +479,10 @@ Move to the next / previous fold with `zj` and `zk`. <br>
 **Examples:** `:bufdo wq` **w**rite and **q**uit all buffers. `:wqa` applies the same on **a**ll buffers. <br>  
 `:bufdo exe ":norm G\"ap" | w` will do the **G** command in **normal**, **paste** the content of **register a** and **w**rite all buffers. <br>
 `:bufdo exe ":norm \@b" | w` will execute the **macro** in **register b** on all buffers in the **buffers list** and **w**rite. <br>
+`:argdo %s/Test/Toast/gc | update` will go through the **arglist** and replace all occurrences of *Test* with *Toast* after **confirmation**. <br>
+`:argdo %s/he/she/g | update` will replace all *he* with *she* in all files of the **arglist**. <br>
+The above command could run into a problem – if a file doesn't contain the pattern *he*, an error would be thrown. <br>
+`:argdo %s/he/she/ge | update` would solve this and go over all **arglist** files without throwing an error if *he* ain't found in a file. <br>
 
 ## Great Vim resources
 `vimtutor` command to open an in vim integrated tutorial <br>
