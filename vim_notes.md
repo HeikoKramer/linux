@@ -484,6 +484,10 @@ Move to the next / previous fold with `zj` and `zk`. <br>
 The above command could run into a problem – if a file doesn't contain the pattern *he*, an error would be thrown. <br>
 `:argdo %s/he/she/ge | update` would solve this and go over all **arglist** files without throwing an error if *he* ain't found in a file. <br>
 
+## Auto completion
+<kbd>CTRL</kbd> <kbd>n</kbd> will auto complete typed letters into words with matching patterns by looking **forward** in the file. <br>
+<kbd>CTRL</kbd> <kbd>b</kbd> will do the same by looking **backwards** in the file. <br>
+
 ## Great Vim resources
 `vimtutor` command to open an in vim integrated tutorial <br>
 [rwxrob Linux beginner boost](https://youtu.be/CI-FE2bKr7c) <br> 
