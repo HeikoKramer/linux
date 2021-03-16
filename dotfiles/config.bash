@@ -29,9 +29,9 @@ alias sfn='vim ~/repos/github/sfdx/sfdx_notes.md' #opens sfdx notes on sfdx
 alias bashrc='vim ~/.bashrc' #opens my .bashrc in VIM
 alias bashcr='vim ~/repos/github/linux/dotfiles/remote/.bash_aliases' #opens remote bashconfig in vim
 alias bashc='vim ~/repos/github/linux/dotfiles/config.bash' #opens bashconfig in vim
-alias tmuxc='vim ~/repos/github/linux/dotfiles/tmux.conf' #opens bashconfig in vim
+alias tmuxc='vim ~/repos/github/linux/dotfiles/tmux.conf' #opens tmux config in vim
 alias vimrc='vim ~/repos/github/linux/dotfiles/vimrc' #opens vimrc in vim
-alias sfc='vim ~/repos/github/linux/dotfiles/sfdx.conf' #opens sfdx.conf in vim
+alias sfc='vim -c "set filetype=sh" ~/repos/github/linux/dotfiles/sfdx.conf' #opens sfdx config in vim
 alias sshc='vim ~/.ssh/config' #opens ssh config in vim
 alias muttc='vim ~/.config/mutt/muttrc' #opens (neo)mutt config file in vim
 ## BOOK SHORTCUTS
