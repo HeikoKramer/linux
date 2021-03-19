@@ -63,8 +63,8 @@ alias h='history' #shows command history
 alias l='ls -alh --color=always --group-directories-first' #colorised list
 alias x='xclip' #copy output into xclip
 alias xs='xclip -section clipboard -o' #shows xclip clipboards
-alias off='shutdown -h now' #shuts down the system
-alias offr='sudo shutdown -h now' #shuts down a remote system
+alias off='poweroff' #shuts down the system
+alias offr='sudo poweroff' #shuts down a remote system
 alias gs='git status' #shows git status is directory is a repo
 alias ?='duck' #calls duck function (duckduckgo search in lynx)
 alias ??='google' #calls google function (google search in lynx)
