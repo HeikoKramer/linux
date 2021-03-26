@@ -486,7 +486,13 @@ The above command could run into a problem – if a file doesn't contain the pat
 
 ## Auto completion
 <kbd>CTRL</kbd> <kbd>n</kbd> will auto complete typed letters into words with matching patterns by looking **forward** in the file. <br>
-<kbd>CTRL</kbd> <kbd>b</kbd> will do the same by looking **backwards** in the file. <br>
+<kbd>CTRL</kbd> <kbd>p</kbd> will do the same by looking **backwards** in the file. <br>
+This method will only search for matching word pattern within the same file. <br>
+You can set up a **dictionary** file with the command `set dictionary+=/path/to/dictionary`. <br>
+While in **insert** mode, press <kbd>CTRL</kbd> <kbd>x</kbd>, then <kbd>CTRL</kbd> <kbd>k</kbd> to search the dictionary file for a matching pattern. <br>
+You can set a **thesaurus** file the same way: `set thesaurus+=/path/to/thesaurus`. <br>
+To use the thesaurus file on a word type <kbd>CTRL</kbd> <kbd>x</kbd>, then <kbd>CTRL</kbd> <kbd>t</kbd> in **insert** mode. <br>
+You can load existing dictionary and thesaurus files or use plugins as discussed on [stackoverflow](https://stackoverflow.com/questions/33453468/vim-thesaurus-file). <br>
 
 ## Great Vim resources
 `vimtutor` command to open an in vim integrated tutorial <br>
