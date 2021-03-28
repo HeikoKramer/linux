@@ -122,6 +122,8 @@ nmap <C-X> :noh<cr>
 " FAVOURITES: koehler, delek, peachpuff, slate, zellner
 colorscheme koehler
 
+" TEMPLATES
+:autocmd BufNewFile *.cls 0r ~/.vim/templates/apex.tpl
 
 " NEOVIM SPECIFIC CONFIGS
 if has('nvim') 

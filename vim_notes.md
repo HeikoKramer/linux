@@ -494,6 +494,34 @@ You can set a **thesaurus** file the same way: `set thesaurus+=/path/to/thesauru
 To use the thesaurus file on a word type <kbd>CTRL</kbd> <kbd>x</kbd>, then <kbd>CTRL</kbd> <kbd>t</kbd> in **insert** mode. <br>
 You can load existing dictionary and thesaurus files or use plugins as discussed on [stackoverflow](https://stackoverflow.com/questions/33453468/vim-thesaurus-file). <br>
 
+## Templates – or how to load other files into your buffer
+You can load another files content into your current buffer with the `:r` command. <br>
+`:0r ~/test/string` will load the file **string** and place its content **at the top** (below line 0). <br>
+`:122r ~/test/string` will do the same, but place the string file content below line **122**. <br>
+<br>
+If you want to use a template every time you create a file with a certain ending .. <br>
+.. let's say a basic Salesforce Apex class header like this: <br>
+```java
+/*
+* ─────────────────────────────────────────────────────────────────────────────────────────────────┐
+* CLASS NAME 
+*
+* DESCRIPTION
+*
+* ──────────────────────────────────────────────────────────────────────────────────────────────────
+* @author         Heiko Krämer   <sfhcks@myforce.net>
+* @created        2021-00-00
+* ─────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+
+```
+
+It would be a good practive to create a template folder `mkdir ~/.vim/templates`. <br>
+There you could store all template files with the ending **.tpl** to better identify them. <br>
+In our example this would be **apex.tpl**. <br>
+You'd have to add `:autocmd BufNewFile *.cls 0r ~/.vim/templates/apex.tpl` to your **.vimrc** <br>
+If you then create a new Apex class with `vim MyDemoClass.cls` or `:e MyDemoClass.cls`, the header would be loaded. <br>
+
 ## Great Vim resources
 `vimtutor` command to open an in vim integrated tutorial <br>
 [rwxrob Linux beginner boost](https://youtu.be/CI-FE2bKr7c) <br> 
