@@ -33,6 +33,8 @@ network={
 }
 ```
 
+Link to a manual to [setup multiple networks](https://raspberrypi.stackexchange.com/questions/11631/how-to-setup-multiple-wifi-networks) in your wpa_supplicant.conf file. <br>
+
 ### Step 4
 Eject the sd card, insert it into the Raspi and boot. <br>
 The device should be connected to your WiFi already. <br>
