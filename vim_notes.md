@@ -495,7 +495,7 @@ To use the thesaurus file on a word type <kbd>CTRL</kbd> <kbd>x</kbd>, then <kbd
 You can load existing dictionary and thesaurus files or use plugins as discussed on [stackoverflow](https://stackoverflow.com/questions/33453468/vim-thesaurus-file). <br>
 
 ## Templates – or how to load other files automatically into your buffer
-You can load another files content into your current buffer with the **read** command `:r`. <br>
+Remember, you can load another files content into your current buffer with the **read** command `:r`. <br>
 `:0r ~/test/string` will load the file **string** and place its content **at the top** (below line 0). <br>
 `:122r ~/test/string` will do the same, but place the string file content below line **122**. <br>
 <br>
