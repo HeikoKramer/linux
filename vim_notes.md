@@ -147,6 +147,11 @@ Press <kbd>d</kbd> then <kbd>$</kbd> then <kbd>ENTER</kbd> to delete from where 
 When you're in line 15 ant type <kbd>d</kbd> <kbd>:</kbd> <kbd>3</kbd> <kbd>0</kbd> <kbd>ENTER</kbd> 15 lines (15-30) will be deleted. <br>
 <kbd>d</kbd> <kbd>}</kbd> will delete a whole block to the next empty line below, <kbd>d</kbd> <kbd>{</kbd> above the cursor. <br>
 You can delete un**t**il something by adding the **t** modifier: <kbd>d</kbd> <kbd>t</kbd> <kbd>?</kbd> deletes everything from the cursor's position un**t**il the next question mark. <br>
+### Delete in insert mode
+<kbd>CTRL</kbd> <kbd>h</kbd> to delete the last **letter** before the cursor. <br>
+<kbd>CTRL</kbd> <kbd>w</kbd> to delete the last **word** before the cursor. <br>
+<kbd>CTRL</kbd> <kbd>u</kbd> to delete the **everything** back to the **start of the line**. <br>
+
 
 ## Until pattern
 Interesting on VimTricks: [Operate until pattern](https://vimtricks.com/p/vimtrick-operate-until-pattern/) <br>
