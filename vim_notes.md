@@ -347,6 +347,7 @@ Example:
  30 Test REGISTER b
  31 Test REGISTER c
 ```
+
 If you have three lines as those above and you'd like to paste each in different files or different positions in the same file, you'd place the cursor on the start of line 29 and type `"ayy` – named register a now stores *Test REGISTER a*. <br>
 In line 30 type `"byy` – named register b now stores *Test REGISTER b* and in line 31 type `"cyy` – named register c now stores *Test REGISTER c*. <br>
 To paste register a's content anywhere, place the cursor at the target position in the appropriate document and type `"aP`. <br>
@@ -378,6 +379,10 @@ You have basically three options if you want to use the drop registers neverthel
 * compile Vim including those features
 * search and install a Vim version that already includes them
 * install neovim and use – which has those features activated by default
+### The colon register
+The colom register `":` will storte the last command executed in **command** mode. <br>
+You can repeat the last executed command by typing <kbd>@</kbd> <kbd>:</kbd> in **normal** mode. <br>
+If you've typed a command and want it to place in your **.vimrc** or your documentation use `":P` <br>
 
 ## Buffers and Windows
 * Buffer = text of a file in memory
