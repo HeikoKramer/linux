@@ -73,7 +73,6 @@ alias ??='google' #calls google function (google search in lynx)
 ## REMOTE ACCESS SHORTCUTS
 alias pihole='ssh pihole' #connects to pihole raspi
 alias apie='ssh ApplePie' #connects to Mac Mini gaming station
-alias jitsi='ssh jitsi' #connect to digital ocean droplet
 alias one='ssh one' #connect to one server
 
 # PROMT
