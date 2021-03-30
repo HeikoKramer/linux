@@ -78,6 +78,16 @@ noremap sn :e ~/repos/github/sfdx/sfdx_notes.md<cr>
 " open my tmux notes by entering – tn
 noremap tn :e ~/repos/github/linux/tmux_notes.md<cr>
 
+" NUMBER SETTINGS MAPPINGS
+" switch on relative line numbers by entering – rl
+noremap rl :set relativenumber<cr>
+" switch off relative line numbers by entering – nr
+noremap nr :set norelativenumber<cr> 
+" switch on numbers by entering – nu
+noremap nu :set nu<cr>
+" switch off numbers by entering – nn
+noremap nn :set nonu<cr>
+
 " VISUAL MODE KEYBINDINGS
 " makes dot command work in visual mode without tying the usually needed full command
 vnoremap . :norm.<CR> 
