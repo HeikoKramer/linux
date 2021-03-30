@@ -74,6 +74,8 @@ alias ??='google' #calls google function (google search in lynx)
 alias pihole='ssh pihole' #connects to pihole raspi
 alias apie='ssh ApplePie' #connects to Mac Mini gaming station
 alias one='ssh one' #connect to one server
+## MISC
+alias babo='vim ~/test/babofile' #opens vim training file
 
 # PROMT
 ## All red
