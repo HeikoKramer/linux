@@ -204,6 +204,14 @@ There is no ctrl+x style cut and paste in Vim --> because it keeps the last dele
 `:23,42m108` will **move** line 23-42 to line 108. <br>
 The move command will work on any line specified without the need to place the cursor there. <br>
 However, you can move the line where your cursor is placed with `:m10` – which will move this line to line 10. <br>
+`:195co.` will copy the content of line 195 **below** the line where the cursor is positioned. <br>
+`:195,199co207` to copy and paste the specified range **below** line 207. <br>
+**Hot:** `195,co.` will copy everything from line 195 to your current cursor position and place it in the line below. <br>
+### Copy when using relative line numbers 
+`:-15co` will c&p the content from 15 lines **above** and place it one line below. <br>
+`:+15co` will c&p the content from 15 lines **below** and place it one line below. <br>
+`:-15,co` will copy all content from 15 lines **above** until the cursor position and place it one below. <br>
+`:+15,co` will copy all content from 15 lines **below** until the cursor position and place it one below. <br>
 
 ## Ways to change into insert mode
 Press <kbd>a</kbd> in **Normal** mode to start appending letters where you are. <br>
