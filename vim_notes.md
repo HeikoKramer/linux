@@ -212,6 +212,8 @@ However, you can move the line where your cursor is placed with `:m10` – which
 `:+15co` will c&p the content from 15 lines **below** and place it one line below. <br>
 `:-15,co` will copy all content from 15 lines **above** until the cursor position and place it one below. <br>
 `:+15,co` will copy all content from 15 lines **below** until the cursor position and place it one below. <br>
+<br>
+**t** is an **alias** to **co** – so all the above shown examples work like this `195,t.` as well. <br>
 
 ## Ways to change into insert mode
 Press <kbd>a</kbd> in **Normal** mode to start appending letters where you are. <br>
