@@ -207,11 +207,14 @@ However, you can move the line where your cursor is placed with `:m10` – which
 `:195co.` will copy the content of line 195 **below** the line where the cursor is positioned. <br>
 `:195,199co207` to copy and paste the specified range **below** line 207. <br>
 **Hot:** `195,co.` will copy everything from line 195 to your current cursor position and place it in the line below. <br>
-### Copy when using relative line numbers 
+### Copy or move lines when using relative line numbers 
 `:-15co` will c&p the content from 15 lines **above** and place it one line below. <br>
 `:+15co` will c&p the content from 15 lines **below** and place it one line below. <br>
 `:-15,co` will copy all content from 15 lines **above** until the cursor position and place it one below. <br>
 `:+15,co` will copy all content from 15 lines **below** until the cursor position and place it one below. <br>
+`:+1,+2m+3` will move line 1-2 **below** your cursor to line 3 **below** it. <br> 
+`:+0m+3` will move to current line to 3 lines **below**. <br>
+`:-6m219` will move the 6th line **above** the cursor to line 219. <br>
 <br>
 **t** is an **alias** to **co** – so all the above shown examples work like this `195,t.` as well. <br>
 
