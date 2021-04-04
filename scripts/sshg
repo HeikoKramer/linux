@@ -1,0 +1,23 @@
+#!/bin/sh
+
+####################
+# ––––– SSHG ––––– #
+####################
+
+# 1 >> Generate ssh key-pair
+# 2 >> Copy public key to host
+# 3 >> Add host to ssh config
+
+read -p 'enter host alias: ' hostAlias
+read -p 'enter user name: ' userName
+read -p 'enter host address: ' hostAddress
+
+ssh-keygen -f ~/.ssh/"$hostAlias"_id_ed25519 -t ed25519   
+
+ssh-copy-id -i ~/.ssh/"$hostAlias"_id_ed25519 $userName@$hostAddress -o IdentitiesOnly=yes
+
+echo '\n' >> ~/.ssh/config
+echo "Host $hostAlias" >> ~/.ssh/config
+echo "User $userName" >> ~/.ssh/config
+echo "Hostname $hostAddress" >> ~/.ssh/config
+echo "IdentityFile ~/.ssh/"$hostAlias"_id_ed25519" >> ~/.ssh/config
