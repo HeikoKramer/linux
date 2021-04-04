@@ -18,6 +18,8 @@ ssh-copy-id -i ~/.ssh/"$hostAlias"_id_ed25519 $userName@$hostAddress -o Identiti
 
 echo '\n' >> ~/.ssh/config
 echo "Host $hostAlias" >> ~/.ssh/config
-echo "User $userName" >> ~/.ssh/config
-echo "Hostname $hostAddress" >> ~/.ssh/config
-echo "IdentityFile ~/.ssh/"$hostAlias"_id_ed25519" >> ~/.ssh/config
+echo '\t'"User $userName" >> ~/.ssh/config
+echo '\t'"Hostname $hostAddress" >> ~/.ssh/config
+echo '\t'"IdentityFile ~/.ssh/"$hostAlias"_id_ed25519" >> ~/.ssh/config
+
+ssh $hostAlias
