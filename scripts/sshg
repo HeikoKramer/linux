@@ -16,7 +16,7 @@ ssh-keygen -f ~/.ssh/"$hostAlias"_id_ed25519 -t ed25519
 
 ssh-copy-id -i ~/.ssh/"$hostAlias"_id_ed25519 $userName@$hostAddress -o IdentitiesOnly=yes
 
-echo '\n' >> ~/.ssh/config
+echo "" >> ~/.ssh/config
 echo "Host $hostAlias" >> ~/.ssh/config
 echo '\t'"User $userName" >> ~/.ssh/config
 echo '\t'"Hostname $hostAddress" >> ~/.ssh/config
