@@ -839,7 +839,7 @@ The `scp` command copies files over a secure, encrypted network connection. http
 Create ssh key: `ssh-keygen -t ed25519` **Note:** we have used the **-t** option to specify key type ed25519. <br>
 **ATTENTION:** processing like this is ok to generate the very first ed25519, but carefull not to overwrite an existing key – it could be your only way to enter a server. <br>
 `ssh-keygen -t ed25519 -C "pihole"` the -C option can be used to **comment** on the key's usage. <br>
-In the next steps the ss-keygen is asking *Enter file in which to save the key* – it is as above mentioned really important to change the default file name if multiple keys exist, the first key gets silently overwritten otherwise! <br>
+In the next steps the ssh-keygen is asking *Enter file in which to save the key* – it is as above mentioned really important to change the default file name if multiple keys exist, the first key gets silently overwritten otherwise! <br>
 A password for the key is optional, but recommended – especially when using it with an employeer or client. Everyone with access to an unsecured key would be able to identify as yourself and log into all remote systems using the key. A missing pw could even have legal consequences. <br>
 Find your own naming convention, if you're for example using the key dedicated for a pihole dns server, name it *pihole_id_ed25519*. <br>
 `ssh-add ~/.ssh/pihole_id_ed25519` can be used to store a private key in memory for the running ssh agent session – that way you'll have to entere the pw only once for that session. <br>
