@@ -4,8 +4,9 @@ set -o vi #activates vim key-bindings
 # ALIASES
 ## FILE SHORTCUTS
 alias bashrc='vim ~/.bashrc' #opens my .bashrc in VIM
-alias bashc='vim ~/.bash_aliases' #opens bashconfig in vim
+alias bashc='vim ~/.bash_remote' #opens bashconfig in vim
 alias vimrc='vim ~/.vimrc' #opens vimrc in vim
+alias tmuxc='vim ~/.tmux.conf' #opens .tmux.conf in vim
 ## TERMINAL COMMAND SHORCUTS
 alias h='history' #shows command history
 alias l='ls -Flah' #my prefered list options
@@ -34,4 +35,12 @@ function refresh {
 function upgr {
         sudo apt update -y;
         sudo apt upgrade -y;
+}
+
+# syncdot – function to curl the current version of my dotfiles    
+function syncdot {    
+  curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.vimrc > .vimrc;    
+  curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.bashrc > .bashrc;    
+  curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.bash_aliases > .bash_aliases;
+  curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/tmux.conf > .tmux.conf;    
 }
