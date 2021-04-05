@@ -110,6 +110,11 @@ if [ -f ~/.bash_aliases ]; then
     echo "sourced >> .bash_aliases"
 fi
 
+if [ -f ~/.bash_remote ]; then
+    . ~/.bash_remote
+    echo "sourced >> .bash_remote"
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
