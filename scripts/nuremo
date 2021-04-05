@@ -17,6 +17,27 @@ function curldotfiles {
   curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.bash_aliases > .bash_aliases;
 }
 
+function installapps {
+  sudo apt update;
+  sudo apt upgrade;
+  
+  if ! [ -f /usr/bin/vim]; then
+    sudo apt install vim -y;
+  fi
+
+  if ! [ -f /usr/bin/tmux]; then
+    sudo apt install tmux -y;
+  fi
+
+  if ! [ -f /usr/bin/neofetch]; then
+    sudo apt install neofetch -y;
+  fi
+
+  if ! [ -f /usr/bin/htop]; then
+    sudo apt install htop -y;
+  fi
+}
+
 # gather host information via user input
 read -p 'enter host alias: ' hostAlias
 read -p 'enter user name: ' userName
@@ -37,6 +58,9 @@ echo $'\t'"IdentityFile ~/.ssh/"$hostAlias"_id_ed25519" >> ~/.ssh/config
 
 # curl dor files from github on remote system
 ssh -o "StrictHostKeyChecking=no" $userName@$hostAlias "$(declare -f curldotfiles);curldotfiles"
+
+# install most essential apps
+ssh -o "StrictHostKeyChecking=no" $userName@$hostAlias "$(declare -f installapps);installapps"
 
 # connect to remote host with credentials from ssh config 
 ssh $hostAlias
