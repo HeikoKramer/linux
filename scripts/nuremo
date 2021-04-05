@@ -40,6 +40,7 @@ function installapps {
   # install neofetch
   if ! [ -f /usr/bin/neofetch]; then
     sudo apt install neofetch -y;
+    curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/neofetch.conf > ~/.config/neofetch/config.conf;
   fi
 
   # install htop
