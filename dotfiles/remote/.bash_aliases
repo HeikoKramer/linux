@@ -28,9 +28,11 @@ export PS1
 ## sources .bashrc while keeping you in the working directoty
 function refresh {
         currentDirectory=$(pwd);
+        clear;
         cd; source .bashrc;
         cd $currentDirectory;
 }
+export -f refresh
 
 ## upgr will update and upgrate your system
 function upgr {

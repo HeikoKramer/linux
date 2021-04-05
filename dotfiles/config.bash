@@ -101,6 +101,7 @@ function refresh {
         cd; source .bashrc;
         cd $currentDirectory;
 }
+export -f refresh
 
 # allg = all Git 
 # adds, commits and pushes everything in the working directory
