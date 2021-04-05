@@ -1,0 +1,4 @@
+# remot bash config file (like .bash_aliases)
+# changes made in this file won't be overwritten by syncdot function
+# bashc alias changed to open this file instead of .bash_aliases
+

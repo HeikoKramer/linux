@@ -15,6 +15,7 @@ function curldotfiles {
   curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.vimrc > .vimrc;
   curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.bashrc > .bashrc;
   curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.bash_aliases > .bash_aliases;
+  curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.bash_remote > .bash_remote;
   curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/tmux.conf > .tmux.conf;
 }
 
