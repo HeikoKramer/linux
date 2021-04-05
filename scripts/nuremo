@@ -21,8 +21,8 @@ function curldotfiles {
 
 # installapps – function to install my most essential apps (if not already installed)
 function installapps {
-  sudo apt update;
-  sudo apt upgrade;
+  sudo apt update -y;
+  sudo apt upgrade -y;
 
   # install vim with additional setu
   if ! [ -f /usr/bin/vim]; then
