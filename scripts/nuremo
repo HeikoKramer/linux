@@ -5,12 +5,12 @@
 # – generates a dedicated ssh key-pair
 # – copies the public key over to the new remote system
 # – adds host to local ssh config
-# – changes ssh configs on remote system
 # – curls remote versions of my most relevant dot files
 # – updates remote system
 # – installs essential apps
 # – connects to remote system
 
+# curldotfiles – function to curl the remote versions of my dotfiles
 function curldotfiles {
   curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.vimrc > .vimrc;
   curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.bashrc > .bashrc;
@@ -18,6 +18,7 @@ function curldotfiles {
   curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/tmux.conf > .tmux.conf;
 }
 
+# installapps – function to install my most essential apps (if not already installed)
 function installapps {
   sudo apt update;
   sudo apt upgrade;
