@@ -37,7 +37,7 @@ set linebreak
 set history=100
 filetype plugin on  " allow sensing the filetype
 set formatoptions+=c
-set listchars=tab:→\ ,eol:↲,nbsp:␣,space:·,trail:·,extends:⟩,precedes:⟨
+" set listchars=tab:→\ ,eol:↲,nbsp:␣,space:·,trail:·,extends:⟩,precedes:⟨
 
 set shortmess=aoOtI " avoid most 'Hit Enter …' messages
 set viminfo='20,<1000,s1000
