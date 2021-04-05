@@ -2,11 +2,12 @@
 set -o vi #activates vim key-bindings
 
 # ALIASES
-## FILE SHORTCUTS
+## CONFIG SHORTCUTS
 alias bashrc='vim ~/.bashrc' #opens my .bashrc in VIM
 alias bashc='vim ~/.bash_remote' #opens bashconfig in vim
 alias vimrc='vim ~/.vimrc' #opens vimrc in vim
 alias tmuxc='vim ~/.tmux.conf' #opens .tmux.conf in vim
+alias conf='cd ~/.config; l' #enter and list config files
 ## TERMINAL COMMAND SHORCUTS
 alias h='history' #shows command history
 alias l='ls -Flah' #my prefered list options
