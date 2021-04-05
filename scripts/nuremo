@@ -22,19 +22,26 @@ function curldotfiles {
 function installapps {
   sudo apt update;
   sudo apt upgrade;
-  
+
+  # install vim with additional setu
   if ! [ -f /usr/bin/vim]; then
     sudo apt install vim -y;
   fi
 
+  mkdir ~/.vim;
+  mkdir ~/.vim/undo;
+
+  # install tmux
   if ! [ -f /usr/bin/tmux]; then
     sudo apt install tmux -y;
   fi
 
+  # install neofetch
   if ! [ -f /usr/bin/neofetch]; then
     sudo apt install neofetch -y;
   fi
 
+  # install htop
   if ! [ -f /usr/bin/htop]; then
     sudo apt install htop -y;
   fi
