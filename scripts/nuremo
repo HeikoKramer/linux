@@ -1,0 +1,42 @@
+#!/bin/bash
+
+### nuremo (new remote system) ###
+##################################
+# – generates a dedicated ssh key-pair
+# – copies the public key over to the new remote system
+# – adds host to local ssh config
+# – changes ssh configs on remote system
+# – curls remote versions of my most relevant dot files
+# – updates remote system
+# – installs essential apps
+# – connects to remote system
+
+function curldotfiles {
+  curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.vimrc > .vimrc;
+  curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.bashrc > .bashrc;
+  curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.bash_aliases > .bash_aliases;
+}
+
+# gather host information via user input
+read -p 'enter host alias: ' hostAlias
+read -p 'enter user name: ' userName
+read -p 'enter host address: ' hostAddress
+
+# generate ssh key-pair
+ssh-keygen -f ~/.ssh/"$hostAlias"_id_ed25519 -t ed25519   
+
+# copy public key to host
+ssh-copy-id -i ~/.ssh/"$hostAlias"_id_ed25519 $userName@$hostAddress -o IdentitiesOnly=yes
+
+# add host to ssh config
+echo "" >> ~/.ssh/config
+echo "Host $hostAlias" >> ~/.ssh/config
+echo $'\t'"User $userName" >> ~/.ssh/config
+echo $'\t'"Hostname $hostAddress" >> ~/.ssh/config
+echo $'\t'"IdentityFile ~/.ssh/"$hostAlias"_id_ed25519" >> ~/.ssh/config
+
+# curl dor files from github on remote system
+ssh -o "StrictHostKeyChecking=no" $userName@$hostAlias "$(declare -f curldotfiles);curldotfiles"
+
+# connect to remote host with credentials from ssh config 
+ssh $hostAlias

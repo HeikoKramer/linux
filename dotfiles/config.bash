@@ -77,6 +77,7 @@ alias apie='ssh ApplePie' #connects to Mac Mini gaming station
 alias one='ssh one' #connect to one server
 ## MISC
 alias babo='vim ~/test/babofile' #opens vim training file
+alias nur='vim ~/repos/github/linux/scripts/nuremo' #opens new remote script in vim 
 
 # PROMT
 ## All red
