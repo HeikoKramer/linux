@@ -72,6 +72,7 @@ alias ?='duck' #calls duck function (duckduckgo search in lynx)
 alias ??='google' #calls google function (google search in lynx)
 ## REMOTE ACCESS SHORTCUTS
 alias pihole='ssh pihole' #connects to pihole raspi
+alias dopi='ssh DockerPi' #connects to docker raspi
 alias apie='ssh ApplePie' #connects to Mac Mini gaming station
 alias one='ssh one' #connect to one server
 ## MISC
