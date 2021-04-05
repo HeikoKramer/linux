@@ -8,3 +8,6 @@ ls -l $HOME/.vimrc
 
 ln -sf $PWD/tmux.conf $HOME/.tmux.conf
 ls -l $HOME/.tmux.conf
+
+ln -sf $PWD/neofetch.conf ~/.config/neofetch/config.conf
+ls -l ~/.config/neofetch/config.conf
