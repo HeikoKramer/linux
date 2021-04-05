@@ -44,4 +44,5 @@ function syncdot {
   curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.bashrc > .bashrc;    
   curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.bash_aliases > .bash_aliases;
   curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/tmux.conf > .tmux.conf;    
+  refresh;
 }
