@@ -26,7 +26,8 @@ alias linn='vim ~/repos/github/linux/linux_notes.md' #opens my notes on Linux
 alias vimn='vim ~/repos/github/linux/vim_notes.md' #opens my notes on vim
 alias tmuxn='vim ~/repos/github/linux/tmux_notes.md' #opens my notes on tmux
 alias sfn='vim ~/repos/github/sfdx/sfdx_notes.md' #opens sfdx notes on sfdx
-alias pin='vim ~/repos/github/linux/pi_notes.md' #opens my notes on Respberry Pi related stuff
+alias pin='vim ~/repos/github/linux/pi_notes.md' #opens my notes on Raspberry Pi related stuff
+alias don='vim ~/repos/github/linux/docker_notes.md' #opens my notes on Docker
 ## CONFIG SHORTCUTS
 alias bashrc='vim ~/.bashrc' #opens my .bashrc in VIM
 alias bashcr='vim ~/repos/github/linux/dotfiles/remote/.bash_aliases' #opens remote bashconfig in vim
