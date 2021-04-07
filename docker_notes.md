@@ -43,3 +43,10 @@ Docker doesn't save any changes made to a container by default! <br>
 If you want to make a permanent change to a container, you have to change the image. <br>
 A container is build from the image when you use `docker run`, so what ain't in the image won't be build. <br>
 
+## Remove image
+`docker image rm ubuntu` to remove the ubuntu image.
+If you get a conflict error message, you should stop containers running the image.
+`docker stop 50a4bb400ca7` will stop the container with that id. <br>
+If the image still doesn't get deleted or you don't care about running containers, <br>
+run `docker image rm -f ubuntu` to **force** the deletion of the image. <br>
+
