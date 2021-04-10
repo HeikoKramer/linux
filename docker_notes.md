@@ -81,7 +81,7 @@ If you re-attach to it, you'll realize, your changes have been kept. <br>
 * **d** deamon mode
 * **port 80** (on which nginx runs by default) **enabled**
 * **port 8080** from the **host** system mapped to that port
-<br>
+
 Get the ip adress of the host with `ip addr show` or short `ip a`. <br>
 Enter your browser, type in that address plus the specified port, in my case http://192.168.178.41:8080/ … <br>
 … and you'll hopefully see the ngnix welcome page. <br>
