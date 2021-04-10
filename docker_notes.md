@@ -87,6 +87,9 @@ Enter your browser, type in that address plus the specified port, in my case htt
 … and you'll hopefully see the ngnix welcome page. <br>
 Use `docker run -it -d --restart unless-stopped -p 8080:80 nginx` if you want to keep ngnix alive **until stopped**. <br>
 
+## docker start
+You can restart a container you exited or stopped by command with `docker start 1dd819d65581`. <br>
+
 ## docker commit
 `docker commit 1dd819d65581 cranky_hamilton:1.0` will create an image … <br>
 * from container **1dd819d65581**
