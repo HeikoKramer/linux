@@ -43,7 +43,7 @@ Docker doesn't save any changes made to a container by default! <br>
 If you want to make a permanent change to a container, you have to change the image. <br>
 A container is build from the image when you use `docker run`, so what ain't in the image won't be build. <br>
 `docker run -it arm32v7/debian` without the */bin/bash* addition brings you to the promt as well. <br>
-bash ist the default shell of the debian image and called through the **-it** option.
+bash is the default shell of the debian image and called through the **-it** option.
 If you enter `docker run -it -d arm32v7/debian` you'll get some string like this as result: <br>
 
 ```sh
@@ -78,11 +78,11 @@ If you re-attach to it, you'll realize, your changes have been kept. <br>
 ### installing a web-server and mapping a port
 `docker run -it -d -8080:80 nginx` will run an container of an **nginx** image, with … <br>
 * **-it** an interactive shell
-* **d** deamon mode
+* **d** daemon mode
 * **port 80** (on which nginx runs by default) **enabled**
 * **port 8080** from the **host** system mapped to that port
 
-Get the ip adress of the host with `ip addr show` or short `ip a`. <br>
+Get the ip address of the host with `ip addr show` or short `ip a`. <br>
 Enter your browser, type in that address plus the specified port, in my case http://192.168.178.41:8080/ … <br>
 … and you'll hopefully see the ngnix welcome page. <br>
 Use `docker run -it -d --restart unless-stopped -p 8080:80 nginx` if you want to keep ngnix alive **until stopped**. <br>
