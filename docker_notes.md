@@ -43,6 +43,7 @@ Docker doesn't save any changes made to a container by default! <br>
 If you want to make a permanent change to a container, you have to change the image. <br>
 A container is build from the image when you use `docker run`, so what ain't in the image won't be build. <br>
 `docker run -it arm32v7/debian` without the */bin/bash* addition brings you to the promt as well. <br>
+bash ist the default shell of the debian image and called through the **-it** option.
 If you enter `docker run -it -d arm32v7/debian` you'll get some string like this as result: <br>
 
 ```sh
@@ -58,7 +59,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 So let's walk through the `docker run -it -d arm32v7/debian` command: <br>
 **-it** is for **interactive terminal** – that will open the default shell. <br>
-**-d** the -d option puts the container into **deamon** mode, which means it is running in the background. <br>
+**-d** the -d option puts the container into **deamon** mode, which means it is running in the **background**. <br>
 To get back into that container, use `docker attach 1dd819d65581`. <br>
 Docker allows you to type **those letters** from the container id which deffer from those of the other running containers. <br>
 <br>
@@ -72,6 +73,20 @@ root@1dd819d65581:/# read escape sequence
 
 The container will now remain in the background. <br>
 If you re-attach to it, you'll realize, your changes have been kept. <br> 
+
+## interacting with containers
+### installing a web-server and mapping a port
+`docker run -it -d -8080:80 nginx` will run an container of an **nginx** image, with … <br>
+* **-it** an interactive shell
+* **d** deamon mode
+* **port 80** (on which nginx runs by default) **enabled**
+* **port 8080** from the **host** system mapped to that port
+<br>
+Get the ip adress of the host with `ip addr show` or short `ip a`. <br>
+Enter your browser, type in that address plus the specified port http://192.168.178.41**:8080/** … <br>
+… and you'll hopefully see the ngnix welcome page. <br>
+Use `docker run -it -d --restart unless-stopped -p 8080:80 nginx` if you want to keep ngnix alive **until stopped**. <br>
+
 
 ## Remove image
 `docker image rm arm32v7/debian` to remove the arm32v7/debian image.
