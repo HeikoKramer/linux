@@ -83,7 +83,7 @@ If you re-attach to it, you'll realize, your changes have been kept. <br>
 * **port 8080** from the **host** system mapped to that port
 <br>
 Get the ip adress of the host with `ip addr show` or short `ip a`. <br>
-Enter your browser, type in that address plus the specified port http://192.168.178.41**:8080/** … <br>
+Enter your browser, type in that address plus the specified port, in my case http://192.168.178.41:8080/ … <br>
 … and you'll hopefully see the ngnix welcome page. <br>
 Use `docker run -it -d --restart unless-stopped -p 8080:80 nginx` if you want to keep ngnix alive **until stopped**. <br>
 
