@@ -96,6 +96,18 @@ You can restart a container you exited or stopped by command with `docker start 
 * with name **cranky_hamilton** 
 * in **version 1.0**
 
+This command will create a new image from the container including all the changes made to the original image. <br>
+
+```sh
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+cranky_hamilton     1.0                 ed24b7782983        19 hours ago        375MB
+```
+
+`docker run -d -it --restart unless-stopped cranky_hamilton:1.0` will run a container from that image. <br>  
+You can specify entry point and other options directly in the commit command. Example: <br>
+`docker commit --change='ENTRYPOINT ["apachctl", "-DFOREGROUND"]' 1dd819d65581 cranky_hamilton:1.1` <br>
+
+
 ## Remove image
 `docker image rm arm32v7/debian` to remove the arm32v7/debian image.
 If you get a conflict error message, you should stop containers running the image.
