@@ -19,6 +19,7 @@ alias sfp='cd ~/repos/github/sfdx_projects; l' #enter and list sfdx_projects pri
 alias sfs='cd ~/repos/github/sfdx/sfdx_scripts; l' #enter and list sfdx scripts
 alias sfh='cd ~/repos/github/sfhcks; l' #enter and list Salesforce hacks repo 
 alias isv='cd ~/repos/github/sfdx_projects/isv; l' #enter isv sfdx project
+alias js='cd ~/repos/github/JavaScript; l' #enter and list JavaScript repo
 alias conf='cd ~/.config; l' #enter and list config files
 ## NOTES SHORTCUTS
 alias notes='vim ~/repos/gitlab.com/heiko__b/dotfiles/notes.md' #opens my notes in VIM
