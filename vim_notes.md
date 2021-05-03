@@ -554,6 +554,22 @@ If you then create a new Apex class with `vim MyDemoClass.cls` or `:e MyDemoClas
 [vimgenius](https://vimgenius.com) <br>
 [learn vim progressively](https://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/) <br>
 
+
+## Repeat pattern vertically / horizontally 
+In **normal** mode, type `3O` – Vim will switch to **insert** mode – type <kbd>/</kbd> <kbd>/</kbd> then <kbd>ESC</kbd> … <br>
+Vim will horizontally repeat the pattern **//** vertically 3 times. <br>
+
+```js
+//
+//
+//
+```
+
+Again in **normal** mode, type `9a` – Vim will switch to **insert** mode – type <kbd>,</kbd> <kbd>SPACE</kbd> then <kbd>ESC</kbd> … <br> 
+Vim will place 9 commas separated by spaces horizontally. `, , , , , , , , ,` <br>
+<br> 
+This trick works not only with single words in one line, but also with whole test blocks / patterns. <br>
+
 ----
 
 # NEOVIM
