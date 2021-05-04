@@ -7,6 +7,7 @@ set -o noclobber #prevents the > operator from overwriting existing files, this 
 ## COMMAND REPLACEMENTS
 alias vim='nvim' #replace standard vim with neovim
 alias mutt='neomutt' #launches neomutt instead of mutt
+alias m='cmatrix -C magenta -s' #launches cmatrix in magenta and screensave mode
 ## DIRECTORY SHORTCUTS
 alias gil='cd ~/repos/gitlab.com; l' #enter and list gitlab directory
 alias gih='cd ~/repos/github; l' #enter and list github directory
