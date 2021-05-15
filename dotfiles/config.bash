@@ -188,6 +188,14 @@ function duck {
 }
 export -f duck
 
+# md [directory name] – alias function for mkdir
+# creates directory with entered name and changes (cd) into the new directory
+function md {
+  mkdir $1;
+  cd $1;
+}
+export -f md
+
 # google – takes user input and performs a google search with it in the lynx browser
 function google {
   lynx "google.com/search?q=$*";
