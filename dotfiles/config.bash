@@ -20,7 +20,7 @@ alias sfp='cd ~/repos/github/sfdx_projects; l' #enter and list sfdx_projects pri
 alias sfs='cd ~/repos/github/sfdx/sfdx_scripts; l' #enter and list sfdx scripts
 alias sfh='cd ~/repos/github/sfhcks; l' #enter and list Salesforce hacks repo 
 alias isv='cd ~/repos/github/sfdx_projects/isv; l' #enter isv sfdx project
-alias js='cd ~/repos/github/JavaScript; l' #enter and list JavaScript repo
+alias wd='cd ~/repos/github/webDev; l' #enter and list webDev repo
 alias conf='cd ~/.config; l' #enter and list config files
 ## NOTES SHORTCUTS
 alias notes='vim ~/repos/gitlab.com/heiko__b/dotfiles/notes.md' #opens my notes in VIM
@@ -29,7 +29,7 @@ alias vimn='vim ~/repos/github/linux/vim_notes.md' #opens my notes on vim
 alias tmuxn='vim ~/repos/github/linux/tmux_notes.md' #opens my notes on tmux
 alias sfn='vim ~/repos/github/sfdx/sfdx_notes.md' #opens sfdx notes on sfdx
 alias pin='vim ~/repos/github/linux/pi_notes.md' #opens my notes on Raspberry Pi related stuff
-alias jsn='vim ~/repos/github/JavaScript/javascript_notes.md' #opens my notes on JS
+alias jsn='vim ~/repos/github/webDev/javascript_notes.md' #opens my notes on JS
 alias don='vim ~/repos/github/linux/docker_notes.md' #opens my notes on Docker
 ## CONFIG SHORTCUTS
 alias bashrc='vim ~/.bashrc' #opens my .bashrc in VIM
