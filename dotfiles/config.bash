@@ -30,6 +30,8 @@ alias tmuxn='vim ~/repos/github/linux/tmux_notes.md' #opens my notes on tmux
 alias sfn='vim ~/repos/github/sfdx/sfdx_notes.md' #opens sfdx notes on sfdx
 alias pin='vim ~/repos/github/linux/pi_notes.md' #opens my notes on Raspberry Pi related stuff
 alias jsn='vim ~/repos/github/webDev/javascript_notes.md' #opens my notes on JS
+alias htn='vim ~/repos/github/webDev/html_notes.md' #opens my notes on HTML
+alias vsn='vim ~/repos/github/webDev/VS-Code_notes.md' #opens my notes on Visual Studio Code
 alias don='vim ~/repos/github/linux/docker_notes.md' #opens my notes on Docker
 ## CONFIG SHORTCUTS
 alias bashrc='vim ~/.bashrc' #opens my .bashrc in VIM
