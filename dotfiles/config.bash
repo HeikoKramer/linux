@@ -22,6 +22,7 @@ alias sfh='cd ~/repos/github/sfhcks; l' #enter and list Salesforce hacks repo
 alias isv='cd ~/repos/github/sfdx_projects/isv; l' #enter isv sfdx project
 alias wd='cd ~/repos/github/webDev; l' #enter and list webDev repo
 alias conf='cd ~/.config; l' #enter and list config files
+alias vl='cd ~/repos/github/vlocity; l' #enter and list vlocity repo
 ## NOTES SHORTCUTS
 alias notes='vim ~/repos/gitlab.com/heiko__b/dotfiles/notes.md' #opens my notes in VIM
 alias linn='vim ~/repos/github/linux/linux_notes.md' #opens my notes on Linux
@@ -32,6 +33,7 @@ alias pin='vim ~/repos/github/linux/pi_notes.md' #opens my notes on Raspberry Pi
 alias jsn='vim ~/repos/github/webDev/javascript_notes.md' #opens my notes on JS
 alias htn='vim ~/repos/github/webDev/html_notes.md' #opens my notes on HTML
 alias vsn='vim ~/repos/github/webDev/VS-Code_notes.md' #opens my notes on Visual Studio Code
+alias vln='vim ~/repos/github/vlocity/vlocity_notes.md' #opens my notes on vlocity
 alias don='vim ~/repos/github/linux/docker_notes.md' #opens my notes on Docker
 ## CONFIG SHORTCUTS
 alias bashrc='vim ~/.bashrc' #opens my .bashrc in VIM
