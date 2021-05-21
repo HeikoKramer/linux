@@ -114,7 +114,6 @@ export -f refresh
 # allg = all Git 
 # adds, commits and pushes everything in the working directory
 # asks for a commit message
-# toDo --> would actually be great to enter a commit message per changed item.
 function allg {
 	git add .;
 	git status;
@@ -122,6 +121,17 @@ function allg {
 	git commit -m "$commitMessage";
 	git push -u origin main;
 }
+
+# gamp [file to add] = git add + commit + push
+# adds and commits the file given as function option
+# asks for a commit message
+function gamp {
+	read -p 'Please enter a commit message: ' commitMessage;
+	git add $1;
+	git commit -m "$commitMessage";
+	git push -u origin main;
+}
+export -f gamp
 
 # newremote will copy remote editions of most relevant dot files to a remote system.
 # newremote will then connect to the system, skipping authenticity question and perform updates.
