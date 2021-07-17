@@ -42,6 +42,7 @@ alias bashcr='vim ~/repos/github/linux/dotfiles/remote/.bash_aliases' #opens rem
 alias bashc='vim ~/repos/github/linux/dotfiles/config.bash' #opens bashconfig in vim
 alias tmuxc='vim ~/repos/github/linux/dotfiles/tmux.conf' #opens tmux config in vim
 alias vimc='vim ~/repos/github/linux/dotfiles/vimrc' #opens vimrc in vim
+alias conkyc='vim ~/repos/github/linux/dotfiles/conky.conf' #opens conky.conf
 alias sfc='vim -c "set filetype=sh" ~/repos/github/sfdx/sfdx.conf' #opens sfdx config in vim
 alias sshc='vim ~/.ssh/config' #opens ssh config in vim
 alias muttc='vim ~/.config/mutt/muttrc' #opens (neo)mutt config file in vim
@@ -241,3 +242,5 @@ fi
 
 ### "vim" as manpager
 export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
+
+conky

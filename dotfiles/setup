@@ -11,3 +11,6 @@ ls -l $HOME/.tmux.conf
 
 ln -sf $PWD/neofetch.conf ~/.config/neofetch/config.conf
 ls -l ~/.config/neofetch/config.conf
+
+ln -sf $PWD/conky.conf ~/.config/conky/conky.conf
+ls -l ~/.config/conky/conky.conf
