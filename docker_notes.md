@@ -74,8 +74,8 @@ root@1dd819d65581:/# read escape sequence
 The container will now remain in the background. <br>
 If you re-attach to it, you'll realize, your changes have been kept. <br> 
 
-## interacting with containers
-### installing a web-server and mapping a port
+## Interacting with containers
+### Installing a web-server and mapping a port
 `docker run -it -d -8080:80 nginx` will run an container of an **nginx** image, with … <br>
 * **-it** an interactive shell
 * **d** daemon mode
@@ -87,10 +87,10 @@ Enter your browser, type in that address plus the specified port, in my case htt
 … and you'll hopefully see the ngnix welcome page. <br>
 Use `docker run -it -d --restart unless-stopped -p 8080:80 nginx` if you want to keep ngnix alive **until stopped**. <br>
 
-## docker start
+## Docker start
 You can restart a container you exited or stopped by command with `docker start 1dd819d65581`. <br>
 
-## docker commit
+## Docker commit
 `docker commit 1dd819d65581 cranky_hamilton:1.0` will create an image … <br>
 * from container **1dd819d65581**
 * with name **cranky_hamilton** 
@@ -107,6 +107,27 @@ cranky_hamilton     1.0                 ed24b7782983        19 hours ago        
 You can specify entry point and other options directly in the commit command. Example: <br>
 `docker commit --change='ENTRYPOINT ["apachctl", "-DFOREGROUND"]' 1dd819d65581 cranky_hamilton:1.1` <br>
 
+## Docker files
+Ressources: [wiki.learnlinux.tv](https://wiki.learnlinux.tv/index.php/Docker_Essentials_7_-_Creating_Images) <br>
+Optional: Create docker file directory `mkdir dockerfiles` and enter it `cd dockerfiles` <br>
+`vim Dockerfile` to create a new file. <br> 
+
+```sh
+FROM arm32v7/ubuntu
+MAINTAINER <sfhks@myforce.net>
+
+# skip prompts
+ARG DEBIAN_FRONTEND=noninteractive 
+
+# Update packages
+RUN apt update; apt upgrade -y
+
+# Install packages
+RUN apt install -y vim tmux htop neofetch curl
+
+# Curl dotfiles
+RUN curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.bashrc > .bashrc; curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.vimrc > .vimrc; curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.bash_aliases > .bash_aliases; curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/remote/.bash_remote > .bash_remote; curl https://raw.githubusercontent.com/HeikoKramer/linux/main/dotfiles/tmux.conf > .tmux.conf;
+```
 
 ## Remove image
 `docker image rm arm32v7/debian` to remove the arm32v7/debian image.
