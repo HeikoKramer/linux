@@ -33,6 +33,7 @@ alias pin='vim ~/repos/github/linux/pi_notes.md' #opens my notes on Raspberry Pi
 alias jsn='vim ~/repos/github/webDev/javascript_notes_2.md' #opens my notes on JS
 alias htn='vim ~/repos/github/webDev/html_notes.md' #opens my notes on HTML
 alias csn='vim ~/repos/github/webDev/css_notes.md' #opens my notes on CSS
+alias dom='vim ~/repos/github/webDev/dom_notes.md' #opens my notes on the JS DOM
 alias vsn='vim ~/repos/github/webDev/VS-Code_notes.md' #opens my notes on Visual Studio Code
 alias vln='vim ~/repos/github/vlocity/vlocity_notes.md' #opens my notes on vlocity
 alias don='vim ~/repos/github/linux/docker_notes.md' #opens my notes on Docker
