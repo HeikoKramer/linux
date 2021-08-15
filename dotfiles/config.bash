@@ -114,6 +114,14 @@ function refresh {
 }
 export -f refresh
 
+# size
+# get size of working directory
+function size {
+        currentDirectory=$(pwd);
+        du -h $currentDirectory --max-depth=0;
+}
+export -f size
+
 # allg = all Git 
 # adds, commits and pushes everything in the working directory
 # asks for a commit message
