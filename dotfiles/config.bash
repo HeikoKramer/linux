@@ -35,8 +35,9 @@ alias jpn='vim ~/repos/github/webDev/javascript-practice_notes.md' #opens my JS 
 alias htn='vim ~/repos/github/webDev/html_notes.md' #opens my notes on HTML
 alias csn='vim ~/repos/github/webDev/css_notes.md' #opens my notes on CSS
 alias dom='vim ~/repos/github/webDev/dom_notes.md' #opens my notes on the JS DOM
-alias ooj='vim ~/repos/github/webDev/object_oriented_javascript.md' #opens my notes on object oriented JS
 alias vsn='vim ~/repos/github/webDev/VS-Code_notes.md' #opens my notes on Visual Studio Code
+alias ooj='vim ~/repos/github/webDev/object_oriented_javascript.md' #opens my notes on object oriented JS
+alias asy='vim ~/repos/github/webDev/asynchronous_js.md' #opens my notes on asynchronous JS
 alias vln='vim ~/repos/github/vlocity/vlocity_notes.md' #opens my notes on vlocity
 alias don='vim ~/repos/github/linux/docker_notes.md' #opens my notes on Docker
 ## CONFIG SHORTCUTS
