@@ -125,6 +125,15 @@ function size {
 }
 export -f size
 
+# md
+# make directory – make new directory and jump right into it
+function md {
+        currentDirectory=$(pwd);
+        mkdir currentDirectory$1;
+        cd currentDirectory$1;
+}
+export -f md
+
 # allg = all Git 
 # adds, commits and pushes everything in the working directory
 # asks for a commit message
