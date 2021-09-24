@@ -35,6 +35,7 @@ alias jpn='vim ~/repos/github/webDev/javascript-practice_notes.md' #opens my JS 
 alias htn='vim ~/repos/github/webDev/html_notes.md' #opens my notes on HTML
 alias csn='vim ~/repos/github/webDev/css_notes.md' #opens my notes on CSS
 alias dom='vim ~/repos/github/webDev/dom_notes.md' #opens my notes on the JS DOM
+alias jsp='vim ~/repos/github/webDev/js-pattern_notes.md' #opens my JS pattern notes 
 alias ren='vim ~/repos/github/webDev/regex_notes.md' #opens my regex notes 
 alias vsn='vim ~/repos/github/webDev/VS-Code_notes.md' #opens my notes on Visual Studio Code
 alias ooj='vim ~/repos/github/webDev/object_oriented_javascript.md' #opens my notes on object oriented JS
