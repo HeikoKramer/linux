@@ -23,6 +23,7 @@ alias isv='cd ~/repos/github/sfdx_projects/isv; l' #enter isv sfdx project
 alias wd='cd ~/repos/github/webDev; l' #enter and list webDev repo
 alias conf='cd ~/.config; l' #enter and list config files
 alias vl='cd ~/repos/github/vlocity; l' #enter and list vlocity repo
+alias jst='cd ~/repos/github/webDev/js_tutorials; l' #enter and list JavaScript tutorials
 ## NOTES SHORTCUTS
 alias notes='vim ~/repos/gitlab.com/heiko__b/dotfiles/notes.md' #opens my notes in VIM
 alias linn='vim ~/repos/github/linux/linux_notes.md' #opens my notes on Linux
