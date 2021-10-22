@@ -9,7 +9,7 @@ alias vim='nvim' #replace standard vim with neovim
 alias mutt='neomutt' #launches neomutt instead of mutt
 alias m='cmatrix -C magenta -s' #launches cmatrix in magenta and screensave mode
 ## DIRECTORY SHORTCUTS
-alias dl='cd ~/Downloads; l' #enter and list download folder
+alias dl='cd ~/Downloads; l -t' #enter and list download folder
 alias gil='cd ~/repos/gitlab.com; l' #enter and list gitlab directory
 alias gih='cd ~/repos/github; l' #enter and list github directory
 alias lin='cd ~/repos/github/linux; l' #enter and list linux repo
