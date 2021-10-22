@@ -55,27 +55,8 @@ alias sfc='vim -c "set filetype=sh" ~/repos/github/sfdx/sfdx.conf' #opens sfdx c
 alias sshc='vim ~/.ssh/config' #opens ssh config in vim
 alias muttc='vim ~/.config/mutt/muttrc' #opens (neo)mutt config file in vim
 ## BOOK SHORTCUTS
-### Vim books
-alias vimb='mupdf -I ~/books/Vim/Mastering_Vim_Quickly_v1.1.pdf' #opens vim book in mupdf
-alias ovimb='mupdf -I ~/books/Vim/viandvimeditorspocketreference2e.pdf' #opens O'Reilly vim book in mupdf
-alias pvimb='mupdf -I ~/books/Vim/781789341096-MASTERING_VIM.pdf' #opens Packt vim book in mupdf
 ### Linux / Unix command line books
 alias book='mupdf -I ~/books/Linux_CL/TLCL-19.01.pdf' #opens "The Linus Command Line" book in mupdf
-alias ubook='mupdf -I ~/books/Linux_CL/9781800564640-MASTERING_UBUNTU_SERVER_THIRD_EDITION.pdf' #opens Jay's ubuntu server book in mupdf
-alias obash='mupdf -I ~/books/Linux_CL/bashpocketreference2e.pdf' #opens O'Reilly  bash book in mupdf
-alias ogit='mupdf -I ~/books/Linux_CL/gitpocketguide1e.pdf' #opens O'Reilly git book in mupdf
-alias ogrep='mupdf -I ~/books/Linux_CL/greppocketref.pdf' #opens O'Reilly grep book in mupdf
-alias olinux='mupdf -I ~/books/Linux_CL/linuxpocketguide3e.pdf' #opens O'Reilly linux book in mupdf
-alias oregex='mupdf -I ~/books/Linux_CL/regularexpressionspocketreference.pdf' #opens O'Reilly regex book in mupdf
-alias oawk='mupdf -I ~/books/Linux_CL/sedandawkpocketreference2e.pdf' #opens O'Reilly sed & awk book in mupdf
-## JavaScript books
-alias jsb='mupdf -I ~/books/JS/Eloquent_JavaScript.pdf' #opens "Eloquent JS" book in mupdf
-alias nodeb='mupdf -I ~/books/JS/9781838987572-NODEJS_WEB_DEVELOPMENT_FIFTH_EDITION.pdf' #opens Packt NodeJS book in mupdf
-alias reactb='mupdf -I ~/books/JS/9781839219931-FULLSTACK_REACT_TYPESCRIPT_AND_NODE.pdf' #opens Packt React book in mupdf
-## Salesforce book
-alias lightb='mupdf -I ~/books/Salesforce/9781789956719-SALESFORCE_LIGHTNING_PLATFORM_ENTERPRISE_ARCHITECTURE_THIRD_EDITION.pdf' #opens Packt Lightning book in mupdf
-alias apexp='mupdf -I ~/books/Salesforce/9781800200920-MASTERING_APEX_PROGRAMMING.pdf' #opens Packt Apex book in mupdf
-alias archb='mupdf -I ~/books/Salesforce/9781800568754-BECOMING_A_SALESFORCE_CERTIFIED_TECHNICAL_ARCHITECT.pdf' #opens Packt SF Architect book in mupdf
 ## VIRTUALIZATION SHORTCUTS
 alias vmac='VBoxManage startvm "VMac"' #starts my virtual mac
 ## TERMINAL COMMAND SHORCUTS
