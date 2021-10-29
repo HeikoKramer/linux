@@ -226,6 +226,16 @@ function google {
   lynx "google.com/search?q=$*";
 }
 export -f google
+# ToDo for google function:
+# – add option to put searchterm in quotes "" (exact search)
+# – add option to search within a specific site (site:$siteName)
+# – add option to exclude a term (-term)
+# – add option to search for results published before a specific date (before:2020)
+# – add option to search for results published after a specific date (after:2020)
+# – add option to search for results bublished between specific dates (2015..2018)
+# – add option to search one or the other term (termA | termB)
+# – add option to search for all subdomains of a site (site:*.example.com -www)
+# – add option to search for a specifc filetype (filetype:pdf)
 
 # wikie – takes user input and performs a search within the english wikipedia via lynx
 function wikie {
