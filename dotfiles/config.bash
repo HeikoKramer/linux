@@ -48,6 +48,7 @@ alias ooj='vim ~/repos/github/webDev/object_oriented_javascript.md' #opens my no
 alias asy='vim ~/repos/github/webDev/asynchronous_js.md' #opens my notes on asynchronous JS
 alias vln='vim ~/repos/github/vlocity/vlocity_notes.md' #opens my notes on vlocity
 alias don='vim ~/repos/github/linux/docker_notes.md' #opens my notes on Docker
+alias tfn='vim ~/repos/github/webDev/tensorflow-js_notes.md' #opens my tensorflow notes
 ## CONFIG SHORTCUTS
 alias bashrc='vim ~/.bashrc' #opens my .bashrc in VIM
 alias bashcr='vim ~/repos/github/linux/dotfiles/remote/.bash_aliases' #opens remote bashconfig in vim
