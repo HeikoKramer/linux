@@ -37,6 +37,7 @@ alias sfn='vim ~/repos/github/sfdx/sfdx_notes.md' #opens sfdx notes on sfdx
 alias pin='vim ~/repos/github/linux/pi_notes.md' #opens my notes on Raspberry Pi related stuff
 alias jsn='vim ~/repos/github/webDev/javascript_notes.md' #opens my notes on JS
 alias njn='vim ~/repos/github/webDev/nodeJS_notes.md' #opens my node.js notes
+alias npn='vim ~/repos/github/webDev/npm_notes.md' #opens my npm packages notes
 alias jpn='vim ~/repos/github/webDev/javascript-practice_notes.md' #opens my JS practice notes
 alias htn='vim ~/repos/github/webDev/html_notes.md' #opens my notes on HTML
 alias csn='vim ~/repos/github/webDev/css_notes.md' #opens my notes on CSS
