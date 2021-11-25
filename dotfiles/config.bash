@@ -253,6 +253,60 @@ function wikid {
 }
 export -f wikid
 
+# silomail – create, delete, list-all or update forwarding mails via namesilo.com API
+function silomail {
+
+  # source silomail.conf file where my default KEY, DOM and FOR1 values are defined
+  source ~/repos/github/linux/dotfiles/silomail.conf;
+
+  # set parameter default values
+  valVER=1;
+  valTYPE=xml;
+  valKEY=$devKEY;
+  valDOM=$devDOM;
+  valFOR1=$devFOR1;
+
+  # set query string parameters 
+  VER='version='$valVER;
+  TYPE='type='$valTYPE;
+  KEY='key='$valKEY;
+  DOM='domain='$valDOM;
+  FOR1='forward1='$valFOR1;
+
+  read -p 'enter action option (1 create, 2 delete, 3 list all, 4 update): ' OPT;
+
+  if [ $OPT == 1 ]
+  then
+    ACT=configureEmailForward;
+    read -p 'enter forwarding name (local part) you want to create: ' valEMAIL;
+    EMAIL='email='$valEMAIL;
+    echo `curl -G -d $VER -d $TYPE -d $KEY -d $DOM -d $EMAIL -d $FOR1 https://www.namesilo.com/api/$ACT`;
+  elif [ $OPT == 2 ]
+  then
+    ACT=deleteEmailForward;
+    read -p 'enter forwarding name (local part) you want to delete: ' valEMAIL;
+    EMAIL='email='$valEMAIL;
+    echo `curl -G -d $VER -d $TYPE -d $KEY -d $DOM -d $EMAIL https://www.namesilo.com/api/$ACT`;
+  elif [ $OPT == 3 ]
+  then
+    ACT=listEmailForwards;
+    echo `curl -G -d $VER -d $TYPE -d $KEY -d $DOM https://www.namesilo.com/api/$ACT`;
+  elif [ $OPT == 4 ]
+  then
+    ACT=configureEmailForward;
+    read -p 'enter forwarding name (local part) you want to update: ' valEMAIL;
+    read -p 'enter new receipient address: ' valFOR1;
+    EMAIL='email='$valEMAIL;
+    FOR1='forward1='$valFOR1;
+    echo `curl -G -d $VER -d $TYPE -d $KEY -d $DOM -d $EMAIL -d $FOR1 https://www.namesilo.com/api/$ACT`;
+  else
+    echo $OPT is not a valid option.;
+    silomail;
+  fi
+  
+}
+export -f silomail
+
 ## autostart apps
 neofetch
 
