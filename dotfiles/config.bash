@@ -307,6 +307,23 @@ function silomail {
 }
 export -f silomail
 
+# pall – pull all
+# goes through all my github repos an pulls remote changes
+function pall {
+	for i in ~/repos/github/*; do
+		if [ -d "$i" ]; then
+			echo "Checking for updates in – $(basename "$i") – repo.";
+			cd ~/repos/github/$(basename "$i");
+			git pull;
+			echo "";
+		fi
+	done
+}
+export -f pall
+
+# calling pall when bashrc is sourced
+pall
+
 ## autostart apps
 neofetch
 
