@@ -28,6 +28,7 @@ alias jst='cd ~/repos/github/webDev/js_tutorials; l' #enter and list JavaScript 
 alias op='cd ~/repos/github/webDev/own_projects; l' #enter and list own projects
 alias paps='cd ~/repos/github/webDev/own_projects/papa-schule; l' #enter and list papa-schule
 alias njs='cd ~/repos/github/webDev/node-js_sandbox; l' #enter and list node.js sandbox
+alias cli='cd ~/repos/github/nodeCLI; l' #enter and list nodeCLI repo
 alias dea='cd ~/repos/github/webDev/js_tutorials/devcamper_api; l' #enter & list devcamper api project
 ## NOTES SHORTCUTS
 alias notes='vim ~/repos/gitlab.com/heiko__b/dotfiles/notes.md' #opens my notes in VIM
