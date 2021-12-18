@@ -309,7 +309,14 @@ export -f silomail
 
 # pall – pull all
 # goes through all my github repos an pulls remote changes
+# function creates a temp file "pall" which will prevent an other run for 4h
 function pall {
+	# if pall file is older than 4h, remove it
+	if [ $(find /tmp/pall -mmin +320) ]; then
+		rm /tmp/pall;
+	fi
+	# if pall file does not exist, create it and …
+	# … loop through all github repos and pull remote changes
 	if [ ! -f /tmp/pall ]; then
 		touch /tmp/pall;
 		for i in ~/repos/github/*; do
