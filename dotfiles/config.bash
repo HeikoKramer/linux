@@ -150,6 +150,29 @@ function gamp {
 }
 export -f gamp
 
+# grm [file / dir to remove] = git remove
+# removes file / dir from remote repository but will keep its local copy 
+function grm {
+	read -p 'Enter "f" to remove a file, "d" to remove a directory : ' OPT;
+  if [ $OPT == "f" ] 
+  then
+    read -p 'Enter the name of the file you want to remove : ' FILE;
+    git rm --cached $FILE;
+    git commit -m "file $FILE removed from repository";
+    git push -u origin main;
+  elif [ $OPT == "d" ]
+  then
+    read -p 'Enter the name of the directory you want to remove : ' DIR;
+    git rm -r --cached $DIR;
+    git commit -m "directory $DIR removed from repository";
+    git push -u origin main;
+  else
+    echo $OPT is not a valid option!;
+    grm;
+  fi
+}
+export -f grm
+
 # newremote will copy remote editions of most relevant dot files to a remote system.
 # newremote will then connect to the system, skipping authenticity question and perform updates.
 # as last step newremote will log you into the remote maschine. 
