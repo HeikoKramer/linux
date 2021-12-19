@@ -153,18 +153,18 @@ export -f gamp
 # grm [file / dir to remove] = git remove
 # removes file / dir from remote repository but will keep its local copy 
 function grm {
-	read -p 'Enter "f" to remove a file, "d" to remove a directory : ' OPT;
+	read -p 'Enter "f" to remove a file, "d" to remove a directory: ' OPT;
   if [ $OPT == "f" ] 
   then
-    read -p 'Enter the name of the file you want to remove : ' FILE;
+    read -p 'Enter the name of the file you want to remove: ' FILE;
     git rm --cached $FILE;
-    git commit -m "file $FILE removed from repository";
+    git commit -m "file ($FILE) removed from repository";
     git push -u origin main;
   elif [ $OPT == "d" ]
   then
-    read -p 'Enter the name of the directory you want to remove : ' DIR;
+    read -p 'Enter the name of the directory you want to remove: ' DIR;
     git rm -r --cached $DIR;
-    git commit -m "directory $DIR removed from repository";
+    git commit -m "directory ($DIR) removed from repository";
     git push -u origin main;
   else
     echo $OPT is not a valid option!;
