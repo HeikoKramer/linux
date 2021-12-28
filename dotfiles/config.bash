@@ -353,6 +353,7 @@ function pall {
 			fi
 		done
 	fi
+  cd;
 }
 export -f pall
 
