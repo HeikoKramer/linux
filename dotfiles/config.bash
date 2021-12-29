@@ -361,6 +361,18 @@ export -f pall
 # calling pall when bashrc is sourced
 pall
 
+# anc – archive node cli
+# copy node cli from sandbox to archive directory
+function anc {
+  read -p 'Please enter name for archive folder: ' ARCH;
+  cd ~/repos/github/nodeCLI/archive;
+  mkdir $ARCH;
+  cd -;
+  cp * ~/repos/github/nodeCLI/archive/$ARCH;
+  echo "CLI archived!";
+}
+export -f anc
+
 ## autostart apps
 neofetch
 
