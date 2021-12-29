@@ -30,6 +30,7 @@ alias paps='cd ~/repos/github/webDev/own_projects/papa-schule; l' #enter and lis
 alias njs='cd ~/repos/github/webDev/node-js_sandbox; l' #enter and list node.js sandbox
 alias cli='cd ~/repos/github/nodeCLI; l' #enter and list nodeCLI repo
 alias hcli='cd ~/repos/github/nodeCLI/heiko-cli; l' #enter and list heiko-cli project
+alias clis='cd ~/repos/github/nodeCLI/cli_sandbox; l' #enter and list node cli sandbox
 alias dea='cd ~/repos/github/webDev/js_tutorials/devcamper_api; l' #enter & list devcamper api project
 ## NOTES SHORTCUTS
 alias notes='vim ~/repos/gitlab.com/heiko__b/dotfiles/notes.md' #opens my notes in VIM
