@@ -369,6 +369,11 @@ function anc {
   mkdir $ARCH;
   cd -;
   cp * ~/repos/github/nodeCLI/archive/$ARCH;
+  cd ~/repos/github/nodeCLI/;
+  git add .;
+  git commit -m "$ARCH archived";
+  git push origin main;
+  cd -;
   echo "CLI archived!";
 }
 export -f anc
