@@ -32,6 +32,7 @@ alias cli='cd ~/repos/github/nodeCLI; l' #enter and list nodeCLI repo
 alias hcli='cd ~/repos/github/nodeCLI/heiko-cli; l' #enter and list heiko-cli project
 alias clis='cd ~/repos/github/nodeCLI/cli_sandbox; l' #enter and list node cli sandbox
 alias clig='cd ~/repos/github/nodeCLI/cligen; l' #enter and list cligen dir
+alias ctd='cd ~/repos/github/nodeCLI/cli-todo; l' #enter and list cli-todo dir
 alias dea='cd ~/repos/github/webDev/js_tutorials/devcamper_api; l' #enter & list devcamper api project
 ## NOTES SHORTCUTS
 alias notes='vim ~/repos/gitlab.com/heiko__b/dotfiles/notes.md' #opens my notes in VIM
