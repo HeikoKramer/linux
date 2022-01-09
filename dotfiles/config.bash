@@ -361,6 +361,15 @@ function pall {
 }
 export -f pall
 
+# giti – git .gitignore
+# adds, commits and pushes only the .gitignore file
+function giti {
+  git add .gitignore;
+  git commit -m ".gitignore edited";
+  git push origin main;
+}
+export -f giti
+
 # calling pall when bashrc is sourced
 pall
 
