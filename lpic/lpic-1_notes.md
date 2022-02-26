@@ -57,6 +57,14 @@ The information shown differ from module to module, but can for example contain:
 * `modinfo -n` shows the **filename** of the module
 
 #### insmod
-`insmod` is a simple program to insert a module into the Linux Kernel. <br>
+`insmod` is a simple program to **insert a module** into the Linux Kernel. <br>
 It requires the whole file path of the module that should be loaded into memory. <br>
-`insmod` won't automatically load any dependencies. <br>
+`insmod` won't automatically load any dependencies and it doesn't show success messages. <br>
+
+#### rmmod
+`rmmod` can be used to **remove modules** from memory. <br>
+It takes in the module name as a parameter. <br>
+`rmmod` doesn't provide success messages, but it shows an error if a module is required by an other active module. <br>
+Dependencies can be ignored and remove be forced with `rmmod -f`. <br>
+
+
