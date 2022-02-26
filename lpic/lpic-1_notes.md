@@ -56,4 +56,7 @@ The information shown differ from module to module, but can for example contain:
 * `modinfo -p` shows required **parameters** for the module
 * `modinfo -n` shows the **filename** of the module
 
-
+#### insmod
+`insmod` is a simple program to insert a module into the Linux Kernel. <br>
+It requires the whole file path of the module that should be loaded into memory. <br>
+`insmod` won't automatically load any dependencies. <br>
