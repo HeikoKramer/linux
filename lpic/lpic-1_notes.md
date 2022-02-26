@@ -67,4 +67,17 @@ It takes in the module name as a parameter. <br>
 `rmmod` doesn't provide success messages, but it shows an error if a module is required by an other active module. <br>
 Dependencies can be ignored and remove be forced with `rmmod -f`. <br>
 
+#### modprobe
+`modprobe` is a combination of `insmod` and `rmmod` with some additional features. <br>
+It is capable of finding and loading required modules from a module's dependency tree. <br>
+`modprobe` doesn't require the full module path like `insmod` – it uses `uname -r` to find the kernel's base directory. <br>
+It can load all modules of a certain type: <br>
 
+```sh
+modprobe -at net
+
+# -a for "all", -t for "type", net for type "network" 
+```
+
+Modules can be removed with `modprobe -r` – multiple module names can be passed at the same time (separated by space). <br>
+RETIRED: Modules can be listed with `modprobe -l` – this shows not only loaded but also loadable modules. <br> 
