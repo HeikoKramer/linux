@@ -76,7 +76,9 @@ It can load all modules of a certain type: <br>
 ```sh
 modprobe -at net
 
-# -a for "all", -t for "type", net for type "network" 
+# -a for "all"
+# -t for "type"
+# net for type "network" 
 ```
 
 Modules can be removed with `modprobe -r` – multiple module names can be passed at the same time (separated by space). <br>
