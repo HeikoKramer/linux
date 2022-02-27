@@ -83,3 +83,12 @@ modprobe -at net
 
 Modules can be removed with `modprobe -r` – multiple module names can be passed at the same time (separated by space). <br>
 RETIRED: Modules can be listed with `modprobe -l` – this shows not only loaded but also loadable modules. <br> 
+
+#### depmod
+The dependencies between modules are stored in the file *modules.dep*. <br>
+That file is stored in */lib/modules/5.13.0-30-generic* (5.13.0-30-generic is my current kernel version. <br>
+`depmod` creates a list of module dependencies (*modules.dep*) by reading each module under the current kernel version. <br>
+`depmod` replaces the existing *modules.dep* with a newer version. <br>
+`depmod -n` can be used to dry run, results will only be shown in *stdout*, not saved in a file. <br>
+`depmod -A` performs a check on *modules.dep* and executed `depmod` only if new modules exist. <br>
+
