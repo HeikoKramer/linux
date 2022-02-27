@@ -92,3 +92,24 @@ That file is stored in */lib/modules/5.13.0-30-generic* (5.13.0-30-generic is my
 `depmod -n` can be used to dry run, results will only be shown in *stdout*, not saved in a file. <br>
 `depmod -A` performs a check on *modules.dep* and executed `depmod` only if new modules exist. <br>
 
+### Kernel directories and files
+#### /proc/sys/kernel
+During runtime the kernel stores its config files in */proc/sys/kernel*. <br>
+Config information can be gathered by using the `cat` command on the files in this folder. <br>
+
+```sh
+cat /proc/sys/kernel/osrelease
+# > 5.13.0-30-generic
+
+cat /proc/sys/kernel/ostype
+# > Linux
+
+cat /proc/sys/kernel/hostname
+# > tiny
+
+cat /proc/sys/kernel/modprobe
+# > /sbin/modprobe
+```
+
+All changes to files in this directory will be lost after reboot, as they contain information loaded from memory. <br>
+
