@@ -1,6 +1,6 @@
 # LPIC-1 Notes
 Notes I'm taking as a preparation for the LPIC-1 certificate. <br>
-I'm using the [Rheinwerk LPIC-1 book by Harald Maaßen](https://www.rheinwerk-verlag.de/lpic-1-sicher-zur-erfolgreichen-linux-zertifizierung/) (German) as the main source for my prep-work. <br>
+I'm using the [Rheinwerk LPIC-1 book by Harald Maaßen](https://www.rheinwerk-verlag.de/lpic-1-sicher-zur-erfolgreichen-linux-zertifizierung/) (German) and the [LPIC-1 - Linux System Administrator Masterclass](https://www.udemy.com/course/lpic-1-linux-system-administrator-masterclass/) Udemy course as the main source for my prep-work. <br>
 
 ## 101 System Architecture
 The Linux kernel is the interface between hardware and software. <br>
@@ -112,4 +112,7 @@ cat /proc/sys/kernel/modprobe
 ```
 
 All changes to files in this directory will be lost after reboot, as they contain information loaded from memory. <br>
+
+#### /usr/src
+*/usr/src* contains the **source files** of available kernels in sub-directories for the appropriate kernel version. <br>
 
