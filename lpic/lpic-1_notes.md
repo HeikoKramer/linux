@@ -162,3 +162,9 @@ It contains a lot of system directories – also the *home* directory, where eve
 Those files and directories outside of the user's personal home directory might require **root privileges** for interaction. <br>
 To navigate the file tree outside the root directory (withing the personal home dir) **~/** is needed. Within root the tilde is not needed. <br>
 
+## Man & help pages
+The most commands have a **manual** which can be entered by typing `man` + the command name – `man ls` for example. <br>
+The **man pages** show all the available options for a command and sometimes also examples. <br>
+Some commands have **help pages** which can be entered with command name + `-h` or `--help`. <br>
+
+
