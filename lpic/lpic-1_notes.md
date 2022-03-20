@@ -116,3 +116,20 @@ All changes to files in this directory will be lost after reboot, as they contai
 #### /usr/src
 */usr/src* contains the **source files** of available kernels in sub-directories for the appropriate kernel version. <br>
 
+## CLI basics 
+### pwd
+`pwd` *print working directory* – prints complete path for the entered directory (full directory tree). <br>
+
+```sh
+10:08:51:heiko@tiny:~
+$ pwd
+/home/heiko
+```
+
+In this case `pwd` shows that we're in a subdirectory of the */home* directory. <br>
+*heiko* is my **username** and therewith also the name of my **personal home directory** */heiko*. <br>
+In this personal home directory I'm authorized to **create, delete, copy**, etc. files and directories **without root privileges**. <br>
+**root** is the **administrator** on a Linux system. <br>
+
+
+
