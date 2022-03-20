@@ -142,11 +142,11 @@ There are many useful options for `ls`, here are my favourites, which I usually 
 
 ## cd
 `cd` *change directory* is used to navigate the directory tree. <br>
-`cd ~/Downloads` brings you to the *Downloads* directory. <br>
-`cd ..` brings takes you **one step back** in the directory tree. <br>
-`cd .` takes you to your **personal home** directory. <br>
-`cd -` lets you jump to the **last** directory you had visited before the current directory. <br>
-`cd /` brings you to the **root** directory. <br>
+`cd ~/Downloads` brings us to the *Downloads* directory. <br>
+`cd ..` takes us **one step back** in the directory tree. <br>
+`cd` or `cd  ~` take us back to our **personal home** directory. <br>
+`cd -` lets us jump to the **last** directory we have visited before the current directory. <br>
+`cd /` brings us to the **root** directory. <br>
 
 ## / the root directory
 */* – the *root directory* is our **1st directory** in the file tree. <br>
@@ -160,4 +160,5 @@ boot  dev    home  lib32  libx32  media       opt  root  sbin  swapfile  timeshi
 
 It contains a lot of system directories – also the *home* directory, where every user registered on the system has its sub-directory. <br>
 Those files and directories outside of the user's personal home directory might require **root privileges** for interaction. <br>
+To navigate the file tree outside the root directory (withing the personal home dir) **~/** is needed. Within root the tilde is not needed. <br>
 
