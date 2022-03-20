@@ -131,5 +131,13 @@ In this case `pwd` shows that we're in a subdirectory of the */home* directory. 
 In this personal home directory I'm authorized to **create, delete, copy**, etc. files and directories **without root privileges**. <br>
 **root** is the **administrator** on a Linux system. <br>
 
+## ls
+`ls` *list* displays the contents of the directory in which we are currently located. <br>
+Different file-types are displayed in different colors. Depending on your color scheme, the default might look like:
+
+* directories – <span style="color:blue">**blue**</span>
+* files – <span style="color:white">**white**</span>
+* archives – <span style="color:red">**red**</span>
+* scripts – <span style="color:green">**green**</span>
 
 
