@@ -130,14 +130,20 @@ In this case `pwd` shows that we're in a subdirectory of the */home* directory. 
 *heiko* is my **username** and therewith also the name of my **personal home directory** */heiko*. <br>
 In this personal home directory I'm authorized to **create, delete, copy**, etc. files and directories **without root privileges**. <br>
 **root** is the **administrator** on a Linux system. <br>
+Our personal home directory is represented by the **tilde symbol** – **~** – in the command prompt. <br>
 
 ## ls
 `ls` *list* displays the contents of the directory in which we are currently located. <br>
-Different file-types are displayed in different colors. Depending on your color scheme, the default might look like:
+There are many useful options for `ls`, here are my favourites, which I usually include in an `ls` alias: <br>
+* -a – lets you see **all** files (include hidden files)
+* -l – shows contents in list format, with additional information
+* -h – shows file size in **human readable** format
+* -t – sorts filed by modification time, newest first
 
-* directories – <span style="color:blue">**blue**</span>
-* files – <span style="color:white">**white**</span>
-* archives – <span style="color:red">**red**</span>
-* scripts – <span style="color:green">**green**</span>
-
+## cd
+`cd` *change directory* is used to navigate the directory tree. <br>
+`cd ~/Downloads` brings you to the *Downloads* directory. <br>
+`cd ..` brings takes you back one step in the directory tree. <br>
+`cd .` takes you to your personal home directory. <br>
+`cd -` lets you jump to the last directory you had visited before the current directory. <br>
 
