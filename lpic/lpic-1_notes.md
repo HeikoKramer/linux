@@ -7,9 +7,25 @@ The Linux kernel is the interface between hardware and software. <br>
 Its architecture is **modular** – single components can be loaded / re-loaded during runtime, without re-loading the entire system. <br>
 This is an advantage above *monolytic* kernels, which would require a complete re-load. <br>
 
+## 101.1 Determine and configure hardware settings
 ### kernel version
 #### uname
-`uname -r` can be used to find the kernel version. <br>
+`uname -r` can be used to find the kernel version. The **-r** option stands for **release**. <br>
+`uname -m` for **machine** will provide information in regards to the underlying system architecture. <br>
+`uname -a` will show **all** information `uname` hast to offer. <br>
+<br>
+Output: *Linux tiny 5.13.0-35-generic #40~20.04.1-Ubuntu SMP Mon Mar 7 09:18:32 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux* <br>
+Let's break this down into sections: <br>
+* Linux – *Kernel Name*
+* tiny – *Host Name*
+* 5.13.0-35-generic – *Kernel Release*
+* #40~20.04.1-Ubuntu SMP Mon Mar 7 09:18:32 UTC 2022 – *Kernel Version*
+* x86_64 – *Processor Type*
+* x86_64 – *Hardware Platform*
+* x86_64 – *Architecture of the Processor*
+* GNU/Linux – *Operating System*
+
+
 The directory */lib/modules* contains (this depends on the distro) the full history of former installed kernel versions. <br>
 */usr/src/* contains directories named after kernel version – which contain the source code of the appropriate kernel. <br>
 <br>
