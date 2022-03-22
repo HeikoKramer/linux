@@ -132,6 +132,11 @@ All changes to files in this directory will be lost after reboot, as they contai
 #### /usr/src
 */usr/src* contains the **source files** of available kernels in sub-directories for the appropriate kernel version. <br>
 
+### CPU info
+#### lscpu
+We can query cpu information with the command `lscpu`. <br>
+`lscpu` will provide information about the system cpu, such as *model name, architecture or number of cores (CPU(S))*. <br>
+
 ## CLI basics 
 ### pwd
 `pwd` *print working directory* – prints complete path for the entered directory (full directory tree). <br>
