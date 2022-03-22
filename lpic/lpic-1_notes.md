@@ -144,6 +144,10 @@ It represents the currently running processes. Files and folders of this directo
 When the system shuts down, the directory is deleted. Most files are only readable, there is no point in changing them. <br>
 There are further directories in */proc* with **numbers as their names**. Those numbers are called **PIDs**, for *Process IDs*. <br>
 Each started process has its own PID. There are also files in */proc* – for example *modules*, which lists all loaded kernel modules. <br>
+#### /sys
+The */sys* directory is also virtual, its content is only stored in memory. <br> 
+It contains information of system hardware and kernel modules.  <br>
+
 
 ## CLI basics 
 ### pwd
