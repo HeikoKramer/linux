@@ -137,6 +137,14 @@ All changes to files in this directory will be lost after reboot, as they contai
 We can query cpu information with the command `lscpu`. <br>
 `lscpu` will provide information about the system cpu, such as *model name, architecture or number of cores (CPU(S))*. <br>
 
+### Pseudo-/Virtual-Filesystems
+#### /proc
+The */proc* directory is a **virtual directory** which is only available during runtime. <br>
+It represents the currently running processes. Files and folders of this directory are stored in memory, not on the hard disk. <br>
+When the system shuts down, the directory is deleted. Most files are only readable, there is no point in changing them. <br>
+There are further directories in */proc* with **numbers as their names**. Those numbers are called **PIDs**, for *Process IDs*. <br>
+Each started process has its own PID. There are also files in */proc* – for example *modules*, which lists all loaded kernel modules. <br>
+
 ## CLI basics 
 ### pwd
 `pwd` *print working directory* – prints complete path for the entered directory (full directory tree). <br>
