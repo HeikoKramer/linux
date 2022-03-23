@@ -148,6 +148,15 @@ Each started process has its own PID. There are also files in */proc* – for ex
 The */sys* directory is also virtual, its content is only stored in memory. <br> 
 It contains information of system hardware and kernel modules.  <br>
 
+### Device filesystem
+#### /dev
+**dev** stands for **devices** – the */dev* directory is the **device diretory**. <br>
+There is a lot of content in this directory .. <br>
+* tty files (pre-fabricated consoles) [What is a TTY on Linux?](https://www.howtogeek.com/428174/what-is-a-tty-on-linux-and-how-to-use-the-tty-command/)
+* dvd
+* cdrom
+* sda (hard disc) – hd partitions are named sda1, sda2, …
+* sr0
 
 ## CLI basics 
 ### pwd
