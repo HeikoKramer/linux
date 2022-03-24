@@ -159,7 +159,10 @@ There is a lot of content in this directory .. <br>
 * sr0
 #### udev
 `udev` stands for **userspace dev** and is a program with which Linux automatically manages the device files in the */dev* directory. <br>
-If e.g. a USB stick is plugged in, `udev` reports this to the **dbus** system and this creates a new device file in */dev*. <br>
+If e.g. a USB stick is plugged in, `udev` gets that information from the */sys* directory and reports this to the **dbus** system, that way a new device file in */dev* gets created. <br>
+#### hotplug vs coldplug
+A **hotplug** device is a hardware that can be connected to a system and be used immediately via runtime (like a USB stick). <br> 
+A **coldplug** device is a hardware that can only be connected when the computer has been switched off. <br>
 
 
 ## CLI basics 
