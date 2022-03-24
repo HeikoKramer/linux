@@ -158,8 +158,10 @@ There is a lot of content in this directory .. <br>
 * sda (hard disc) – hd partitions are named sda1, sda2, …
 * sr0
 #### udev
-`udev` stands for **userspace dev** and is a program with which Linux automatically manages the device files in the */dev* directory. <br>
-If e.g. a USB stick is plugged in, `udev` gets that information from the */sys* directory and reports this to the **dbus** system, that way a new device file in */dev* gets created. <br>
+**udev** stands for **userspace dev** and is a program with which Linux automatically manages the device files in the */dev* directory. <br>
+If e.g. a USB stick is plugged in, **udev** gets that information from the */sys* directory and reports this to the **dbus** system, that way a new device file in */dev* gets created. <br>
+#### dbus
+**dbus** is a program that sends messages back and forward between different applications and informs them about events. <br>
 #### hotplug vs coldplug
 A **hotplug** device is a hardware that can be connected to a system and be used immediately via runtime (like a USB stick). <br> 
 A **coldplug** device is a hardware that can only be connected when the computer has been switched off. <br>
