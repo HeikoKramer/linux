@@ -157,6 +157,10 @@ There is a lot of content in this directory .. <br>
 * cdrom
 * sda (hard disc) – hd partitions are named sda1, sda2, …
 * sr0
+#### udev
+`udev` stands for **userspace dev** and is a program with which Linux automatically manages the device files in the */dev* directory. <br>
+If e.g. a USB stick is plugged in, `udev` reports this to the **dbus** system and this creates a new device file in */dev*. <br>
+
 
 ## CLI basics 
 ### pwd
