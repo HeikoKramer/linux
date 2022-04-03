@@ -192,6 +192,49 @@ If e.g. a USB stick is plugged in, **udev** gets that information from the */sys
 A **hotplug** device is a hardware that can be connected to a system and be used immediately via runtime (like a USB stick). <br> 
 A **coldplug** device is a hardware that can only be connected when the computer has been switched off. <br>
 
+### Display ardware
+#### lspci
+The `lspci` command displays information about PCI buses in the system and devices connected to them. <br>
+Notable is that `lspci` has **three levels of verbose**: <br>
+* `lspci -v` will already provide you much more info as the pure `lspci`
+* `lspci -vv` will add further displayed information to the output
+* `lspci -vvv` will provide the most information available on the attached hardware
+
+Example of the graphics card, displayed with pure `lspci`: <br>
+
+```sh
+00:02.0 VGA compatible controller: Intel Corporation UHD Graphics 630 (Desktop)
+```
+
+Compared to the most detailed view with `lspci -vvv`: <br>
+
+```sh
+00:02.0 VGA compatible controller: Intel Corporation UHD Graphics 630 (Desktop) (prog-if 00 [VGA controller])
+	DeviceName: Onboard - Video
+	Subsystem: Lenovo UHD Graphics 630 (Desktop)
+	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin A routed to IRQ 133
+	Region 0: Memory at b0000000 (64-bit, non-prefetchable) [size=16M]
+	Region 2: Memory at a0000000 (64-bit, prefetchable) [size=256M]
+	Region 4: I/O ports at 3000 [size=64]
+	Expansion ROM at 000c0000 [virtual] [disabled] [size=128K]
+	Capabilities: <access denied>
+	Kernel driver in use: i915
+	Kernel modules: i915
+```
+
+`lspci -k` shows the PCI devices + the module they're using. So for our *VGA compatible controller* it looks like this: <br>
+
+```sh
+00:02.0 VGA compatible controller: Intel Corporation UHD Graphics 630 (Desktop)
+	DeviceName: Onboard - Video
+	Subsystem: Lenovo UHD Graphics 630 (Desktop)
+	Kernel driver in use: i915
+	Kernel modules: i915
+```
+
 
 ## CLI basics 
 ### pwd
