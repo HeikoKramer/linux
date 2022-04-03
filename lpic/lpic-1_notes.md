@@ -109,6 +109,23 @@ modprobe -at net
 Modules can be removed with `modprobe -r` – multiple module names can be passed at the same time (separated by space). <br>
 RETIRED: Modules can be listed with `modprobe -l` – this shows not only loaded but also loadable modules. <br> 
 
+To test this, let's remove the *ip_tables* module, which runs our firewall. <br>
+First let's check with `lsmod` if *ip_tables* is running, here we restrict the list output with the `grep` command: <br>
+
+```sh
+$ lsmod | grep ip_tables
+ip_tables              32768  0
+```
+
+A normal user has not the required permission to unload a module, so we have to run this with **sudo**: <br>
+
+```sh
+sudo modprobe -r ip_tables
+```
+
+If we run `lsmod | grep ip_tables` again, it won't show any results, the module has been removed from the running kernel. <br>
+To load *ip_tables* again, we can run `sudo modprobe ip_tables` – **sudo** is also required to load modules into the kernel. <br> 
+
 #### depmod
 The dependencies between modules are stored in the file *modules.dep*. <br>
 That file is stored in */lib/modules/5.13.0-30-generic* (5.13.0-30-generic is my current kernel version. <br>
