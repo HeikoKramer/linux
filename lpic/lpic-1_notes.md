@@ -66,6 +66,7 @@ vermagic:       5.13.0-30-generic SMP mod_unload modversions
 sig_id:         PKCS#7
 ```
 
+The extension *.ko* stands for *Kernel Object*, sometimes you also might see only *.o* for *Object*. <br>
 The information shown differ from module to module, but can for example contain: <br>
 
 * module version
