@@ -41,6 +41,14 @@ Everything after the third number (-28-generic) is specified in the kernel's **m
 `lsmod` prints the status of modules of the running kernel. <br>
 This information comes from the file */proc/modules*. <br>
 So `cat /proc/modules` would provide identical information, but `lsmod` presents it in a more readable format. <br>
+<br>
+The format of `lsmod` looks like this: <br>
+
+```sh
+videobuf2_common       61440  4 videobuf2_vmalloc,videobuf2_v4l2,uvcvideo,videobuf2_memops
+```
+
+On the left we see the **module name**, followed by its **size in bytes**, then the **number of dependent modules** + a **list of their names**. <br>
 
 #### modinfo
 Those modules from that list can be inspected further with the `modinfo` command. <br>
