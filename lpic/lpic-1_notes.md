@@ -235,6 +235,117 @@ Compared to the most detailed view with `lspci -vvv`: <br>
 	Kernel modules: i915
 ```
 
+#### lsusb
+The `lsusb` command displays information about USB buses in the system and devices connected to them. <br>
+The output of `lsusb` looks like this: <br>
+
+```sh
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 006: ID 046d:0836 Logitech, Inc. B525 HD Webcam
+Bus 001 Device 005: ID 05ac:0250 Apple, Inc. Aluminium Keyboard (ISO)
+Bus 001 Device 004: ID 0b0e:245d GN Netcom 
+Bus 001 Device 003: ID 046d:c069 Logitech, Inc. M-U0007 [Corded Mouse M500]
+Bus 001 Device 002: ID 1a40:0101 Terminus Technology Inc. Hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+```
+
+Now we can see which devices are connected to which USB Bus. <br>
+If we want to restrict our search only to bus 2, we could do that with the **-s** option: <br>
+
+```sh
+$ lsusb -s 002:
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+```
+
+Or could search only the 3rd device of bus 1, which is my corded mouse: <br>
+
+```sh
+$ lsusb -s 001:003
+Bus 001 Device 003: ID 046d:c069 Logitech, Inc. M-U0007 [Corded Mouse M500]
+```
+
+There is also a **verbose** option `lsusb -v`. That option provides much more details on those devices. <br>
+The output of the verbose version is actually quite huge. Here for example only the entry for the connected mouse: <br>
+
+```sh
+Bus 001 Device 003: ID 046d:c069 Logitech, Inc. M-U0007 [Corded Mouse M500]
+Couldn't open device, some information will be missing
+Device Descriptor:
+  bLength                18
+  bDescriptorType         1
+  bcdUSB               2.00
+  bDeviceClass            0 
+  bDeviceSubClass         0 
+  bDeviceProtocol         0 
+  bMaxPacketSize0         8
+  idVendor           0x046d Logitech, Inc.
+  idProduct          0xc069 M-U0007 [Corded Mouse M500]
+  bcdDevice           56.01
+  iManufacturer           1 
+  iProduct                2 
+  iSerial                 0 
+  bNumConfigurations      1
+  Configuration Descriptor:
+    bLength                 9
+    bDescriptorType         2
+    wTotalLength       0x0022
+    bNumInterfaces          1
+    bConfigurationValue     1
+    iConfiguration          4 
+    bmAttributes         0xa0
+      (Bus Powered)
+      Remote Wakeup
+    MaxPower               98mA
+    Interface Descriptor:
+      bLength                 9
+      bDescriptorType         4
+      bInterfaceNumber        0
+      bAlternateSetting       0
+      bNumEndpoints           1
+      bInterfaceClass         3 Human Interface Device
+      bInterfaceSubClass      1 Boot Interface Subclass
+      bInterfaceProtocol      2 Mouse
+      iInterface              0 
+        HID Device Descriptor:
+          bLength                 9
+          bDescriptorType        33
+          bcdHID               1.10
+          bCountryCode            0 Not supported
+          bNumDescriptors         1
+          bDescriptorType        34 Report
+          wDescriptorLength      71
+         Report Descriptors: 
+           ** UNAVAILABLE **
+      Endpoint Descriptor:
+        bLength                 7
+        bDescriptorType         5
+        bEndpointAddress     0x81  EP 1 IN
+        bmAttributes            3
+          Transfer Type            Interrupt
+          Synch Type               None
+          Usage Type               Data
+        wMaxPacketSize     0x0006  1x 6 bytes
+        bInterval              10
+```
+
+The shown ID contains two parts: The **vendor** and the **product** code. <br>
+In our example *046d* is the code for *Logitech* and *c069* is the cord for that *corded mouse*. <br>
+We can search for devices of a certain manufacturer with the option **-d**: <br>
+
+```sh
+$ lsusb -d 046d:
+Bus 001 Device 006: ID 046d:0836 Logitech, Inc. B525 HD Webcam
+Bus 001 Device 003: ID 046d:c069 Logitech, Inc. M-U0007 [Corded Mouse M500]
+```
+
+The colon has to be added in that case. If we know the product ID, we can search it by placing it on the other side of the colon: <br>
+
+```sh
+$ lsusb -d :0836
+Bus 001 Device 006: ID 046d:0836 Logitech, Inc. B525 HD Webcam
+```
+
+An other notable option is `lsusb -t` – which will provide a tree view on available USB ports. <br>
 
 ## CLI basics 
 ### pwd
