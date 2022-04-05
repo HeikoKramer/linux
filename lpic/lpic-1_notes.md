@@ -158,6 +158,14 @@ All changes to files in this directory will be lost after reboot, as they contai
 #### /usr/src
 */usr/src* contains the **source files** of available kernels in sub-directories for the appropriate kernel version. <br>
 
+#### /boot
+This directory contains everything required for the boot process except for configuration files not needed at boot time. <br>
+The */boot* directory stores data that is used before the kernel begins executing user-mode programs. <br>
+Programs necessary to arrange for the boot loader to be able to boot a file are placed in */sbin*. <br> 
+Configuration files for boot loaders are placed in */etc*. 
+The system kernel is located in either */* or */boot* (under Debian */boot* but is symbolically linked at */*). <br>
+[Source: tldp.org](https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/boot.html)
+
 ### CPU info
 #### lscpu
 We can query cpu information with the command `lscpu`. <br>
