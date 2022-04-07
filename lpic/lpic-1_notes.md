@@ -3,6 +3,59 @@ Notes I'm taking as a preparation for the LPIC-1 certificate. <br>
 I'm using the [Rheinwerk LPIC-1 book by Harald Maaßen](https://www.rheinwerk-verlag.de/lpic-1-sicher-zur-erfolgreichen-linux-zertifizierung/) (German) and the [LPIC-1 - Linux System Administrator Masterclass](https://www.udemy.com/course/lpic-1-linux-system-administrator-masterclass/) Udemy course as the main source for my prep-work. <br>
 Other sources will be linked appropriate. <br>
 
+## CLI basics 
+### pwd
+`pwd` *print working directory* – prints complete path for the entered directory (full directory tree). <br>
+
+```sh
+10:08:51:heiko@tiny:~
+$ pwd
+/home/heiko
+```
+
+In this case `pwd` shows that we're in a subdirectory of the */home* directory. <br>
+*heiko* is my **username** and therewith also the name of my **personal home directory** */heiko*. <br>
+In this personal home directory I'm authorized to **create, delete, copy**, etc. files and directories **without root privileges**. <br>
+**root** is the **administrator** on a Linux system. <br>
+Our personal home directory is represented by the **tilde symbol** – **~** – in the command prompt. <br>
+
+## ls
+`ls` *list* displays the contents of the directory in which we are currently located. <br>
+There are many useful options for `ls`, here are my favourites, which I usually include in an `ls` alias: <br>
+* -a – lets you see **all** files (include hidden files)
+* -l – shows contents in list format, with additional information
+* -h – shows file size in **human readable** format
+* -t – sorts filed by modification time, newest first
+
+## cd
+`cd` *change directory* is used to navigate the directory tree. <br>
+`cd ~/Downloads` brings us to the *Downloads* directory. <br>
+`cd ..` takes us **one step back** in the directory tree. <br>
+`cd` or `cd  ~` take us back to our **personal home** directory. <br>
+`cd -` lets us jump to the **last** directory we have visited before the current directory. <br>
+`cd /` brings us to the **root** directory. <br>
+
+## / the root directory
+*/* – the *root directory* is our **1st directory** in the file tree. <br>
+
+```sh
+11:22:10:heiko@tiny:/
+$ ls
+bin   cdrom  etc   lib    lib64   lost+found  mnt  proc  run   srv       sys        tmp  var
+boot  dev    home  lib32  libx32  media       opt  root  sbin  swapfile  timeshift  usr
+```
+
+It contains a lot of system directories – also the *home* directory, where every user registered on the system has its sub-directory. <br>
+Those files and directories outside of the user's personal home directory might require **root privileges** for interaction. <br>
+To navigate the file tree outside the root directory (withing the personal home dir) **~/** is needed. Within root the tilde is not needed. <br>
+
+## Man & help pages
+The most commands have a **manual** which can be entered by typing `man` + the command name – `man ls` for example. <br>
+The **man pages** show all the available options for a command and sometimes also examples. <br>
+Some commands have **help pages** which can be entered with command name + `-h` or `--help`. <br>
+
+
+
 ## 101 System Architecture
 The Linux kernel is the interface between hardware and software. <br>
 Its architecture is **modular** – single components can be loaded / re-loaded during runtime, without re-loading the entire system. <br>
@@ -356,55 +409,14 @@ Bus 001 Device 006: ID 046d:0836 Logitech, Inc. B525 HD Webcam
 
 An other notable option is `lsusb -t` – which will provide a tree view on available USB ports. <br>
 
-## CLI basics 
-### pwd
-`pwd` *print working directory* – prints complete path for the entered directory (full directory tree). <br>
+## 101.2 Boot the system
 
-```sh
-10:08:51:heiko@tiny:~
-$ pwd
-/home/heiko
-```
-
-In this case `pwd` shows that we're in a subdirectory of the */home* directory. <br>
-*heiko* is my **username** and therewith also the name of my **personal home directory** */heiko*. <br>
-In this personal home directory I'm authorized to **create, delete, copy**, etc. files and directories **without root privileges**. <br>
-**root** is the **administrator** on a Linux system. <br>
-Our personal home directory is represented by the **tilde symbol** – **~** – in the command prompt. <br>
-
-## ls
-`ls` *list* displays the contents of the directory in which we are currently located. <br>
-There are many useful options for `ls`, here are my favourites, which I usually include in an `ls` alias: <br>
-* -a – lets you see **all** files (include hidden files)
-* -l – shows contents in list format, with additional information
-* -h – shows file size in **human readable** format
-* -t – sorts filed by modification time, newest first
-
-## cd
-`cd` *change directory* is used to navigate the directory tree. <br>
-`cd ~/Downloads` brings us to the *Downloads* directory. <br>
-`cd ..` takes us **one step back** in the directory tree. <br>
-`cd` or `cd  ~` take us back to our **personal home** directory. <br>
-`cd -` lets us jump to the **last** directory we have visited before the current directory. <br>
-`cd /` brings us to the **root** directory. <br>
-
-## / the root directory
-*/* – the *root directory* is our **1st directory** in the file tree. <br>
-
-```sh
-11:22:10:heiko@tiny:/
-$ ls
-bin   cdrom  etc   lib    lib64   lost+found  mnt  proc  run   srv       sys        tmp  var
-boot  dev    home  lib32  libx32  media       opt  root  sbin  swapfile  timeshift  usr
-```
-
-It contains a lot of system directories – also the *home* directory, where every user registered on the system has its sub-directory. <br>
-Those files and directories outside of the user's personal home directory might require **root privileges** for interaction. <br>
-To navigate the file tree outside the root directory (withing the personal home dir) **~/** is needed. Within root the tilde is not needed. <br>
-
-## Man & help pages
-The most commands have a **manual** which can be entered by typing `man` + the command name – `man ls` for example. <br>
-The **man pages** show all the available options for a command and sometimes also examples. <br>
-Some commands have **help pages** which can be entered with command name + `-h` or `--help`. <br>
+### The boot process
+BIOS–>MBR–>Bootloader–>Kernel–>InitialRamDisk–>init (PID 1) <br>
+<br>
+* the computer is turned on
+* the BIOS performs simple hardware test (e.g. whether there is a hard disk)
+* the BIOS looks in the Master Boot Record (MBR) for a Bootloader
+* the Bootloader is a program responsible to start the Linux Kernel
 
 
