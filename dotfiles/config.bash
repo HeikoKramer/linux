@@ -35,12 +35,12 @@ alias clig='cd ~/repos/github/nodeCLI/cligen; l' #enter and list cligen dir
 alias clisi='cd ~/repos/github/nodeCLI/img-sizer; l' #enter and list img-sizer dir
 alias ctd='cd ~/repos/github/nodeCLI/cli-todo; l' #enter and list cli-todo dir
 alias dea='cd ~/repos/github/webDev/js_tutorials/devcamper_api; l' #enter & list devcamper api project
+alias sfcp='cd ~/repos/github/sfdx/cert-prep; l' #enter and list Salesforce cerp-prep folder
 ## NOTES SHORTCUTS
 alias notes='vim ~/repos/gitlab.com/heiko__b/dotfiles/notes.md' #opens my notes in VIM
 alias linn='vim ~/repos/github/linux/linux_notes.md' #opens my notes on Linux
 alias vimn='vim ~/repos/github/linux/vim_notes.md' #opens my notes on vim
 alias tmuxn='vim ~/repos/github/linux/tmux_notes.md' #opens my notes on tmux
-alias sfn='vim ~/repos/github/sfdx/sfdx_notes.md' #opens sfdx notes on sfdx
 alias pin='vim ~/repos/github/linux/pi_notes.md' #opens my notes on Raspberry Pi related stuff
 alias jsn='vim ~/repos/github/webDev/javascript_notes.md' #opens my notes on JS
 alias njn='vim ~/repos/github/webDev/nodeJS_notes.md' #opens my node.js notes
@@ -58,6 +58,8 @@ alias vln='vim ~/repos/github/vlocity/vlocity_notes.md' #opens my notes on vloci
 alias don='vim ~/repos/github/linux/docker_notes.md' #opens my notes on Docker
 alias lpn='vim ~/repos/github/linux/lpic/lpic-1_notes.md' #opens my lpic-1 notes
 alias tfn='vim ~/repos/github/webDev/tensorflow-js_notes.md' #opens my tensorflow notes
+alias sfn='vim ~/repos/github/sfdx/sfdx_notes.md' #opens sfdx notes on sfdx
+alias dan='vim ~/repos/github/sfdx/cert-prep/data-architect_notes.md' #opens sf data architect cert prep notes
 ## CONFIG SHORTCUTS
 alias bashrc='vim ~/.bashrc' #opens my .bashrc in VIM
 alias bashcr='vim ~/repos/github/linux/dotfiles/remote/.bash_aliases' #opens remote bashconfig in vim
