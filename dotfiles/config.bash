@@ -60,6 +60,7 @@ alias lpn='vim ~/repos/github/linux/lpic/lpic-1_notes.md' #opens my lpic-1 notes
 alias tfn='vim ~/repos/github/webDev/tensorflow-js_notes.md' #opens my tensorflow notes
 alias sfn='vim ~/repos/github/sfdx/sfdx_notes.md' #opens sfdx notes on sfdx
 alias dan='vim ~/repos/github/sfdx/cert-prep/data-architect_notes.md' #opens sf data architect cert prep notes
+alias sva='vim ~/repos/github/sfdx/cert-prep/sharing-and-visibility-architect_notes.md' #opens sharing & visibility architect cert prep notes
 ## CONFIG SHORTCUTS
 alias bashrc='vim ~/.bashrc' #opens my .bashrc in VIM
 alias bashcr='vim ~/repos/github/linux/dotfiles/remote/.bash_aliases' #opens remote bashconfig in vim
