@@ -21,6 +21,7 @@ alias sfp='cd ~/repos/github/sfdx_projects; l' #enter and list sfdx_projects pri
 alias sfs='cd ~/repos/github/sfdx/sfdx_scripts; l' #enter and list sfdx scripts
 alias sfh='cd ~/repos/github/sfhcks; l' #enter and list Salesforce hacks repo 
 alias isv='cd ~/repos/github/sfdx_projects/isv; l' #enter isv sfdx project
+alias opa='cd ~/repos/github/open-ai; l' #enter and list open-ai repo
 alias wd='cd ~/repos/github/webDev; l' #enter and list webDev repo
 alias conf='cd ~/.config; l' #enter and list config files
 alias vl='cd ~/repos/github/vlocity; l' #enter and list vlocity repo
