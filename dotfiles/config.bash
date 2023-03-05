@@ -43,6 +43,7 @@ alias linn='vim ~/repos/github/linux/linux_notes.md' #opens my notes on Linux
 alias vimn='vim ~/repos/github/linux/vim_notes.md' #opens my notes on vim
 alias tmuxn='vim ~/repos/github/linux/tmux_notes.md' #opens my notes on tmux
 alias pin='vim ~/repos/github/linux/pi_notes.md' #opens my notes on Raspberry Pi related stuff
+alias opan='vim ~/repos/github/open-ai/open-ai_notes.md' #opens my notes on the open ai api
 alias jsn='vim ~/repos/github/webDev/javascript_notes.md' #opens my notes on JS
 alias njn='vim ~/repos/github/webDev/nodeJS_notes.md' #opens my node.js notes
 alias npn='vim ~/repos/github/webDev/npm_notes.md' #opens my npm packages notes
