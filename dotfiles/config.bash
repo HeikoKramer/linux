@@ -73,6 +73,7 @@ alias conkyc='vim ~/repos/github/linux/dotfiles/conky.conf' #opens conky.conf
 alias sfc='vim -c "set filetype=sh" ~/repos/github/sfdx/sfdx.conf' #opens sfdx config in vim
 alias sshc='vim ~/.ssh/config' #opens ssh config in vim
 alias muttc='vim ~/.config/mutt/muttrc' #opens (neo)mutt config file in vim
+alias opac='vim ~/repos/github/open-ai/opai.conf' #opens my open ai config
 ## BOOK SHORTCUTS
 ### Linux / Unix command line books
 alias book='mupdf -I ~/books/Linux_CL/TLCL-19.01.pdf' #opens "The Linus Command Line" book in mupdf
