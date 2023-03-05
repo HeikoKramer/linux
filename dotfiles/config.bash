@@ -404,5 +404,12 @@ if [ -f ~/.sfdx.conf ]; then
     echo "sourced >> .sfdx.conf"
 fi
 
+# source open ai configuration file
+# check out opai.conf so see all open ai related aliases and functions
+if [ -f ~/.opai.conf ]; then
+    . ~/.opai.conf
+    echo "sourced >> .opai.conf"
+fi
+
 ### "vim" as manpager
 export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
