@@ -37,6 +37,7 @@ alias clisi='cd ~/repos/github/nodeCLI/img-sizer; l' #enter and list img-sizer d
 alias ctd='cd ~/repos/github/nodeCLI/cli-todo; l' #enter and list cli-todo dir
 alias dea='cd ~/repos/github/webDev/js_tutorials/devcamper_api; l' #enter & list devcamper api project
 alias sfcp='cd ~/repos/github/sfdx/cert-prep; l' #enter and list Salesforce cerp-prep folder
+alias py='cd ~/repos/github/python; l' #enter and list python repo directory
 ## NOTES SHORTCUTS
 alias notes='vim ~/repos/gitlab.com/heiko__b/dotfiles/notes.md' #opens my notes in VIM
 alias linn='vim ~/repos/github/linux/linux_notes.md' #opens my notes on Linux
@@ -63,6 +64,7 @@ alias tfn='vim ~/repos/github/webDev/tensorflow-js_notes.md' #opens my tensorflo
 alias sfn='vim ~/repos/github/sfdx/sfdx_notes.md' #opens sfdx notes on sfdx
 alias dan='vim ~/repos/github/sfdx/cert-prep/data-architect_notes.md' #opens sf data architect cert prep notes
 alias sva='vim ~/repos/github/sfdx/cert-prep/sharing-and-visibility-architect_notes.md' #opens sharing & visibility architect cert prep notes
+alias pyn='vim ~/repos/github/python/python_notes.md' #opens my python notes
 ## CONFIG SHORTCUTS
 alias bashrc='vim ~/.bashrc' #opens my .bashrc in VIM
 alias bashcr='vim ~/repos/github/linux/dotfiles/remote/.bash_aliases' #opens remote bashconfig in vim
